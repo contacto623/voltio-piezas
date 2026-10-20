@@ -38,7 +38,21 @@ h1 .serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-we
 .boton{font-size:14px;font-weight:600;padding:11px 18px;border-radius:999px;text-decoration:none;border:1px solid rgba(255,255,255,.18)}
 .boton.principal{background:#fff;color:#0a0d14;border-color:#fff}
 footer{margin-top:90px;font-size:13px;color:rgba(255,255,255,.5)}
-@media (max-width:760px){.pieza{grid-template-columns:1fr}.carrusel img{height:240px}}
+@media (max-width:760px){.pieza{grid-template-columns:minmax(0,1fr);padding:16px;gap:20px}.reel{max-width:360px;margin:0 auto}.carrusel img{height:240px}}
+/* Visor: toca una lámina y se abre en grande; se pasa deslizando. */
+.visor{position:fixed;inset:0;z-index:50;background:rgba(1,4,10,.94);backdrop-filter:blur(10px);display:none;flex-direction:column}
+.visor.abierto{display:flex}
+.visor__pista{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior:contain}
+.visor__pista::-webkit-scrollbar{display:none}
+.visor__lamina{flex:0 0 100%;scroll-snap-align:center;display:grid;place-items:center;padding:64px 16px 24px}
+.visor__lamina img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.visor__barra{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;font-weight:600;font-size:15px}
+.visor__boton{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.visor__flecha{position:absolute;top:50%;transform:translateY(-50%)}
+.visor__flecha--antes{left:14px}.visor__flecha--despues{right:14px}
+.carrusel img{cursor:zoom-in}
+@media (max-width:760px){.visor__flecha{display:none}.visor__lamina{padding:60px 8px 16px}}
+
 </style>
 </head>
 <body>
@@ -73,6 +87,50 @@ fetch('piezas.json').then(r => r.json()).then(piezas => {
       </div>
     </article>`;
   }).join('');
+});
+// ── Visor de láminas ─────────────────────────────────────────────────────────
+// Toca una lámina y se abre a pantalla completa; se pasa deslizando con el dedo
+// o con las flechas (y las del teclado). Esc o tocar la X cierra.
+const visor = document.createElement('div');
+visor.className = 'visor';
+visor.setAttribute('role', 'dialog');
+visor.setAttribute('aria-modal', 'true');
+visor.innerHTML = `<div class="visor__pista"></div>
+  <div class="visor__barra"><span class="visor__cuenta"></span><button class="visor__boton" data-cerrar aria-label="Cerrar">&times;</button></div>
+  <button class="visor__boton visor__flecha visor__flecha--antes" data-paso="-1" aria-label="Anterior">&#8249;</button>
+  <button class="visor__boton visor__flecha visor__flecha--despues" data-paso="1" aria-label="Siguiente">&#8250;</button>`;
+document.body.appendChild(visor);
+const pista = visor.querySelector('.visor__pista');
+const cuenta = visor.querySelector('.visor__cuenta');
+let total = 0;
+const actual = () => Math.round(pista.scrollLeft / Math.max(1, pista.clientWidth));
+const pintarCuenta = () => { cuenta.textContent = `${actual() + 1} / ${total}`; };
+const ir = (i, suave = true) => pista.scrollTo({ left: Math.max(0, Math.min(total - 1, i)) * pista.clientWidth, behavior: suave ? 'smooth' : 'auto' });
+function abrirVisor(urls, inicio) {
+  total = urls.length;
+  pista.innerHTML = urls.map((u, i) => `<div class="visor__lamina"><img src="${u}" alt="Lámina ${i + 1} de ${urls.length}"></div>`).join('');
+  visor.classList.add('abierto');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => { ir(inicio, false); pintarCuenta(); });
+}
+function cerrarVisor() { visor.classList.remove('abierto'); document.body.style.overflow = ''; }
+pista.addEventListener('scroll', pintarCuenta, { passive: true });
+visor.addEventListener('click', (e) => {
+  if (e.target.closest('[data-cerrar]') || e.target.classList.contains('visor__lamina')) return cerrarVisor();
+  const paso = e.target.closest('[data-paso]');
+  if (paso) ir(actual() + Number(paso.dataset.paso));
+});
+document.addEventListener('keydown', (e) => {
+  if (!visor.classList.contains('abierto')) return;
+  if (e.key === 'Escape') cerrarVisor();
+  if (e.key === 'ArrowRight') ir(actual() + 1);
+  if (e.key === 'ArrowLeft') ir(actual() - 1);
+});
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('.carrusel img');
+  if (!img) return;
+  const fotos = [...img.closest('.carrusel').querySelectorAll('img')];
+  abrirVisor(fotos.map((f) => f.src), fotos.indexOf(img));
 });
 </script>
 </body>
