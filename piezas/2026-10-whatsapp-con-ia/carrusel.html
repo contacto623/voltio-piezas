@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Voltio · Carrusel WhatsApp con IA</title>
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(../../marca/fuentes/Inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:500;src:url(../../marca/fuentes/Inter-500.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(../../marca/fuentes/Inter-600.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../../marca/fuentes/Inter-700.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(../../marca/fuentes/InstrumentSerif-Italic.woff2) format('woff2')}
+:root{--azul:#1d68ff;--azul-claro:#5b93ff;--verde:#7dffb0;--noche:#01040a;--tinta:#0a0d14;--rojo:#ff9b9b}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--noche)}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+.lamina{display:none;position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--noche);padding:72px 80px}
+.lamina:target{display:block}
+/* Fondo: cielo de la portada de Voltio + auroras + grano + retícula */
+.lamina::before{content:'';position:absolute;inset:0;background:url(../../marca/cielo.webp) center/cover;opacity:.28;filter:saturate(1.2)}
+.lamina::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.aurora{position:absolute;border-radius:50%;filter:blur(120px);opacity:.55;z-index:0}
+.reticula{position:absolute;inset:0;z-index:0;opacity:.22;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:72px 72px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%)}
+.capa{position:relative;z-index:2;height:100%;display:flex;flex-direction:column}
+/* Cabecera y pie */
+.cabeza{display:flex;justify-content:space-between;align-items:center}
+.marca{display:flex;align-items:center;gap:14px;font-weight:700;font-size:26px;letter-spacing:.16em}
+.marca svg{width:44px;height:44px;filter:drop-shadow(0 0 18px rgba(29,104,255,.7))}
+.pagina{font-size:22px;font-weight:600;letter-spacing:.12em;color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.pagina b{color:#fff}
+.pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:22px;color:rgba(255,255,255,.6);letter-spacing:.04em}
+.desliza{display:flex;align-items:center;gap:12px;font-weight:600;color:#fff}
+.desliza svg{width:34px;height:34px}
+/* Tipografía */
+.sello{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:12px 22px;border-radius:999px;font-size:22px;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);color:rgba(255,255,255,.88)}
+.sello i{width:10px;height:10px;border-radius:50%;background:var(--verde);box-shadow:0 0 16px var(--verde)}
+h1,h2{font-weight:700;letter-spacing:-.035em;line-height:.98}
+h1{font-size:118px}
+h2{font-size:84px}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.azul{background:linear-gradient(100deg,#8fb6ff 0%,var(--azul-claro) 35%,var(--azul) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 40px rgba(29,104,255,.45))}
+.subrayo{position:relative;display:inline-block}
+.subrayo svg{position:absolute;left:-2%;bottom:-18px;width:104%;height:34px}
+.bajada{font-size:34px;line-height:1.35;color:rgba(255,255,255,.72);font-weight:400;max-width:860px}
+.bajada b{color:#fff;font-weight:600}
+/* Vidrio */
+.vidrio{background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);
+  border-radius:32px;backdrop-filter:blur(18px);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12)}
+/* Burbujas */
+.burbuja{font-size:28px;line-height:1.35;padding:20px 26px;border-radius:26px;max-width:620px}
+.entra{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-bottom-left-radius:8px}
+.sale{background:linear-gradient(135deg,var(--azul),#1450d6);border-bottom-right-radius:8px;align-self:flex-end;box-shadow:0 18px 50px rgba(29,104,255,.45)}
+.hora{display:block;font-size:18px;opacity:.6;margin-top:8px;text-align:right}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#1d68ff"/><path d="M18 4 8 18h7l-2 10 10-14h-7z" fill="#fff"/></symbol>
+    <symbol id="flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="cruz" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="rayo" viewBox="0 0 24 24"><path d="M13.5 2 4 14h6.5L9 22l11-13h-7z" fill="currentColor"/></symbol>
+    <symbol id="globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.8 3.8 5.8 3.8 9s-1.2 6.2-3.8 9c-2.6-2.8-3.8-5.8-3.8-9S9.4 5.8 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="escudo" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.4 3.1 7.9 7.5 9 4.4-1.1 7.5-4.6 7.5-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.8 12.2 2.3 2.3 4.3-4.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ficha" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.8 17c.9-1.9 2.4-2.8 4.2-2.8s3.3.9 4.2 2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="subrayo" viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M4 20C90 6 220 4 396 14" fill="none" stroke="#7dffb0" stroke-width="7" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1 · PORTADA -->
+<section class="lamina" id="l1">
+  <div class="aurora" style="width:760px;height:760px;background:#1d68ff;top:-220px;right:-260px"></div>
+  <div class="aurora" style="width:520px;height:520px;background:#3b2bff;bottom:-140px;left:-200px;opacity:.4"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>01</b> / 05</div></div>
+    <div style="margin-top:110px;display:flex;flex-direction:column;gap:46px">
+      <span class="sello"><i></i>Lo que viste en tu feed, funcionando hoy</span>
+      <h1>Todos hablan del<br><span class="serif azul" style="font-size:150px">WhatsApp con IA.</span></h1>
+      <h1 style="font-size:96px;color:rgba(255,255,255,.92)">Nosotros ya lo<br><span class="subrayo">instalamos.<svg><use href="#subrayo"/></svg></span></h1>
+    </div>
+    <!-- Conversación flotante -->
+    <div class="vidrio" style="position:absolute;right:0;top:860px;width:520px;padding:26px;display:flex;flex-direction:column;gap:14px;transform:rotate(-2.5deg)">
+      <div class="burbuja entra" style="font-size:24px">¿Atienden el sábado?<span class="hora">23:47</span></div>
+      <div class="burbuja sale" style="font-size:24px">Sí, el sábado de 10:00 a 14:00. ¿Te paso la dirección?<span class="hora">23:47</span></div>
+    </div>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 2 · EL PROBLEMA -->
+<section class="lamina" id="l2">
+  <div class="aurora" style="width:620px;height:620px;background:#1d68ff;top:420px;left:-280px;opacity:.38"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>02</b> / 05</div></div>
+    <h2 style="margin-top:80px">Tu WhatsApp hoy:<br><span class="serif" style="color:rgba(255,255,255,.55);font-size:96px">40 mensajes iguales.</span></h2>
+    <div class="vidrio" style="margin-top:56px;padding:18px 0">
+      <div id="lista"></div>
+    </div>
+    <p class="bajada" style="margin-top:44px">Y tú contestando <b>de a uno</b>, entre un cliente y otro, o a las once de la noche.</p>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 3 · QUÉ HACE -->
+<section class="lamina" id="l3">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:-200px;left:180px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>03</b> / 05</div></div>
+    <h2 style="margin-top:80px">El bot de Voltio<br><span class="serif azul" style="font-size:104px">contesta por ti.</span></h2>
+    <div style="margin-top:60px;display:flex;flex-direction:column;gap:26px">
+      <div class="vidrio tarjeta"><span class="icono"><svg><use href="#globo"/></svg></span><div><h3>Al instante, con lo que dice tu web</h3><p>Horario, precios, carta y productos. Lo que publicas es lo que responde.</p></div></div>
+      <div class="vidrio tarjeta"><span class="icono"><svg><use href="#escudo"/></svg></span><div><h3>Si no sabe, no inventa</h3><p>Te pasa la conversación a ti, con todo lo que el cliente ya dijo.</p></div></div>
+      <div class="vidrio tarjeta"><span class="icono"><svg><use href="#ficha"/></svg></span><div><h3>Cada consulta queda en tu CRM</h3><p>Nombre, conversación y en qué quedó. Nadie se pierde.</p></div></div>
+    </div>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+  <style>
+    .tarjeta{display:flex;gap:30px;align-items:flex-start;padding:34px 38px}
+    .icono{flex:none;width:76px;height:76px;border-radius:22px;display:grid;place-items:center;color:#fff;
+      background:linear-gradient(140deg,var(--azul-claro),var(--azul));box-shadow:0 12px 34px rgba(29,104,255,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+    .icono svg{width:40px;height:40px}
+    .tarjeta h3{font-size:36px;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
+    .tarjeta p{font-size:27px;line-height:1.4;color:rgba(255,255,255,.68)}
+  </style>
+</section>
+
+<!-- 4 · LA DIFERENCIA -->
+<section class="lamina" id="l4">
+  <div class="aurora" style="width:520px;height:520px;background:#ff5a5a;top:560px;left:-220px;opacity:.22"></div>
+  <div class="aurora" style="width:620px;height:620px;background:#1d68ff;top:520px;right:-220px;opacity:.5"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>04</b> / 05</div></div>
+    <h2 style="margin-top:80px;font-size:92px">Una IA sin frenos<br><span class="serif" style="color:var(--rojo);font-size:92px">se equivoca rápido.</span></h2>
+    <div style="margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div class="vidrio lado" style="border-color:rgba(255,155,155,.35)">
+        <div class="etiqueta" style="color:var(--rojo)"><svg><use href="#cruz"/></svg>IA sin frenos</div>
+        <div class="burbuja entra">¿Cuánto sale el corte con barba?</div>
+        <div class="burbuja mala">Te queda en $9.990, ¡te esperamos!</div>
+        <p class="nota">El precio real es $14.000. Nadie lo publicó.</p>
+      </div>
+      <div class="vidrio lado" style="border-color:rgba(125,255,176,.4)">
+        <div class="etiqueta" style="color:var(--verde)"><svg><use href="#check"/></svg>Bot de Voltio</div>
+        <div class="burbuja entra">¿Cuánto sale el corte con barba?</div>
+        <div class="burbuja sale">Ese valor te lo confirma Carla por acá en un rato.</div>
+        <p class="nota">Sin precio publicado, no da un precio.</p>
+      </div>
+    </div>
+    <p class="bajada" style="margin-top:44px">Y lo <b>pruebas antes</b> de que hable con tus clientes.</p>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+  <style>
+    .lado{padding:30px;display:flex;flex-direction:column;gap:18px}
+    .lado .burbuja{font-size:25px;max-width:none}
+    .etiqueta{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .etiqueta svg{width:28px;height:28px}
+    .mala{background:rgba(255,90,90,.16);border:1px solid rgba(255,155,155,.45);border-bottom-right-radius:8px;align-self:flex-end;text-decoration:line-through;text-decoration-color:rgba(255,155,155,.8);text-decoration-thickness:3px}
+    .nota{font-size:21px;color:rgba(255,255,255,.55);line-height:1.4}
+  </style>
+</section>
+
+<!-- 5 · CIERRE -->
+<section class="lamina" id="l5">
+  <div class="aurora" style="width:900px;height:900px;background:#1d68ff;top:200px;left:90px;opacity:.55"></div>
+  <div class="reticula"></div>
+  <div class="capa" style="align-items:center;text-align:center">
+    <div class="cabeza" style="width:100%"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>05</b> / 05</div></div>
+    <span class="sello" style="align-self:center;margin-top:110px"><i></i>Bot de WhatsApp</span>
+    <div style="margin-top:40px;font-size:40px;color:rgba(255,255,255,.7);font-weight:500">desde</div>
+    <div class="precio">$59.000<span>/mes</span></div>
+    <p class="bajada" style="margin-top:26px;text-align:center">Conectado a <b>tu web</b> y a <b>tu CRM</b>:<br>tus clientes en un solo lugar.</p>
+    <div class="cta"><svg><use href="#rayo"/></svg>Comenta <b>BOT</b></div>
+    <p style="margin-top:28px;font-size:28px;color:rgba(255,255,255,.7)">y te mostramos uno andando <span class="serif" style="font-size:38px;color:#fff">con tu negocio.</span></p>
+    <div class="pie" style="width:100%"><span>voltiodigital.cl</span><span>Demo con tu marca, antes de pagar</span></div>
+  </div>
+  <style>
+    .precio{font-size:190px;font-weight:700;letter-spacing:-.05em;line-height:1;margin-top:6px;
+      background:linear-gradient(180deg,#fff 30%,#a9c6ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 60px rgba(29,104,255,.6))}
+    .precio span{font-size:56px;letter-spacing:-.02em;font-weight:600}
+    .cta{margin-top:60px;display:inline-flex;align-items:center;gap:16px;padding:30px 56px;border-radius:999px;font-size:44px;font-weight:500;color:var(--tinta);
+      background:linear-gradient(180deg,#fff,#dfe9ff);box-shadow:0 0 0 10px rgba(29,104,255,.22),0 0 90px rgba(29,104,255,.85)}
+    .cta b{font-weight:700;color:var(--azul)}
+    .cta svg{width:42px;height:42px;color:var(--azul)}
+  </style>
+</section>
+
+<script>
+// La lista de chats de la lámina 2: preguntas repetidas, como en cualquier WhatsApp de negocio.
+const chats = [
+  ['Camila R.', '¿Sigue disponible?', '23:47', 3],
+  ['+56 9 •••• 4471', '¿Cuánto cuesta?', '23:31', 2],
+  ['Jorge M.', '¿Atienden el sábado?', '22:58', 1],
+  ['+56 9 •••• 2290', 'Hola, ¿cuánto cuesta?', '22:12', 4],
+  ['Fernanda', '¿Dónde quedan?', '21:40', 1],
+  ['+56 9 •••• 0193', '¿Sigue disponible?', '21:05', 2],
+];
+document.getElementById('lista').innerHTML = chats.map(([n, m, h, c], i) => `
+  <div style="display:flex;align-items:center;gap:22px;padding:16px 34px;${i ? 'border-top:1px solid rgba(255,255,255,.08)' : ''}">
+    <div style="width:64px;height:64px;border-radius:50%;flex:none;background:linear-gradient(140deg,rgba(255,255,255,.22),rgba(255,255,255,.06));display:grid;place-items:center;font-weight:700;font-size:24px;color:rgba(255,255,255,.75)">${n.startsWith('+') ? '#' : n[0]}</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-size:27px;font-weight:600">${n}</div>
+      <div style="font-size:25px;color:rgba(255,255,255,.62);margin-top:4px">${m}</div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:20px;color:var(--verde)">${h}</div>
+      <div style="margin-top:8px;margin-left:auto;width:36px;height:36px;border-radius:50%;background:var(--verde);color:#02150a;font-weight:700;font-size:20px;display:grid;place-items:center">${c}</div>
+    </div>
+  </div>`).join('');
+</script>
+</body>
+</html>

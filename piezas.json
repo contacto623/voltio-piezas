@@ -1,0 +1,13 @@
+[
+  {
+    "id": "2026-10-whatsapp-con-ia",
+    "titulo": "WhatsApp con IA",
+    "fecha": "2026-10-20",
+    "cliente": "Voltio",
+    "tipo": "Venta del bot de WhatsApp",
+    "resumen": "Aprovecha la ola de «WhatsApp agéntico»: lo que muestran como futuro, Voltio ya lo instala, y sin inventar precios.",
+    "reel": "voltio-whatsapp-ia-reel.mp4",
+    "carrusel": ["voltio-ia-01.png", "voltio-ia-02.png", "voltio-ia-03.png", "voltio-ia-04.png", "voltio-ia-05.png"],
+    "textos": "textos.md"
+  }
+]

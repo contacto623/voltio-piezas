@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voltio · Piezas</title>
+<meta name="description" content="Carruseles y reels hechos por Voltio Digital.">
+<style>
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(marca/fuentes/Inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(marca/fuentes/Inter-600.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;font-display:swap;src:url(marca/fuentes/Inter-700.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-display:swap;src:url(marca/fuentes/InstrumentSerif-Italic.woff2) format('woff2')}
+:root{--azul:#1d68ff;--azul-claro:#5b93ff;--verde:#7dffb0;--noche:#01040a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--noche);color:#fff;-webkit-font-smoothing:antialiased;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:url(marca/cielo.webp) center/cover;opacity:.18;z-index:-2}
+body::after{content:'';position:fixed;width:900px;height:900px;border-radius:50%;background:var(--azul);filter:blur(180px);opacity:.35;top:-400px;right:-300px;z-index:-1}
+a{color:inherit}
+.envoltura{max-width:1200px;margin:0 auto;padding:40px 24px 80px}
+header{display:flex;justify-content:space-between;align-items:center}
+.marca{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;text-decoration:none}
+.marca svg{width:34px;height:34px;filter:drop-shadow(0 0 14px rgba(29,104,255,.7))}
+header nav a{font-size:14px;color:rgba(255,255,255,.7);text-decoration:none}
+h1{margin:90px 0 14px;font-size:clamp(44px,8vw,92px);letter-spacing:-.04em;line-height:1}
+h1 .serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;background:linear-gradient(100deg,#9cbfff,var(--azul));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bajada{font-size:19px;color:rgba(255,255,255,.7);max-width:620px;line-height:1.5}
+.pieza{margin-top:80px;display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:36px;align-items:start;
+  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:28px;backdrop-filter:blur(14px)}
+.reel{width:100%;aspect-ratio:9/16;border-radius:18px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.chip.vivo::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--verde);margin-right:7px;box-shadow:0 0 10px var(--verde)}
+.pieza h2{font-size:36px;letter-spacing:-.03em;margin-bottom:10px}
+.pieza p{color:rgba(255,255,255,.72);line-height:1.55}
+.carrusel{margin-top:24px;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.carrusel img{height:300px;aspect-ratio:4/5;border-radius:14px;scroll-snap-align:start;flex:none;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.acciones{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.boton{font-size:14px;font-weight:600;padding:11px 18px;border-radius:999px;text-decoration:none;border:1px solid rgba(255,255,255,.18)}
+.boton.principal{background:#fff;color:#0a0d14;border-color:#fff}
+footer{margin-top:90px;font-size:13px;color:rgba(255,255,255,.5)}
+@media (max-width:760px){.pieza{grid-template-columns:1fr}.carrusel img{height:240px}}
+</style>
+</head>
+<body>
+<div class="envoltura">
+  <header>
+    <a class="marca" href="https://voltiodigital.cl"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1d68ff"/><path d="M18 4 8 18h7l-2 10 10-14h-7z" fill="#fff"/></svg>VOLTIO</a>
+    <nav><a href="https://voltiodigital.cl">voltiodigital.cl</a></nav>
+  </header>
+  <h1>Piezas que <span class="serif">mueven.</span></h1>
+  <p class="bajada">Carruseles y reels que armamos para Voltio y para nuestros clientes. Cada uno cuenta solo lo que el producto hace de verdad.</p>
+  <main id="piezas"></main>
+  <footer>Voltio Digital · Las conversaciones que aparecen en las piezas son de ejemplo.</footer>
+</div>
+<script>
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fecha = iso => new Date(iso + 'T12:00:00').toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+fetch('piezas.json').then(r => r.json()).then(piezas => {
+  document.getElementById('piezas').innerHTML = piezas.map(p => {
+    const dir = `piezas/${encodeURIComponent(p.id)}/`;
+    return `<article class="pieza" id="${esc(p.id)}">
+      <video class="reel" src="${dir}${esc(p.reel)}" poster="${dir}${esc(p.carrusel[0])}" muted loop playsinline autoplay controls preload="metadata"></video>
+      <div>
+        <div class="meta"><span class="chip vivo">${esc(p.tipo)}</span><span class="chip">${esc(p.cliente)}</span><span class="chip">${fecha(p.fecha)}</span></div>
+        <h2>${esc(p.titulo)}</h2>
+        <p>${esc(p.resumen)}</p>
+        <div class="carrusel">${p.carrusel.map((img, i) => `<img src="${dir}${esc(img)}" alt="Lámina ${i + 1} de ${esc(p.titulo)}" loading="lazy">`).join('')}</div>
+        <div class="acciones">
+          <a class="boton principal" href="${dir}${esc(p.reel)}" download>Bajar reel</a>
+          ${p.carrusel.map((img, i) => `<a class="boton" href="${dir}${esc(img)}" download>Lámina ${i + 1}</a>`).join('')}
+          <a class="boton" href="https://github.com/contacto623/voltio-piezas/blob/main/${dir}${esc(p.textos)}">Textos del post</a>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+});
+</script>
+</body>
+</html>
