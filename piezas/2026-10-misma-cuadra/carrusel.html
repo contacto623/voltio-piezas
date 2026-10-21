@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Voltio · Carrusel «Misma cuadra»</title>
+<link rel="stylesheet" href="cuadra.css">
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(../../marca/fuentes/Inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:500;src:url(../../marca/fuentes/Inter-500.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(../../marca/fuentes/Inter-600.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../../marca/fuentes/Inter-700.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(../../marca/fuentes/InstrumentSerif-Italic.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--noche)}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+.lamina{display:none;position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--noche);padding:72px 80px}
+.lamina:target{display:block}
+/* Fondo: cielo de voltiodigital.cl + auroras + grano + retícula */
+.lamina::before{content:'';position:absolute;inset:0;background:url(../../marca/cielo.webp) center/cover;opacity:.26;filter:saturate(1.2)}
+.lamina::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;z-index:9;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.aurora{position:absolute;border-radius:50%;filter:blur(120px);opacity:.5;z-index:0}
+.reticula{position:absolute;inset:0;z-index:0;opacity:.22;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:72px 72px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%)}
+.capa{position:relative;z-index:2;height:100%;display:flex;flex-direction:column}
+.cabeza{display:flex;justify-content:space-between;align-items:center}
+.marca{display:flex;align-items:center;gap:14px;font-weight:700;font-size:26px;letter-spacing:.16em}
+.marca svg{width:44px;height:44px;filter:drop-shadow(0 0 18px rgba(29,104,255,.7))}
+.pagina{font-size:22px;font-weight:600;letter-spacing:.12em;color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.pagina b{color:#fff}
+.pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:22px;color:rgba(255,255,255,.6);letter-spacing:.04em}
+.desliza{display:flex;align-items:center;gap:12px;font-weight:600;color:#fff}
+.desliza svg{width:34px;height:34px}
+.sello{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:12px 22px;border-radius:999px;font-size:22px;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);color:rgba(255,255,255,.88)}
+.sello i{width:10px;height:10px;border-radius:50%;background:var(--verde);box-shadow:0 0 16px var(--verde)}
+h1,h2{font-weight:700;letter-spacing:-.035em;line-height:1}
+h2{font-size:74px}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.azul{background:linear-gradient(100deg,#8fb6ff 0%,var(--azul-claro) 35%,var(--azul) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 40px rgba(29,104,255,.45))}
+.subrayo{position:relative;display:inline-block}
+.subrayo svg{position:absolute;left:-2%;bottom:-16px;width:104%;height:30px}
+.bajada{font-size:32px;line-height:1.35;color:rgba(255,255,255,.72)}
+.bajada b{color:#fff;font-weight:600}
+.vidrio{background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);
+  border-radius:30px;backdrop-filter:blur(18px);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12)}
+/* Lámina con celular a la izquierda y notas a la derecha */
+.duo{margin-top:40px;display:flex;gap:36px;align-items:flex-start}
+.notas{flex:1;display:flex;flex-direction:column;gap:22px;padding-top:30px}
+.nota{padding:26px 26px;display:flex;flex-direction:column;gap:12px}
+.nota .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--azul-claro),var(--azul));box-shadow:0 12px 30px rgba(29,104,255,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.nota .ic svg{width:34px;height:34px;color:#fff}
+.nota h3{font-size:31px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.nota p{font-size:24px;line-height:1.38;color:rgba(255,255,255,.68)}
+.nota.verde{border-color:rgba(125,255,176,.45)}
+.nota.verde .ic{background:linear-gradient(140deg,#9dffc4,#2fbf73);box-shadow:0 12px 30px rgba(47,191,115,.4)}
+.nota.verde .ic svg{color:#04210f}
+.ejemplo{font-size:18px;color:rgba(255,255,255,.45)}
+</style>
+</head>
+<body>
+
+<!-- 1 · PORTADA: la cuadra -->
+<section class="lamina" id="l1">
+  <div class="aurora" style="width:760px;height:760px;background:#1d68ff;top:420px;left:-200px;opacity:.42"></div>
+  <div class="aurora" style="width:520px;height:520px;background:#3b2bff;top:-160px;right:-200px;opacity:.35"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>01</b> / 08</div></div>
+    <span class="sello" style="margin-top:44px"><i></i>Una cuadra cualquiera de Ñuñoa</span>
+    <h1 style="font-size:80px;margin-top:30px">En la misma cuadra hay<br><span class="serif azul" style="font-size:100px">dos restaurantes.</span></h1>
+    <p class="bajada" style="margin-top:22px">Misma comida, mismo precio. <b>Uno siempre está lleno.</b></p>
+    <div data-ciudad="portada" style="margin:0 auto;width:800px"></div>
+    <h2 style="font-size:64px;margin-top:-10px">No es suerte. <span class="serif subrayo" style="font-size:80px">Tiene un sistema.<svg><use href="#subrayo"/></svg></span></h2>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 2 · LO ENCUENTRAN EN GOOGLE -->
+<section class="lamina" id="l2">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:300px;left:-260px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>02</b> / 08</div></div>
+    <h2 style="margin-top:56px">Lo buscan en Google<br><span class="serif azul" style="font-size:90px">y aparece completo.</span></h2>
+    <div class="duo">
+      <div data-pantalla="google"></div>
+      <div class="notas">
+        <div class="vidrio nota"><span class="ic"><svg><use href="#pin"/></svg></span><h3>Ficha de Google al día</h3><p>Horario, fotos, dirección y el botón a su web.</p></div>
+        <div class="vidrio nota"><span class="ic"><svg><use href="#grafico"/></svg></span><h3>SEO local</h3><p>Su posición en Maps se mide, no se adivina.</p></div>
+      </div>
+    </div>
+    <div class="pie"><span class="ejemplo">Restaurante de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 3 · SU WEB CON CARTA -->
+<section class="lamina" id="l3">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:-160px;right:-200px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>03</b> / 08</div></div>
+    <h2 style="margin-top:56px">Tiene web, con<br><span class="serif azul" style="font-size:90px">carta, horario y fotos.</span></h2>
+    <div class="duo">
+      <div data-pantalla="sitio"></div>
+      <div class="notas">
+        <div class="vidrio nota"><span class="ic"><svg><use href="#web"/></svg></span><h3>La carta en línea</h3><p>Con precios y qué platos son sin gluten.</p></div>
+        <div class="vidrio nota"><span class="ic"><svg><use href="#chat"/></svg></span><h3>Un toque a WhatsApp</h3><p>Desde la web, el cliente ya está escribiendo.</p></div>
+      </div>
+    </div>
+    <div class="pie"><span class="ejemplo">Restaurante de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 4 · EL GANCHO: RESPONDE DE NOCHE Y NO INVENTA -->
+<section class="lamina" id="l4">
+  <div class="aurora" style="width:620px;height:620px;background:#1d68ff;top:500px;right:-220px;opacity:.5"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>04</b> / 08</div></div>
+    <h2 style="margin-top:56px">Le escriben a las 23:48.<br><span class="serif azul" style="font-size:90px">Responde sin inventar.</span></h2>
+    <div class="duo">
+      <div data-pantalla="chatNoche"></div>
+      <div class="notas">
+        <div class="vidrio nota"><span class="ic"><svg><use href="#web"/></svg></span><h3>Contesta con su web</h3><p>Lo que está publicado es lo que dice.</p></div>
+        <div class="vidrio nota verde"><span class="ic"><svg><use href="#persona"/></svg></span><h3>Lo que no sabe, lo deriva</h3><p>Un precio que no está publicado no lo inventa: pasa la conversación a una persona.</p></div>
+      </div>
+    </div>
+    <div class="pie"><span class="ejemplo">Conversación de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 5 · AGENDA Y COBRA EL ABONO -->
+<section class="lamina" id="l5">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:280px;left:-260px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>05</b> / 08</div></div>
+    <h2 style="margin-top:56px">Toma la reserva<br><span class="serif azul" style="font-size:90px">y cobra el abono.</span></h2>
+    <div class="duo">
+      <div data-pantalla="reserva"></div>
+      <div class="notas">
+        <div class="vidrio nota"><span class="ic"><svg><use href="#cal"/></svg></span><h3>Recepcionista con IA</h3><p>Agenda la mesa en el mismo chat de WhatsApp.</p></div>
+        <div class="vidrio nota verde"><span class="ic"><svg><use href="#check"/></svg></span><h3>Abono pagado</h3><p>La mesa queda tomada de verdad, no «de palabra».</p></div>
+      </div>
+    </div>
+    <div class="pie"><span class="ejemplo">Conversación de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 6 · RECORDATORIOS Y RESEÑA -->
+<section class="lamina" id="l6">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:-160px;right:-200px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>06</b> / 08</div></div>
+    <h2 style="margin-top:56px">Recuerda la reserva.<br><span class="serif azul" style="font-size:90px">Y después, pide la reseña.</span></h2>
+    <div class="duo">
+      <div data-pantalla="despues"></div>
+      <div class="notas">
+        <div class="vidrio nota"><span class="ic"><svg><use href="#campana"/></svg></span><h3>24 h y 2 h antes</h3><p>Menos mesas vacías por olvido.</p></div>
+        <div class="vidrio nota"><span class="ic"><svg><use href="#estrella"/></svg></span><h3>Reseña en Google</h3><p>Se la pide por WhatsApp al día siguiente.</p></div>
+        <div class="vidrio nota"><span class="ic"><svg><use href="#contactos"/></svg></span><h3>Todo en su CRM</h3><p>Cada cliente, con su historial.</p></div>
+      </div>
+    </div>
+    <div class="pie"><span class="ejemplo">Conversación de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!--
+  ═══ LÁMINA ALTERNATIVA, APAGADA: activar cuando estén en producción el programa de puntos,
+  la reserva por link sin cuenta y la lista de espera (en construcción la semana del 21-oct-2026).
+  Para activarla: quitar este comentario, numerarla 07 / 09 y renumerar las siguientes.
+
+<section class="lamina" id="l6b">
+  <div class="aurora" style="width:700px;height:700px;background:#1d68ff;top:300px;left:-260px;opacity:.45"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>07</b> / 09</div></div>
+    <h2 style="margin-top:56px">Y lo hace volver.<br><span class="serif azul" style="font-size:90px">Sin mesas vacías.</span></h2>
+    <div class="notas" style="padding-top:60px">
+      <div class="vidrio nota"><span class="ic"><svg><use href="#estrella"/></svg></span><h3>Puntos en una tarjeta digital</h3><p>El cliente suma con cada visita, sin descargar nada.</p></div>
+      <div class="vidrio nota"><span class="ic"><svg><use href="#cal"/></svg></span><h3>Reserva por link, sin cuenta</h3><p>Elige día y hora en dos toques.</p></div>
+      <div class="vidrio nota verde"><span class="ic"><svg><use href="#campana"/></svg></span><h3>Lista de espera</h3><p>Si alguien cancela, avisa al siguiente y la mesa se vuelve a llenar.</p></div>
+    </div>
+    <div class="pie"><span class="ejemplo">Restaurante de ejemplo</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+-->
+
+<!-- 7 · EL DE AL LADO -->
+<section class="lamina" id="l7">
+  <div class="aurora" style="width:560px;height:560px;background:#ff5a5a;top:640px;left:-220px;opacity:.16"></div>
+  <div class="aurora" style="width:620px;height:620px;background:#1d68ff;top:-200px;right:-220px;opacity:.32"></div>
+  <div class="reticula"></div>
+  <div class="capa">
+    <div class="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>07</b> / 08</div></div>
+    <h2 style="margin-top:56px">Mientras, el de al lado<br><span class="serif" style="font-size:90px;color:var(--rojo)">anota en un cuaderno.</span></h2>
+    <div style="position:relative;margin-top:44px;height:650px">
+      <div data-cuaderno style="position:absolute;left:-10px;top:10px;width:510px;transform:rotate(-4deg)"></div>
+      <div data-avisos style="position:absolute;right:0;top:40px;width:450px"></div>
+    </div>
+    <p class="bajada" style="margin-top:30px">Contesta WhatsApp a las once de la noche.<br>Y en Google, <b>ni aparece.</b></p>
+    <div class="pie"><span>voltiodigital.cl</span><span class="desliza">Desliza<svg><use href="#flecha"/></svg></span></div>
+  </div>
+</section>
+
+<!-- 8 · CIERRE -->
+<section class="lamina" id="l8">
+  <div class="aurora" style="width:900px;height:900px;background:#1d68ff;top:260px;left:90px;opacity:.5"></div>
+  <div class="reticula"></div>
+  <div class="capa" style="align-items:center;text-align:center">
+    <div class="cabeza" style="width:100%"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div><div class="pagina"><b>08</b> / 08</div></div>
+    <h2 style="margin-top:100px;font-size:96px">No es suerte.<br><span class="serif azul subrayo" style="font-size:124px">Es un sistema.<svg><use href="#subrayo"/></svg></span></h2>
+    <div class="vidrio" style="margin-top:80px;padding:38px 40px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;text-align:left" id="sistema"></div>
+    <div class="cta"><svg><use href="#rayo"/></svg>Comenta <b>RESERVA</b></div>
+    <p style="margin-top:26px;font-size:28px;color:rgba(255,255,255,.72)">y te mostramos el sistema armado <span class="serif" style="font-size:38px;color:#fff">con tu restaurante.</span></p>
+    <div class="pie" style="width:100%"><span>voltiodigital.cl</span><span>Demo con tu marca, antes de pagar</span></div>
+  </div>
+  <style>
+    #sistema div{display:flex;align-items:center;gap:14px;font-size:27px;font-weight:500;line-height:1.2}
+    #sistema svg{flex:none;width:34px;height:34px;padding:6px;border-radius:50%;color:#04210f;background:var(--verde);box-shadow:0 0 16px rgba(125,255,176,.5)}
+    .cta{margin-top:80px;display:inline-flex;align-items:center;gap:16px;padding:28px 54px;border-radius:999px;font-size:44px;font-weight:500;color:var(--tinta);
+      background:linear-gradient(180deg,#fff,#dfe9ff);box-shadow:0 0 0 10px rgba(29,104,255,.22),0 0 90px rgba(29,104,255,.85)}
+    .cta b{font-weight:700;color:var(--azul)}
+    .cta svg{width:42px;height:42px;color:var(--azul)}
+  </style>
+</section>
+
+<script src="cuadra.js"></script>
+<script src="cuaderno.js"></script>
+<script>
+CUADRA.sprite();
+document.querySelectorAll('[data-ciudad]').forEach((el) => { el.innerHTML = CUADRA.ciudad({ id: el.dataset.ciudad, iconos: true }); });
+document.querySelectorAll('[data-pantalla]').forEach((el) => { el.innerHTML = CUADRA[el.dataset.pantalla](); });
+document.querySelector('[data-cuaderno]').innerHTML = CUADERNO.cuaderno();
+document.querySelector('[data-avisos]').innerHTML = CUADERNO.avisos();
+document.getElementById('sistema').innerHTML = CUADERNO.SISTEMA.map((s) => `<div><svg><use href="#check"/></svg>${s}</div>`).join('');
+</script>
+</body>
+</html>

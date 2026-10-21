@@ -1,5 +1,25 @@
 [
   {
+    "id": "2026-10-misma-cuadra",
+    "titulo": "Misma cuadra",
+    "fecha": "2026-10-21",
+    "cliente": "Voltio",
+    "tipo": "Venta del sistema para restaurantes",
+    "resumen": "Toma el formato de la ciudad isométrica («dos restaurantes, uno siempre lleno») y muestra lo que Voltio instala hoy: web con carta, ficha de Google, bot que no inventa precios, reserva con abono, recordatorios y reseñas.",
+    "reel": "voltio-misma-cuadra-reel.mp4",
+    "carrusel": [
+      "voltio-cuadra-01.png",
+      "voltio-cuadra-02.png",
+      "voltio-cuadra-03.png",
+      "voltio-cuadra-04.png",
+      "voltio-cuadra-05.png",
+      "voltio-cuadra-06.png",
+      "voltio-cuadra-07.png",
+      "voltio-cuadra-08.png"
+    ],
+    "textos": "textos.md"
+  },
+  {
     "id": "2026-10-whatsapp-con-ia",
     "titulo": "WhatsApp con IA",
     "fecha": "2026-10-20",
@@ -7,7 +27,13 @@
     "tipo": "Venta del bot de WhatsApp",
     "resumen": "Aprovecha la ola de «WhatsApp agéntico»: lo que muestran como futuro, Voltio ya lo instala, y sin inventar precios.",
     "reel": "voltio-whatsapp-ia-reel.mp4",
-    "carrusel": ["voltio-ia-01.png", "voltio-ia-02.png", "voltio-ia-03.png", "voltio-ia-04.png", "voltio-ia-05.png"],
+    "carrusel": [
+      "voltio-ia-01.png",
+      "voltio-ia-02.png",
+      "voltio-ia-03.png",
+      "voltio-ia-04.png",
+      "voltio-ia-05.png"
+    ],
     "textos": "textos.md"
   }
 ]

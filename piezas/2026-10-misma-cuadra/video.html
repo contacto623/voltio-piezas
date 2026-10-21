@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Voltio · Reel «Misma cuadra» (9:16)</title>
+<link rel="stylesheet" href="cuadra.css">
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(../../marca/fuentes/Inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:500;src:url(../../marca/fuentes/Inter-500.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(../../marca/fuentes/Inter-600.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../../marca/fuentes/Inter-700.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(../../marca/fuentes/InstrumentSerif-Italic.woff2) format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--noche)}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+#lienzo{position:relative;width:1080px;height:1920px;overflow:hidden}
+#cielo{position:absolute;inset:-6%;background:url(../../marca/cielo.webp) center/cover;opacity:.3;filter:saturate(1.25);will-change:transform}
+.aurora{position:absolute;border-radius:50%;filter:blur(140px);will-change:transform}
+#reticula{position:absolute;inset:0;opacity:.2;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:80px 80px;-webkit-mask-image:radial-gradient(ellipse at 50% 42%,#000 30%,transparent 72%)}
+#grano{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#barrido{position:absolute;inset:-20% -60%;background:linear-gradient(100deg,transparent 42%,rgba(140,180,255,.14) 50%,transparent 58%);pointer-events:none}
+.escena{position:absolute;inset:0;padding:160px 84px 130px;display:flex;flex-direction:column;opacity:0;will-change:transform,opacity,filter}
+.cabeza{position:absolute;left:84px;right:84px;top:70px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.marca{display:flex;align-items:center;gap:16px;font-weight:700;font-size:30px;letter-spacing:.16em}
+.marca svg{width:52px;height:52px;filter:drop-shadow(0 0 22px rgba(29,104,255,.8))}
+#barra{position:absolute;left:84px;right:84px;bottom:70px;height:6px;border-radius:6px;background:rgba(255,255,255,.12);z-index:5;overflow:hidden}
+#barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--azul-claro),var(--verde));box-shadow:0 0 18px var(--azul)}
+#web{position:absolute;left:84px;bottom:100px;font-size:26px;color:rgba(255,255,255,.6);z-index:5;letter-spacing:.04em}
+#ejemplo{position:absolute;right:84px;bottom:100px;font-size:22px;color:rgba(255,255,255,.42);z-index:5}
+.sello{display:inline-flex;align-items:center;gap:14px;align-self:flex-start;padding:14px 26px;border-radius:999px;font-size:27px;font-weight:600;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px)}
+.sello i{width:12px;height:12px;border-radius:50%;background:var(--verde);box-shadow:0 0 18px var(--verde)}
+h1,h2{font-weight:700;letter-spacing:-.035em;line-height:1}
+h2{font-size:92px}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.azul{background:linear-gradient(100deg,#9cbfff 0%,var(--azul-claro) 40%,var(--azul) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.revela{display:inline-block;padding-right:20px}
+.palabra{display:inline-block;will-change:transform,opacity,filter}
+.bajada{font-size:40px;line-height:1.35;color:rgba(255,255,255,.76)}
+.bajada b{color:#fff;font-weight:600}
+.vidrio{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);
+  border-radius:32px;backdrop-filter:blur(18px);box-shadow:0 30px 90px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14)}
+.escenario{position:relative;margin-top:44px;flex:1}
+.celwrap{position:absolute;left:0;right:0;top:0;display:flex;justify-content:center}
+.celwrap .cel{zoom:1.28}
+.chip{position:absolute;left:0;right:0;bottom:16px;margin:0 auto;width:max-content;background:linear-gradient(160deg,rgba(40,60,110,.82),rgba(12,18,34,.88));display:flex;align-items:center;gap:20px;padding:24px 30px;font-size:31px;font-weight:600;line-height:1.2;max-width:520px;z-index:4}
+.chip .ic{flex:none;width:68px;height:68px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(140deg,var(--azul-claro),var(--azul));box-shadow:0 12px 30px rgba(29,104,255,.5)}
+.chip .ic svg{width:38px;height:38px;color:#fff}
+.chip.verde{border-color:rgba(125,255,176,.5)}
+.chip.verde .ic{background:linear-gradient(140deg,#9dffc4,#2fbf73)}
+.chip.verde .ic svg{color:#04210f}
+.chip small{display:block;font-size:24px;font-weight:400;color:rgba(255,255,255,.7);margin-top:4px}
+.sistema{display:grid;grid-template-columns:1fr 1fr;gap:22px 26px;padding:40px 40px;margin-top:70px}
+.sistema div{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:500;line-height:1.2}
+.sistema svg{flex:none;width:38px;height:38px;padding:7px;border-radius:50%;color:#04210f;background:var(--verde);box-shadow:0 0 16px rgba(125,255,176,.5)}
+.cta{display:inline-flex;align-items:center;gap:18px;padding:36px 66px;border-radius:999px;font-size:56px;font-weight:500;color:var(--tinta);background:linear-gradient(180deg,#fff,#dfe9ff)}
+.cta b{font-weight:700;color:var(--azul)}
+.cta svg{width:50px;height:50px;color:var(--azul)}
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="cielo"></div>
+  <div class="aurora" id="au1" style="width:900px;height:900px;background:#1d68ff;top:-260px;right:-320px;opacity:.5"></div>
+  <div class="aurora" id="au2" style="width:700px;height:700px;background:#3b2bff;bottom:-200px;left:-260px;opacity:.38"></div>
+  <div id="reticula"></div>
+  <div id="barrido"></div>
+  <div class="cabeza" id="cabeza"><div class="marca"><svg><use href="#logo"/></svg>VOLTIO</div></div>
+
+  <!-- 1 · LA CUADRA: dos restaurantes, uno lleno -->
+  <section class="escena" id="e1">
+    <h1 style="font-size:80px;margin-top:40px" data-palabras data-t=".3">En la misma cuadra hay</h1>
+    <h1><span class="serif azul revela" data-fx="revela" data-t="1.0" style="font-size:124px">dos restaurantes.</span></h1>
+    <p class="bajada" style="margin-top:26px" data-fx="sube" data-t="2.0">Misma comida, mismo precio.</p>
+    <p class="bajada" style="margin-top:4px" data-fx="sube" data-t="3.4"><b>Uno siempre está lleno.</b></p>
+    <div id="ciudad1" style="margin:60px -40px 0;width:992px"></div>
+    <h2 style="font-size:80px;margin-top:-30px" data-palabras data-t="5.0">No es suerte.</h2>
+    <h2><span class="serif revela" data-fx="revela" data-t="5.6" style="font-size:108px">Tiene un sistema.</span></h2>
+    <svg viewBox="0 0 400 30" preserveAspectRatio="none" style="width:620px;height:36px;margin-top:-6px" data-fx="traza" data-t="6.3"><path d="M4 20C90 6 220 4 396 14" fill="none" stroke="#7dffb0" stroke-width="7" stroke-linecap="round" pathLength="1"/></svg>
+  </section>
+
+  <!-- 2 · GOOGLE -->
+  <section class="escena" id="e2">
+    <h2 data-palabras data-t=".2">Lo buscan en Google</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:112px">y aparece completo.</span></h2>
+    <div class="escenario">
+      <div class="celwrap" data-fx="subeCel" data-t=".5" data-pantalla="google" data-tiempos='{"mapa":1.0,"ficha":1.3,"botones":1.9,"fotos":2.3,"filas":2.8}'></div>
+      <div class="vidrio chip" data-fx="flota" data-t="3.3"><span class="ic"><svg><use href="#grafico"/></svg></span><div>SEO local<small>Su lugar en Maps, medido</small></div></div>
+    </div>
+  </section>
+
+  <!-- 3 · SITIO CON CARTA -->
+  <section class="escena" id="e3">
+    <h2 data-palabras data-t=".2">Tiene web, con</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:108px">carta, horario y fotos.</span></h2>
+    <div class="escenario">
+      <div class="celwrap" data-fx="subeCel" data-t=".5" data-pantalla="sitio" data-tiempos='{"scroll":1.8,"tag":2.6,"boton":3.4}'></div>
+      <div class="vidrio chip" data-fx="flota" data-t="3.0"><span class="ic"><svg><use href="#web"/></svg></span><div>La carta en línea<small>Precios y platos sin gluten</small></div></div>
+    </div>
+  </section>
+
+  <!-- 4 · EL GANCHO: DE NOCHE, Y SIN INVENTAR -->
+  <section class="escena" id="e4">
+    <h2 style="font-size:82px" data-palabras data-t=".2">Le escriben a las 23:48.</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".8" style="font-size:112px">Responde sin inventar.</span></h2>
+    <div class="escenario">
+      <div class="celwrap" data-fx="subeCel" data-t=".5" data-pantalla="chatNoche" data-tiempos='{"m1":1.1,"e1":1.5,"m2":2.3,"m3":3.4,"e2":3.8,"m4":4.7,"aviso":5.6}'></div>
+      <div class="vidrio chip verde" data-fx="flota" data-t="6.0"><span class="ic"><svg><use href="#escudo"/></svg></span><div>No inventa precios<small>Lo deriva a una persona</small></div></div>
+    </div>
+  </section>
+
+  <!-- 5 · RESERVA CON ABONO -->
+  <section class="escena" id="e5">
+    <h2 data-palabras data-t=".2">Toma la reserva</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:112px">y cobra el abono.</span></h2>
+    <div class="escenario">
+      <div class="celwrap" data-fx="subeCel" data-t=".4" data-pantalla="reserva" data-tiempos='{"m1":0.8,"e1":1.2,"m2":2.0,"pago":2.7,"toque":3.4,"ok":3.9}'></div>
+    </div>
+  </section>
+
+  <!-- 6 · RECORDATORIOS Y RESEÑA -->
+  <section class="escena" id="e6">
+    <h2 data-palabras data-t=".2">Recuerda la reserva.</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:88px">Y después, pide la reseña.</span></h2>
+    <div class="escenario">
+      <div class="celwrap" data-fx="subeCel" data-t=".4" data-pantalla="despues" data-tiempos='{"d1":0.7,"m1":0.9,"d2":1.6,"m2":1.8,"d3":2.5,"m3":2.7,"est":3.2}'></div>
+      <div class="vidrio chip" data-fx="flota" data-t="3.9"><span class="ic"><svg><use href="#contactos"/></svg></span><div>Todo queda en su CRM</div></div>
+    </div>
+  </section>
+
+  <!--
+    ═══ ESCENA ALTERNATIVA, APAGADA: puntos con tarjeta digital, reserva por link sin cuenta y lista de espera.
+    En construcción la semana del 21-oct-2026. Para activarla: quitar este comentario, agregar
+    ['e6b', 35.2, 40.0] en ESCENAS y correr 4,8 s las escenas siguientes y DURACION.
+
+  <section class="escena" id="e6b">
+    <h2 data-palabras data-t=".2">Y lo hace volver.</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:112px">Sin mesas vacías.</span></h2>
+    <div style="margin-top:90px;display:flex;flex-direction:column;gap:30px">
+      <div class="vidrio chip" style="position:relative;max-width:none" data-fx="tarjeta" data-t="1.2"><span class="ic"><svg><use href="#estrella"/></svg></span><div>Puntos en una tarjeta digital<small>Suma con cada visita, sin descargar nada</small></div></div>
+      <div class="vidrio chip" style="position:relative;max-width:none" data-fx="tarjeta" data-t="1.8"><span class="ic"><svg><use href="#cal"/></svg></span><div>Reserva por link, sin cuenta<small>Día y hora en dos toques</small></div></div>
+      <div class="vidrio chip verde" style="position:relative;max-width:none" data-fx="tarjeta" data-t="2.4"><span class="ic"><svg><use href="#campana"/></svg></span><div>Lista de espera<small>Si alguien cancela, avisa al siguiente</small></div></div>
+    </div>
+  </section>
+  -->
+
+  <!-- 7 · EL DE AL LADO -->
+  <section class="escena" id="e7">
+    <h2 data-palabras data-t=".2">Mientras, el de al lado</h2>
+    <h2><span class="serif revela" data-fx="revela" data-t=".8" style="font-size:108px;color:var(--rojo)">anota en un cuaderno.</span></h2>
+    <div class="escenario">
+      <div id="cuaderno7" data-fx="flota" data-t=".9" style="position:absolute;left:-20px;top:20px;width:640px"></div>
+      <div id="avisos7" style="position:absolute;right:-10px;top:500px;width:540px"></div>
+    </div>
+    <p class="bajada" style="margin-bottom:60px" data-fx="sube" data-t="3.9">Contesta WhatsApp a las once de la noche.<br>Y en Google, <b>ni aparece.</b></p>
+  </section>
+
+  <!-- 8 · CIERRE -->
+  <section class="escena" id="e8" style="align-items:center;text-align:center">
+    <h2 style="margin-top:110px;font-size:110px" data-palabras data-t=".2">No es suerte.</h2>
+    <h2><span class="serif azul revela" data-fx="revela" data-t=".7" style="font-size:144px">Es un sistema.</span></h2>
+    <svg viewBox="0 0 400 30" preserveAspectRatio="none" style="width:640px;height:38px" data-fx="traza" data-t="1.2"><path d="M4 20C90 6 220 4 396 14" fill="none" stroke="#7dffb0" stroke-width="7" stroke-linecap="round" pathLength="1"/></svg>
+    <div class="vidrio sistema" id="sistema8" style="text-align:left"></div>
+    <div class="cta" style="margin-top:80px" data-fx="cta" data-t="2.9"><svg><use href="#rayo"/></svg>Comenta <b>RESERVA</b></div>
+    <p style="margin-top:36px;font-size:34px;color:rgba(255,255,255,.76)" data-fx="sube" data-t="3.3">y te mostramos el sistema armado<br><span class="serif" style="font-size:50px;color:#fff">con tu restaurante.</span></p>
+    <div class="marca" style="margin-top:auto;margin-bottom:60px;font-size:40px" data-fx="escala" data-t="3.8"><svg style="width:72px;height:72px"><use href="#logo"/></svg>VOLTIO</div>
+  </section>
+
+  <div id="web">voltiodigital.cl</div>
+  <div id="ejemplo">Restaurante y datos de ejemplo</div>
+  <div id="barra"><i></i></div>
+  <div id="grano"></div>
+</div>
+
+<script src="cuadra.js"></script>
+<script src="cuaderno.js"></script>
+<script>
+CUADRA.sprite();
+// Escudo para el chip del gancho (no está en el sprite común).
+document.querySelector('svg defs').insertAdjacentHTML('beforeend', '<symbol id="escudo" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.4 3.1 7.9 7.5 9 4.4-1.1 7.5-4.6 7.5-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.8 12.2 2.3 2.3 4.3-4.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>');
+
+// ── Armado de las escenas con las piezas compartidas ──
+document.getElementById('ciudad1').innerHTML = CUADRA.ciudad({ id: 'v1', iconos: true,
+  tiempos: { piso: .5, luz: 2.6, a: .9, b: 1.3, terraza: 2.2, fila: 2.6, iconos: 6.0 } });
+document.querySelectorAll('[data-pantalla]').forEach((el) => { el.innerHTML = CUADRA[el.dataset.pantalla](JSON.parse(el.dataset.tiempos)); });
+document.getElementById('cuaderno7').innerHTML = CUADERNO.cuaderno({ lineas: 1.2 });
+document.getElementById('avisos7').innerHTML = CUADERNO.avisos({ hora: 2.0, items: 2.3, total: 3.6 });
+document.getElementById('sistema8').innerHTML = CUADERNO.SISTEMA.map((s, i) => `<div data-fx="sube" data-t="${(1.4 + i * .12).toFixed(2)}"><svg><use href="#check"/></svg>${s}</div>`).join('');
+
+// ── Motor de tiempo: `pintar(t)` deja el cuadro exacto del segundo t (mismo motor que «WhatsApp con IA»). ──
+const ESCENAS = [['e1', 0, 7.8], ['e2', 7.8, 13.0], ['e3', 13.0, 18.0], ['e4', 18.0, 25.4], ['e5', 25.4, 30.4],
+  ['e6', 30.4, 35.2], ['e7', 35.2, 40.2], ['e8', 40.2, 45.0]];
+const DURACION = 45.0;
+const TRANSICION = .55;
+
+const lim = (x) => Math.max(0, Math.min(1, x));
+const salida = (p) => (p >= 1 ? 1 : 1 - Math.pow(2, -10 * p));
+const rebote = (p) => { const c = 1.6; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+const entre = (a, b, p) => a + (b - a) * p;
+
+document.querySelectorAll('[data-palabras]').forEach((h) => {
+  const t0 = +h.dataset.t; let i = 0;
+  h.innerHTML = h.innerHTML.split(/<br\s*\/?>/).map((linea) => linea.trim().split(/\s+/)
+    .map((w) => `<span class="palabra" data-fx="palabra" data-t="${(t0 + i++ * .09).toFixed(2)}">${w}</span>`).join(' ')).join('<br>');
+});
+
+const EFECTOS = {
+  sube: (el, p) => { const e = salida(p); el.style.opacity = e; el.style.transform = `translateY(${entre(40, 0, e)}px)`; el.style.filter = `blur(${entre(10, 0, e)}px)`; },
+  aparece: (el, p) => { el.style.opacity = salida(p); },
+  palabra: (el, p) => { const e = salida(p); el.style.opacity = e; el.style.transform = `translateY(${entre(70, 0, e)}px) rotate(${entre(4, 0, e)}deg)`; el.style.filter = `blur(${entre(14, 0, e)}px)`; },
+  revela: (el, p) => { const e = salida(p); el.style.clipPath = `inset(-20% ${entre(100, 0, e)}% -20% 0)`; el.style.filter = `drop-shadow(0 0 ${entre(80, 40, e)}px rgba(29,104,255,.55))`; },
+  traza: (el, p) => { const path = el.querySelector('path'); path.style.strokeDasharray = 1; path.style.strokeDashoffset = 1 - salida(p); },
+  // El edificio «se levanta» desde el suelo: explica que el sistema se construye.
+  crece: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.transformBox = 'fill-box'; el.style.transformOrigin = '50% 100%'; el.style.transform = `scaleY(${Math.max(0, e)})`; el.style.opacity = lim(p * 4); },
+  pop: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 3); el.style.transform = `scale(${entre(.6, 1, e)})`;
+    if (!el.closest('svg')) el.style.transformOrigin = el.classList.contains('b-out') ? 'right bottom' : el.classList.contains('b-in') ? 'left bottom' : 'center'; },
+  subeCel: (el, p) => { const e = salida(p); el.style.opacity = lim(p * 2.5); el.style.transform = `translateY(${entre(260, 0, e)}px)`; },
+  flota: (el, p, t) => { const e = salida(p); el.style.opacity = e; el.style.transform = `translateY(${entre(120, 0, e) + Math.sin(t * 1.6) * 7}px) rotate(${entre(-6, -1.5, e)}deg)`; },
+  tarjeta: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 2.5); el.style.transform = `translateY(${entre(120, 0, e)}px) scale(${entre(.92, 1, e)})`; },
+  // La carta sube sola: «está toda en línea».
+  scroll: (el, p) => { el.style.transform = `translateY(${(+el.dataset.hasta * (p <= 0 ? 0 : .5 - .5 * Math.cos(Math.PI * p))).toFixed(1)}px)`; },
+  // El dedo aprieta «Pagar abono»: hunde y destella.
+  presiona: (el, p) => { const h = p > 0 && p < 1 ? Math.sin(p * Math.PI) : 0; el.style.transform = `scale(${1 - h * .08})`; el.style.background = h > 0 ? `rgba(125,255,176,${.5 + h * .5})` : ''; },
+  estrella: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.transform = `scale(${entre(.2, 1, e)}) rotate(${entre(-60, 0, salida(p))}deg)`; el.style.opacity = lim(p * 3); },
+  escribeMano: (el, p) => { const e = lim(p); el.style.clipPath = `inset(-30% ${((1 - e) * 100).toFixed(1)}% -30% 0)`; },
+  caeAviso: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 3); el.style.transform = `translateY(${entre(-90, 0, e)}px) scale(${entre(.94, 1, e)})`; },
+  escala: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 2); el.style.transform = `scale(${entre(.7, 1, e)})`; },
+  cta: (el, p, t) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 2); const pulso = p >= 1 ? (Math.sin(t * 4) + 1) / 2 : 0;
+    el.style.transform = `scale(${entre(.5, 1, e) + pulso * .03})`; el.style.boxShadow = `0 0 0 ${10 + pulso * 16}px rgba(29,104,255,${.25 - pulso * .12}), 0 0 ${90 + pulso * 40}px rgba(29,104,255,.85)`; },
+};
+const DURACIONES = { palabra: .8, presiona: .35, escribeMano: .7, crece: 1.1 };
+
+function pintarElemento(el, tl, t) {
+  const fx = el.dataset.fx;
+  if (!fx) return;
+  if (fx === 'escribe') {
+    const d = +el.dataset.d; const v = tl >= +el.dataset.t && tl < +el.dataset.t + d;
+    el.style.display = v ? 'flex' : 'none';
+    el.querySelectorAll('span').forEach((s, i) => { s.style.transform = `translateY(${Math.min(0, Math.sin((tl * 9) - i * .9)) * 8}px)`; s.style.opacity = .55 + .45 * Math.max(0, Math.sin(tl * 9 - i * .9)); });
+    return;
+  }
+  if (fx === 'cuenta') { const p = salida(lim((tl - +el.dataset.t) / +el.dataset.d)); el.textContent = Math.round(+el.dataset.hasta * p); return; }
+  if (fx === 'scroll') { EFECTOS.scroll(el, lim((tl - +el.dataset.t) / +el.dataset.d), t); return; }
+  EFECTOS[fx]?.(el, lim((tl - +el.dataset.t) / (DURACIONES[fx] || 1)), t);
+}
+
+function pintar(t) {
+  document.getElementById('cielo').style.transform = `scale(${1.14 - .1 * (t / DURACION)}) translateY(${-t * 2}px)`;
+  document.getElementById('au1').style.transform = `translate(${Math.sin(t * .35) * 120}px, ${Math.cos(t * .3) * 90}px)`;
+  document.getElementById('au2').style.transform = `translate(${Math.cos(t * .28) * 140}px, ${Math.sin(t * .33) * 100}px)`;
+  document.getElementById('barrido').style.transform = `translateX(${((t % 5.2) / 5.2) * 140 - 70}%)`;
+  document.querySelector('#barra i').style.width = `${(t / DURACION) * 100}%`;
+  const cab = salida(lim(t / .8)); document.getElementById('cabeza').style.opacity = cab;
+  document.getElementById('cabeza').style.transform = `translateY(${entre(-30, 0, cab)}px)`;
+  // «Restaurante de ejemplo» solo mientras se ven las pantallas.
+  document.getElementById('ejemplo').style.opacity = t > 8.2 && t < 40 ? 1 : 0;
+
+  for (const [id, a, b] of ESCENAS) {
+    const esc = document.getElementById(id);
+    const tl = t - a;
+    if (t < a - .01 || t > b + TRANSICION) { esc.style.opacity = 0; continue; }
+    const pin = salida(lim(tl / TRANSICION));
+    const pout = lim((t - b) / TRANSICION);
+    const ultima = id === 'e8';
+    esc.style.opacity = ultima ? pin : pin * (1 - pout);
+    esc.style.transform = `scale(${entre(.94, 1, pin) + (ultima ? 0 : pout * .12)})`;
+    esc.style.filter = `blur(${entre(16, 0, pin) + (ultima ? 0 : pout * 24)}px)`;
+    esc.querySelectorAll('[data-fx]').forEach((el) => pintarElemento(el, tl, t));
+    esc.querySelectorAll('svg.ciudad').forEach((svg) => CUADRA.animarCiudad(svg, tl, t));
+  }
+}
+window.pintar = pintar;
+window.DURACION = DURACION;
+// Para mirarlo en el navegador: abre video.html#vivo
+if (location.hash === '#vivo') { const t0 = performance.now(); (function ciclo() { pintar(((performance.now() - t0) / 1000) % DURACION); requestAnimationFrame(ciclo); })(); }
+else if (location.hash.startsWith('#t=')) pintar(parseFloat(location.hash.slice(3)));
+else pintar(0);
+</script>
+</body>
+</html>
