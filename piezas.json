@@ -1,5 +1,27 @@
 [
   {
+    "id": "2026-10-fermat-homero",
+    "titulo": "¿Homero le ganó a Fermat?",
+    "fecha": "2026-10-23",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz",
+    "resumen": "La ecuación de Los Simpson que la calculadora da por cierta, la historia del Último Teorema de Fermat (1637 a 1995, 358 años) y cómo la paridad la desarma sin calculadora; cierra con un desafío estilo PAES de tríos pitagóricos.",
+    "reel": "preu-fermat-reel.mp4",
+    "carrusel": [
+      "preu-fermat-01.png",
+      "preu-fermat-02.png",
+      "preu-fermat-03.png",
+      "preu-fermat-04.png",
+      "preu-fermat-05.png",
+      "preu-fermat-06.png",
+      "preu-fermat-07.png",
+      "preu-fermat-08.png",
+      "preu-fermat-09.png",
+      "preu-fermat-10.png"
+    ],
+    "textos": "textos.md"
+  },
+  {
     "id": "2026-10-misma-cuadra",
     "titulo": "Misma cuadra",
     "fecha": "2026-10-21",

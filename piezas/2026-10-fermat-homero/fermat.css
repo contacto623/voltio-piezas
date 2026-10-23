@@ -1,0 +1,121 @@
+/* «El margen de Fermat»: estilos compartidos por carrusel.html y video.html.
+   Marca Preuniversitario Tesla: títulos en Pirulen, texto en Inter, paleta de src/marca/paleta.js. */
+@font-face{font-family:Pirulen;src:url(pirulen.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:400;src:url(Inter-400.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:500;src:url(Inter-500.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(Inter-600.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(Inter-700.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(InstrumentSerif-Italic.woff2) format('woff2')}
+@font-face{font-family:Mano;src:local('Segoe Print'),local('SegoePrint')}
+
+:root{
+  /* Institucionales (paleta.js) */
+  --magenta:#9d0067;--morado:#5712ac;--azul:#007fd7;--navy:#0b2578;--verde:#67ab00;--rojo:#e0330a;--oro:#f4b300;--violeta:#7c4aa8;
+  /* Tintes claros de los mismos tonos, para leer sobre fondo oscuro */
+  --magenta-c:#ff5fb8;--morado-c:#a77bff;--azul-c:#4cb6ff;--verde-c:#a8e05a;--rojo-c:#ff7a55;--oro-c:#ffd34d;
+  --fondo:#050817;--tinta:#0d1230;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased;background:var(--fondo)}
+
+/* Fondo Scrolltide: auroras, retícula y grano */
+.aurora{position:absolute;border-radius:50%;filter:blur(130px);z-index:0;will-change:transform}
+.reticula{position:absolute;inset:0;z-index:0;opacity:.24;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:72px 72px;-webkit-mask-image:radial-gradient(ellipse at 50% 42%,#000 30%,transparent 76%)}
+.grano{position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;z-index:20;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* Marca */
+.marca{display:flex;align-items:center;gap:14px;color:#fff;line-height:1}
+.marca img{height:58px;width:auto;filter:drop-shadow(0 0 16px rgba(167,123,255,.55))}
+.marca .txt{display:grid;font-family:Pirulen,sans-serif}
+.marca .a{font-size:11.5px;letter-spacing:.05em;opacity:.9}
+.marca .b{font-size:30px;letter-spacing:.02em;margin-top:3px}
+
+/* Tipografía */
+.pir{font-family:Pirulen,sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.08;text-transform:none}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400}
+.grad{background:linear-gradient(100deg,var(--magenta-c) 0%,var(--morado-c) 48%,var(--azul-c) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 30px rgba(167,123,255,.35))}
+.oro{color:var(--oro-c)}.verde{color:var(--verde-c)}.rojo{color:var(--rojo-c)}.azul{color:var(--azul-c)}.mag{color:var(--magenta-c)}
+.bajada{color:rgba(255,255,255,.76);line-height:1.38}
+.bajada b{color:#fff;font-weight:600}
+.subrayo{position:relative;display:inline-block}
+.subrayo > svg{position:absolute;left:-3%;bottom:-.32em;width:106%;height:.42em;overflow:visible}
+
+/* Matemática: exponentes con <sup> reales, nunca «^» */
+.mat{font-family:Inter,sans-serif;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em;white-space:nowrap}
+.mat sup{font-size:.56em;vertical-align:0;position:relative;top:-.78em;margin-left:.04em;font-weight:700}
+.mat i{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.18em}
+.mat .op{font-weight:500;opacity:.85;margin:0 .18em}
+
+/* Vidrio */
+.vidrio{background:linear-gradient(160deg,rgba(255,255,255,.11),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.15);
+  border-radius:30px;backdrop-filter:blur(18px);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12)}
+.sello{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:11px 22px;border-radius:999px;font-size:22px;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);letter-spacing:.02em}
+.sello i{width:10px;height:10px;border-radius:50%;background:var(--oro);box-shadow:0 0 14px var(--oro)}
+.ico{width:1em;height:1em;display:inline-block;vertical-align:-.14em}
+
+/* Calculadora */
+.calc{width:430px;padding:26px 24px 24px;border-radius:40px;background:linear-gradient(165deg,#2a2f4a,#11142a 60%,#1a1f3a);
+  border:1px solid rgba(255,255,255,.2);box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.25),0 0 70px rgba(76,182,255,.18)}
+.calc-pantalla{border-radius:18px;padding:16px 20px;background:linear-gradient(180deg,#b9d6a4,#9fc28a);color:#14200e;box-shadow:inset 0 4px 12px rgba(0,0,0,.35)}
+.calc-linea{display:flex;flex-direction:column;align-items:stretch;font-family:Inter;font-weight:600;font-variant-numeric:tabular-nums}
+.calc-linea small{font-size:19px;opacity:.7;text-align:left}
+.calc-linea small sup{font-size:.62em;position:relative;top:-.55em;vertical-align:0}
+.calc-linea b{font-size:38px;letter-spacing:.02em;text-align:right;line-height:1.1}
+.calc-linea b sup{font-size:.55em;position:relative;top:-.7em;vertical-align:0}
+.calc-linea + .calc-linea{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(20,32,14,.35)}
+.calc-teclas{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.calc-teclas span{height:52px;border-radius:14px;background:linear-gradient(180deg,#3a4064,#262b48);display:grid;place-items:center;font-size:22px;font-weight:600;color:rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 4px 0 rgba(0,0,0,.35)}
+.calc-teclas span.igual{background:linear-gradient(180deg,var(--oro-c),#d49a00);color:#2a1d00}
+.calc-veredicto{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;border-radius:16px;
+  background:rgba(168,224,90,.16);border:1px solid rgba(168,224,90,.6);color:var(--verde-c);font-weight:700;font-size:24px;letter-spacing:.06em}
+.calc-veredicto svg{width:28px;height:28px}
+
+/* Dígitos completos */
+.digitos{font-family:Inter;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.01em;line-height:1.1}
+.digitos .fila{display:flex;align-items:baseline;gap:18px;white-space:nowrap}
+.digitos .fila .lbl{flex:none;width:200px;font-weight:700;color:rgba(255,255,255,.7)}
+.digitos .fila .lbl sup{font-size:.6em;position:relative;top:-.7em;vertical-align:0}
+.digitos .igual{color:var(--verde-c)}
+.digitos .distinto{color:var(--rojo-c)}
+.digitos .fin{border-radius:8px;padding:0 4px;margin:0 -4px;background:rgba(255,122,85,.16);box-shadow:0 0 0 2px rgba(255,122,85,.55)}
+
+/* Paridad */
+.par-paso{display:flex;align-items:center;gap:18px;padding:18px 24px}
+.par-paso .mat{font-size:44px}
+.par-paso .flecha{width:34px;height:34px;flex:none;color:rgba(255,255,255,.5)}
+.etq{display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;font-weight:700;font-size:24px;letter-spacing:.04em;text-transform:uppercase}
+.etq.par{background:rgba(76,182,255,.16);border:1.5px solid rgba(76,182,255,.7);color:var(--azul-c)}
+.etq.impar{background:rgba(255,95,184,.14);border:1.5px solid rgba(255,95,184,.7);color:var(--magenta-c)}
+.etq.mal{background:rgba(255,122,85,.16);border:1.5px solid rgba(255,122,85,.8);color:var(--rojo-c)}
+.etq.ok{background:rgba(168,224,90,.16);border:1.5px solid rgba(168,224,90,.75);color:var(--verde-c)}
+
+/* Línea de tiempo */
+.hito{position:relative;display:flex;gap:26px;align-items:flex-start}
+.hito .anio{flex:none;width:190px;text-align:right;font-family:Pirulen,sans-serif;font-size:30px;line-height:1.15;color:var(--oro-c)}
+.hito .anio small{display:block;font-family:Inter;font-size:17px;letter-spacing:.06em;color:rgba(255,255,255,.55);margin-top:4px;text-transform:uppercase}
+.hito .punto{flex:none;width:26px;height:26px;margin-top:4px;border-radius:50%;background:var(--fondo);border:4px solid var(--morado-c);box-shadow:0 0 18px rgba(167,123,255,.7);position:relative;z-index:2}
+.hito .txt{flex:1;font-size:27px;line-height:1.3;color:rgba(255,255,255,.8)}
+.hito .txt b{color:#fff;font-weight:700}
+.hito.clave .punto{border-color:var(--oro-c);box-shadow:0 0 22px rgba(255,211,77,.8);background:var(--oro-c)}
+
+/* Problema estilo PAES */
+.paes{padding:34px 36px}
+.paes-tag{display:inline-flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--oro-c)}
+.paes-enun{font-size:31px;line-height:1.36;margin-top:14px;font-weight:500}
+.alts{display:grid;gap:14px;margin-top:24px}
+.alt{display:flex;align-items:center;gap:20px;padding:16px 20px;border-radius:20px;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.14);font-size:32px;font-weight:600;font-variant-numeric:tabular-nums;position:relative}
+.alt .l{flex:none;width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-family:Pirulen,sans-serif;font-size:22px;background:rgba(255,255,255,.1)}
+.alt .porque{margin-left:auto;font-size:23px;font-weight:600;font-variant-numeric:tabular-nums}
+.alt .porque sup{font-size:.6em;position:relative;top:-.7em;vertical-align:0}
+.alt.correcta{border-color:rgba(168,224,90,.85);background:rgba(168,224,90,.12);box-shadow:0 0 40px rgba(168,224,90,.25)}
+.alt.correcta .l{background:var(--verde-c);color:#16210a}
+.alt.descartada{opacity:.5}
+
+.etq sup{font-size:.62em;position:relative;top:-.55em;vertical-align:0;margin-left:.04em}
+.alt .l{font-family:Inter,sans-serif;font-weight:700;font-size:26px}
+.pir i{font-family:'Instrument Serif',Georgia,serif;font-style:italic;text-transform:none;font-size:1.15em;letter-spacing:0}

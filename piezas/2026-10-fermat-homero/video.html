@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Preuniversitario Tesla · Reel «El margen de Fermat» (9:16)</title>
+<link rel="stylesheet" href="fermat.css">
+<style>
+html,body{width:1080px;height:1920px;overflow:hidden}
+#lienzo{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--fondo)}
+#barrido{position:absolute;inset:-20% -60%;background:linear-gradient(100deg,transparent 42%,rgba(167,123,255,.12) 50%,transparent 58%);pointer-events:none;z-index:1}
+#mundo{position:absolute;left:-80px;right:-80px;top:360px;z-index:1;will-change:opacity,transform}
+/* Escena: zona útil de 200 a 1620 px; abajo quedan 300 px libres para subtítulos. */
+.escena{position:absolute;inset:0;padding:200px 84px 300px;display:flex;flex-direction:column;opacity:0;z-index:3;will-change:transform,opacity,filter}
+.cabeza{position:absolute;left:84px;right:84px;top:64px;display:flex;justify-content:space-between;align-items:center;z-index:6}
+.cabeza .web{font-size:24px;color:rgba(255,255,255,.62);letter-spacing:.03em}
+.marca img{height:68px}.marca .a{font-size:13.5px}.marca .b{font-size:35px}
+#barra{position:absolute;left:84px;right:84px;top:168px;height:6px;border-radius:6px;background:rgba(255,255,255,.12);z-index:6;overflow:hidden}
+#barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--magenta-c),var(--morado-c),var(--azul-c));box-shadow:0 0 18px var(--morado-c)}
+.pir{font-size:60px}
+h2.pir{line-height:1.12}
+.palabra{display:inline-block;will-change:transform,opacity,filter}
+.bajada{font-size:38px}
+.centro{align-items:center;text-align:center}
+#cuenta{width:230px;height:230px;position:relative}
+#cuenta svg{width:100%;height:100%;transform:rotate(-90deg)}
+#cuenta b{position:absolute;inset:0;display:grid;place-items:center;font-family:Pirulen,sans-serif;font-size:96px}
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div class="aurora" id="au1" style="width:900px;height:900px;background:var(--morado);top:-280px;right:-320px;opacity:.55"></div>
+  <div class="aurora" id="au2" style="width:760px;height:760px;background:var(--magenta);bottom:120px;left:-300px;opacity:.38"></div>
+  <div class="aurora" id="au3" style="width:600px;height:600px;background:var(--azul);top:820px;right:-260px;opacity:.3"></div>
+  <div class="reticula" style="background-size:80px 80px"></div>
+  <div id="barrido"></div>
+  <div id="mundo"></div>
+  <div class="cabeza" id="cabeza"><div id="marcaCab"></div><span class="web">preuniversitariotesla.cl</span></div>
+  <div id="barra"><i></i></div>
+
+  <!-- 1 · GANCHO: la ecuación de Los Simpson y la calculadora -->
+  <section class="escena centro" id="e1">
+    <span class="sello" style="align-self:center;font-size:26px" data-fx="sube" data-t=".1"><i></i>Los Simpson · especial de Halloween, 1995</span>
+    <h2 class="pir" style="margin-top:40px;font-size:68px" data-palabras data-t=".3">¿Esta ecuación<br>es cierta?</h2>
+    <div style="margin-top:70px;font-size:72px;filter:drop-shadow(0 0 30px rgba(76,182,255,.7))" data-fx="pop" data-t=".5" id="ecu1"></div>
+    <div style="margin-top:70px;display:flex;justify-content:center;zoom:1.3" data-fx="subeCel" data-t=".9" id="calc1"></div>
+  </section>
+
+  <!-- 2 · ¿LE GANÓ A FERMAT? -->
+  <section class="escena centro" id="e2">
+    <h2 class="pir" style="font-size:80px;margin-top:130px" data-palabras data-t=".1">¿Homero<br>le ganó</h2>
+    <h2 class="pir" style="font-size:96px;margin-top:10px"><span class="grad" data-fx="revela" data-t=".7" style="display:inline-block;padding-right:16px">a Fermat?</span></h2>
+    <p class="bajada" style="margin-top:46px" data-fx="sube" data-t="1.1">Si fuera cierta, habría derrotado<br>un problema de <b class="oro">358 años.</b></p>
+  </section>
+
+  <!-- 3 · n = 2: PITÁGORAS -->
+  <section class="escena" id="e3">
+    <h2 class="pir" data-palabras data-t=".1">Con <i>n</i> = 2,</h2>
+    <h2 class="pir"><span class="grad" data-fx="revela" data-t=".5" style="display:inline-block;padding-right:16px">sí funciona.</span></h2>
+    <div class="mat" style="font-size:52px;margin-top:22px" data-fx="sube" data-t=".8"><i>a</i><sup>2</sup><span class="op">+</span><i>b</i><sup>2</sup><span class="op">=</span><i>c</i><sup>2</sup></div>
+    <div style="width:860px;align-self:center;margin-top:0" id="pita3"></div>
+    <div style="display:flex;justify-content:center;gap:16px;margin-top:6px" data-fx="sube" data-t="3.9">
+      <span class="vidrio" style="padding:14px 22px;border-radius:20px;font-size:30px;font-weight:600"><span class="mag">9</span> + <span class="azul">16</span> = <span class="oro">25</span></span>
+      <span class="vidrio" style="padding:14px 22px;border-radius:20px;font-size:30px;font-weight:600">5, 12, 13</span>
+      <span class="vidrio" style="padding:14px 22px;border-radius:20px;font-size:30px;font-weight:600">8, 15, 17</span>
+      <span class="vidrio" style="padding:14px 22px;border-radius:20px;font-size:30px;font-weight:700;color:var(--oro-c)">infinitos</span>
+    </div>
+  </section>
+
+  <!-- 4 · n = 3: CUBOS -->
+  <section class="escena" id="e4">
+    <h2 class="pir" data-palabras data-t=".1">Con <i>n</i> = 3,</h2>
+    <h2 class="pir"><span class="grad" data-fx="revela" data-t=".5" style="display:inline-block;padding-right:16px">nunca calza.</span></h2>
+    <div style="margin-top:90px" id="cubos4a"></div>
+    <div style="margin-top:90px" id="cubos4b"></div>
+  </section>
+
+  <!-- 5 · LA NOTA DEL MARGEN -->
+  <section class="escena" id="e5">
+    <h2 class="pir" data-palabras data-t=".1">Hacia 1637,</h2>
+    <h2 class="pir"><span class="grad" data-fx="revela" data-t=".5" style="display:inline-block;padding-right:16px">en un margen.</span></h2>
+    <div style="margin-top:40px" data-fx="subeCel" data-t=".6" id="manu5"></div>
+    <div class="vidrio" style="margin-top:34px;padding:26px 32px;border-color:rgba(255,211,77,.45)" data-fx="sube" data-t="6.4">
+      <p class="serif" style="font-size:44px;line-height:1.2">«He descubierto una demostración verdaderamente maravillosa, pero este margen es demasiado estrecho para contenerla.»</p>
+      <p style="font-size:24px;color:rgba(255,255,255,.62);margin-top:12px">Pierre de Fermat, en su ejemplar de la <i>Aritmética</i> de Diofanto</p>
+    </div>
+    <div style="margin-top:30px;display:flex;align-items:center;justify-content:center;gap:22px" data-fx="sube" data-t="7.6">
+      <span style="font-size:26px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)">Hoy se escribe</span>
+      <span class="mat" style="font-size:52px"><i>a</i><sup><i>n</i></sup><span class="op">+</span><i>b</i><sup><i>n</i></sup><span class="op">≠</span><i>c</i><sup><i>n</i></sup></span>
+      <span style="font-size:26px;color:rgba(255,255,255,.75)">si <span class="mat"><i>n</i> ≥ 3</span></span>
+    </div>
+  </section>
+
+  <!-- 6 · SIGLOS DE INTENTOS -->
+  <section class="escena" id="e6">
+    <h2 class="pir" data-palabras data-t=".1">Siglos de</h2>
+    <h2 class="pir"><span class="grad" data-fx="revela" data-t=".4" style="display:inline-block;padding-right:16px">intentos.</span></h2>
+    <div style="margin-top:80px" id="linea6"></div>
+    <p class="bajada" style="margin-top:60px" data-fx="sube" data-t="3.1">Cada uno sumaba casos.<br><b>Nadie podía con todos.</b></p>
+  </section>
+
+  <!-- 7 · WILES -->
+  <section class="escena" id="e7">
+    <h2 class="pir" data-palabras data-t=".1">El niño de</h2>
+    <h2 class="pir"><span class="grad" data-fx="revela" data-t=".5" style="display:inline-block;padding-right:16px">la biblioteca.</span></h2>
+    <div style="margin-top:60px;zoom:1.12" id="wiles7"></div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:28px;margin-top:60px" data-fx="escala" data-t="10.6">
+      <span class="pir grad" style="font-size:180px;line-height:1" data-fx="cuenta" data-t="10.6" data-d="1.0" data-hasta="358">358</span>
+      <span style="font-size:34px;line-height:1.25;color:rgba(255,255,255,.82)"><b style="color:#fff">años</b> entre la nota<br>y la prueba publicada<br><span style="color:rgba(255,255,255,.55);font-size:28px">1637 a 1995</span></span>
+    </div>
+  </section>
+
+  <!-- 8 · DE VUELTA AL 3D: LA PARIDAD DESARMA LA TRAMPA -->
+  <section class="escena" id="e8">
+    <h2 class="pir" style="font-size:54px" data-palabras data-t=".1">¿Y Homero?</h2>
+    <div style="margin-top:26px;text-align:center;font-size:62px" data-fx="sube" data-t=".4" id="ecu8"></div>
+    <div style="margin-top:26px" id="par8"></div>
+    <div style="margin-top:50px" id="dig8"></div>
+    <div style="margin-top:40px" id="fin8"></div>
+  </section>
+
+  <!-- 9 · DESAFÍO ESTILO PAES, CON CUENTA REGRESIVA -->
+  <section class="escena" id="e9">
+    <h2 class="pir" data-palabras data-t=".1">Ahora tú.</h2>
+    <div style="margin-top:50px;zoom:1.12" id="paes9"></div>
+    <div style="display:flex;justify-content:center;margin-top:50px" data-fx="pop" data-t="4.2"><div id="cuenta" data-fx="cuenta3" data-t="4.9"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="7"/><circle cx="50" cy="50" r="44" fill="none" stroke="url(#gCuenta)" stroke-width="7" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/><defs><linearGradient id="gCuenta"><stop offset="0" stop-color="#ff5fb8"/><stop offset="1" stop-color="#4cb6ff"/></linearGradient></defs></svg><b>3</b></div></div>
+  </section>
+
+  <!-- 10 · RESPUESTA -->
+  <section class="escena" id="e10">
+    <h2 class="pir" data-palabras data-t=".1">Respuesta: C.</h2>
+    <div style="margin-top:50px;zoom:1.12" id="paes10"></div>
+    <div class="vidrio" style="margin-top:34px;padding:24px 30px;display:flex;align-items:center;justify-content:center;gap:16px" data-fx="sube" data-t="2.0">
+      <span class="mat" style="font-size:46px">64<span class="op">+</span>225<span class="op">=</span>289<span class="op">=</span>${sup(17, 2)}</span>
+    </div>
+  </section>
+
+  <!-- 11 · CIERRE -->
+  <section class="escena centro" id="e11" style="justify-content:center">
+    <div style="display:flex;gap:30px;justify-content:center;margin-top:-60px;zoom:1.3" data-fx="pop" data-t=".2">
+      <span style="width:120px;height:120px;border-radius:34px;display:grid;place-items:center;background:rgba(255,211,77,.14);border:2px solid var(--oro-c)"><svg style="width:64px;height:64px;color:var(--oro-c)"><use href="#guardar"/></svg></span>
+      <span style="width:120px;height:120px;border-radius:34px;display:grid;place-items:center;background:rgba(76,182,255,.14);border:2px solid var(--azul-c)"><svg style="width:64px;height:64px;color:var(--azul-c)"><use href="#compartir"/></svg></span>
+    </div>
+    <h2 class="pir" style="margin-top:60px;font-size:74px" data-palabras data-t=".4">Guárdalo y<br>compártelo</h2>
+    <p class="bajada" style="margin-top:28px;font-size:50px" data-fx="sube" data-t="1.8">con quien da la <b>PAES.</b></p>
+    <div style="margin-top:110px;transform-origin:center" data-fx="escala" data-t="2.4" id="marcaFin"></div>
+    <p style="margin-top:26px;font-size:32px;font-weight:600" data-fx="sube" data-t="2.7">preuniversitariotesla.cl</p>
+  </section>
+
+  <div class="grano"></div>
+</div>
+
+<script src="fermat.js"></script>
+<script>
+const F = FERMAT;
+const sup = F.sup;
+F.sprite();
+
+// ═══ DURACIÓN DE CADA ESCENA (segundos). Al regrabar con la voz real, cambia solo estos números. ═══
+// Duraciones calzadas con voz/narracion-a.mp3 más 3,0 s de silencio en 58,3 s (cuenta regresiva). Total 70,25 s.
+// Los data-t internos siguen las palabras de voz/palabras.json.
+const ESCENAS = [
+  { id: 'e1', dur: 3.8 },   // gancho: la ecuación de Los Simpson y la calculadora
+  { id: 'e2', dur: 2.0 },   // ¿Homero le ganó a Fermat?
+  { id: 'e3', dur: 5.5 },   // n = 2: Pitágoras
+  { id: 'e4', dur: 3.9 },   // n = 3: cubos
+  { id: 'e5', dur: 9.0 },  // la nota del margen
+  { id: 'e6', dur: 4.25 },   // siglos de intentos
+  { id: 'e7', dur: 12.85 },  // Wiles
+  { id: 'e8', dur: 12.1 },  // de vuelta al 3D: paridad
+  { id: 'e9', dur: 7.9 },   // desafío PAES + cuenta regresiva
+  { id: 'e10', dur: 4.75 },  // respuesta
+  { id: 'e11', dur: 4.2 },  // cierre
+];
+// Escenas donde se ve el mundo 3D, con su opacidad.
+const MUNDO_EN = { e1: 1, e2: .9, e8: .12 };
+let acum = 0;
+ESCENAS.forEach((e) => { e.a = acum; acum += e.dur; e.b = acum; });
+const DURACION = acum;
+const TRANSICION = .5;
+
+// ── Armado ──
+document.getElementById('marcaCab').innerHTML = F.marca();
+document.getElementById('marcaFin').innerHTML = F.marca().replace('class="marca"', 'class="marca" style="justify-content:center;transform:scale(1.5)"');
+document.querySelectorAll('.escena').forEach((s) => { s.innerHTML = s.innerHTML.replace(/\$\{([^}]+)\}/g, (_, e) => eval(e)); });
+document.getElementById('mundo').innerHTML = F.mundo({ piso: .0, polis: .6, n: 12 }, [
+  { x: .9, y: 8.6, z: 1.8, r: 1.15 }, { x: 8.4, y: 1.1, z: 1.8, r: .85 }, { x: 12.4, y: 5.1, z: 1.4, r: 1.1 }, { x: 4.6, y: 11.8, z: 1.4, r: .9 }]);
+document.getElementById('ecu1').innerHTML = F.ECUACION;
+document.getElementById('calc1').innerHTML = F.calculadora({ l1: 1.3, l2: 1.7, igual: 2.3, veredicto: 2.7 });
+document.getElementById('pita3').innerHTML = F.pitagoras({ vuela: 1.2, total: 3.2 });
+document.getElementById('cubos4a').innerHTML = F.cubos({ t: .4, k: .85 }, 14, 'sobra');
+document.getElementById('cubos4b').innerHTML = F.cubos({ t: .9, k: .85 }, 14, 'falta');
+document.getElementById('manu5').innerHTML = F.manuscrito({ escribe: 1.2, ritmo: .5 });
+document.getElementById('linea6').innerHTML = F.linea({ linea: .3, h: .4, paso: .3 }, 34);
+document.getElementById('wiles7').innerHTML = F.wiles({ ts: [.5, 3.0, 5.0, 6.2, 7.9] }, 30);
+document.getElementById('ecu8').innerHTML = F.ECUACION;
+document.getElementById('dig8').innerHTML = F.digitos({ f1: 9.9, f2: 10.1, nota: 10.4 }, 28);
+document.getElementById('fin8').innerHTML = F.finales({ a: 10.5, b: 10.8 });
+document.getElementById('par8').innerHTML = F.paridad({ ts: [1.8, 3.5, 5.5, 7.3, 9.6] }, 38);
+document.getElementById('paes9').innerHTML = F.paes({ tag: .3, enun: .5, alts: 1.4 });
+document.getElementById('paes10').innerHTML = F.paes({ resp: .1 }, true);
+
+// ── Motor de tiempo: `pintar(t)` deja el cuadro exacto del segundo t ──
+const lim = (x) => Math.max(0, Math.min(1, x));
+const salida = (p) => (p >= 1 ? 1 : 1 - Math.pow(2, -10 * p));
+const suave = (p) => .5 - .5 * Math.cos(Math.PI * lim(p));
+const rebote = (p) => { const c = 1.6; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+const entre = (a, b, p) => a + (b - a) * p;
+
+document.querySelectorAll('[data-palabras]').forEach((h) => {
+  const t0 = +h.dataset.t; let i = 0;
+  h.innerHTML = h.innerHTML.split(/<br\s*\/?>/).map((linea) => linea.trim().split(/\s+/)
+    .map((w) => `<span class="palabra" data-fx="palabra" data-t="${(t0 + i++ * .08).toFixed(2)}">${w}</span>`).join(' ')).join('<br>');
+});
+
+const EFECTOS = {
+  sube: (el, p) => { const e = salida(p); el.style.opacity = e; el.style.transform = `translateY(${entre(40, 0, e)}px)`; el.style.filter = `blur(${entre(10, 0, e)}px)`; },
+  aparece: (el, p) => { el.style.opacity = salida(p); },
+  palabra: (el, p) => { const e = salida(p); el.style.opacity = e; el.style.transform = `translateY(${entre(70, 0, e)}px) rotate(${entre(4, 0, e)}deg)`; el.style.filter = `blur(${entre(14, 0, e)}px)`; },
+  revela: (el, p) => { const e = salida(p); el.style.clipPath = `inset(-20% ${entre(100, 0, e)}% -20% 0)`; },
+  traza: (el, p) => { const path = el.tagName === 'path' ? el : el.querySelector('path'); path.style.strokeDasharray = 1; path.style.strokeDashoffset = 1 - salida(p); },
+  pop: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 3); el.style.transform = `scale(${entre(.6, 1, e)})`; if (el.closest('svg')) { el.style.transformBox = 'fill-box'; el.style.transformOrigin = 'center'; } },
+  subeCel: (el, p) => { const e = salida(p); el.style.opacity = lim(p * 2.5); el.style.transform = `translateY(${entre(220, 0, e)}px)`; },
+  escala: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 2); el.style.transform = `scale(${entre(.7, 1, e)})`; },
+  // Cada cuadrito vuela del cateto a la hipotenusa: 9 + 16 llenan 25.
+  vuela: (el, p) => {
+    const e = suave(p); const [x0, y0, a0] = el.dataset.de.split(',').map(Number); const [x1, y1, a1] = el.dataset.a.split(',').map(Number);
+    el.setAttribute('transform', `translate(${entre(x0, x1, e).toFixed(1)} ${(entre(y0, y1, e) - Math.sin(Math.PI * e) * 60).toFixed(1)}) rotate(${entre(a0, a1, e).toFixed(2)})`);
+  },
+  // El cubo se levanta desde el piso: se arma con sus cubitos.
+  crece: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.transformOrigin = '50% 100%'; el.style.transform = `scaleY(${Math.max(0, e)})`; el.style.opacity = lim(p * 4); },
+  // El cubito que sobra cae y rebota afuera.
+  salta: (el, p, t) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 3); el.style.transform = `translateY(${entre(-160, 0, e)}px) scale(${1 + (p >= 1 ? Math.sin(t * 5) * .05 : 0)})`; },
+  zoom: (el, p) => { const e = p <= 0 ? 0 : rebote(lim(p)); el.style.opacity = lim(p * 2.5); el.style.transform = `scale(${entre(.4, 1, e)})`; },
+  sacude: (el, p) => { const e = salida(p); el.style.opacity = e; const s = p > .2 && p < 1 ? Math.sin(p * 40) * (1 - p) * 18 : 0; el.style.transform = `translate(${s.toFixed(1)}px, ${entre(40, 0, e)}px)`; },
+  bajaLinea: (el, p) => { el.style.transform = `scaleY(${suave(p)})`; },
+  escribeMano: (el, p) => { el.style.clipPath = `inset(-40% ${((1 - lim(p)) * 100).toFixed(1)}% -40% 0)`; },
+  presiona: (el, p) => { const h = p > 0 && p < 1 ? Math.sin(p * Math.PI) : 0; el.style.transform = `scale(${1 - h * .12})`; el.style.filter = h > 0 ? `brightness(${1 + h * .6})` : ''; },
+  apaga: (el, p) => { el.style.opacity = entre(1, .45, salida(p)); },
+};
+const DURACIONES = { palabra: .8, presiona: .35, escribeMano: .5, crece: 1.0, vuela: 1.0, bajaLinea: 3.0, salta: .9, sacude: 1.0 };
+
+function pintarElemento(el, tl, t) {
+  const fx = el.dataset.fx;
+  if (fx === 'cuenta') { const p = salida(lim((tl - +el.dataset.t) / +el.dataset.d)); el.textContent = Math.round(+el.dataset.hasta * p); return; }
+  if (fx === 'cuenta3') {
+    const q = tl - +el.dataset.t; const n = q < 0 ? 3 : Math.max(1, 3 - Math.floor(q));
+    el.querySelector('b').textContent = q >= 3 ? '' : n;
+    el.querySelectorAll('circle')[1].style.strokeDashoffset = lim(q / 3).toFixed(3);
+    const pulso = q >= 0 && q < 3 ? 1 + .08 * Math.max(0, 1 - (q % 1) * 3) : 1;
+    el.style.transform = `scale(${pulso})`;
+    if (q >= 3) el.querySelector('b').innerHTML = '<svg style="width:90px;height:90px;transform:rotate(90deg);color:var(--oro-c)"><use href="#reloj"/></svg>';
+    return;
+  }
+  EFECTOS[fx]?.(el, lim((tl - +el.dataset.t) / (DURACIONES[fx] || 1)), t);
+}
+
+function opacidadMundo(t) {
+  let o = 0;
+  for (const e of ESCENAS) {
+    const v = MUNDO_EN[e.id];
+    if (v == null) continue;
+    const entrada = lim((t - e.a + .3) / .6), salidaM = 1 - lim((t - e.b) / .6);
+    o = Math.max(o, v * Math.min(entrada, salidaM));
+  }
+  return o;
+}
+
+function pintar(t) {
+  document.getElementById('au1').style.transform = `translate(${Math.sin(t * .35) * 120}px, ${Math.cos(t * .3) * 90}px)`;
+  document.getElementById('au2').style.transform = `translate(${Math.cos(t * .28) * 140}px, ${Math.sin(t * .33) * 100}px)`;
+  document.getElementById('au3').style.transform = `translate(${Math.sin(t * .22) * 100}px, ${Math.cos(t * .26) * 120}px)`;
+  document.getElementById('barrido').style.transform = `translateX(${((t % 6) / 6) * 140 - 70}%)`;
+  document.querySelector('#barra i').style.width = `${(t / DURACION) * 100}%`;
+  const cab = salida(lim(t / .8)); document.getElementById('cabeza').style.opacity = cab;
+
+  const mundo = document.getElementById('mundo');
+  mundo.style.opacity = opacidadMundo(t).toFixed(3);
+  mundo.style.transform = `translateY(${(Math.sin(t * .4) * 12).toFixed(1)}px) scale(${(1 + t * .002).toFixed(4)})`;
+  const svgMundo = mundo.querySelector('svg');
+  F.animarMundo(svgMundo, t);
+  svgMundo.querySelectorAll('[data-fx]').forEach((el) => pintarElemento(el, t, t));
+
+  for (const { id, a, b } of ESCENAS) {
+    const esc = document.getElementById(id);
+    const tl = t - a;
+    if (t < a - .01 || t > b + TRANSICION) { esc.style.opacity = 0; esc.style.visibility = 'hidden'; continue; }
+    esc.style.visibility = 'visible';
+    const pin = salida(lim(tl / TRANSICION));
+    const pout = lim((t - b) / TRANSICION);
+    const ultima = id === ESCENAS[ESCENAS.length - 1].id;
+    esc.style.opacity = ultima ? pin : pin * (1 - pout);
+    esc.style.transform = `scale(${entre(.95, 1, pin) + (ultima ? 0 : pout * .1)})`;
+    esc.style.filter = `blur(${entre(14, 0, pin) + (ultima ? 0 : pout * 22)}px)`;
+    esc.querySelectorAll('[data-fx]').forEach((el) => pintarElemento(el, tl, t));
+  }
+}
+window.pintar = pintar;
+window.DURACION = DURACION;
+window.ESCENAS = ESCENAS;
+// En el navegador: video.html#vivo lo reproduce; video.html#t=12.5 deja quieto ese segundo.
+if (location.hash === '#vivo') { const t0 = performance.now(); (function ciclo() { pintar(((performance.now() - t0) / 1000) % DURACION); requestAnimationFrame(ciclo); })(); }
+else if (location.hash.startsWith('#t=')) pintar(parseFloat(location.hash.slice(3)));
+else pintar(0);
+</script>
+</body>
+</html>
