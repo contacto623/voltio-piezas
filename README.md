@@ -24,6 +24,8 @@ Reglas, acordadas con el dueño el 20-oct-2026:
 3. **Gráfica de voltiodigital.cl** con efectos Scrolltide, iconos SVG, sin emojis, y datos de ejemplo tapados.
 4. **Siempre dos formatos**: carrusel y reel, más sus textos.
 
+**Marca de cada pieza** (desde el 23-oct-2026): cada entrada de `piezas.json` lleva `"marca": "voltio"` o `"marca": "preu"`. Las del Preuniversitario Tesla se ven en la pestaña Portafolio de la suite (Agencia Web), en su propio espacio, y **no** salen en las vitrinas públicas de Voltio (esta página y voltiodigital.cl/voltio/piezas). Usan la gráfica del preu, no la de voltiodigital.cl.
+
 Para generar las láminas:
 
 ```bash

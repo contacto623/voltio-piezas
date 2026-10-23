@@ -69,7 +69,11 @@ footer{margin-top:90px;font-size:13px;color:rgba(255,255,255,.5)}
 <script>
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const fecha = iso => new Date(iso + 'T12:00:00').toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
-fetch('piezas.json').then(r => r.json()).then(piezas => {
+// Las piezas del Preuniversitario Tesla viven aquí pero no son de la vitrina de
+// Voltio: se ven en la pestaña Portafolio de la suite, en su propio espacio.
+const esDelPreu = p => String(p.marca || '').toLowerCase() === 'preu' || (!p.marca && /preu(niversitario)?\s*tesla/i.test(String(p.cliente || '')));
+fetch('piezas.json').then(r => r.json()).then(todas => {
+  const piezas = todas.filter(p => !esDelPreu(p));
   document.getElementById('piezas').innerHTML = piezas.map(p => {
     const dir = `piezas/${encodeURIComponent(p.id)}/`;
     return `<article class="pieza" id="${esc(p.id)}">

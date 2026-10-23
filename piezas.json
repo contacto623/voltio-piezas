@@ -19,7 +19,8 @@
       "preu-fermat-09.png",
       "preu-fermat-10.png"
     ],
-    "textos": "textos.md"
+    "textos": "textos.md",
+    "marca": "preu"
   },
   {
     "id": "2026-10-misma-cuadra",
@@ -39,7 +40,8 @@
       "voltio-cuadra-07.png",
       "voltio-cuadra-08.png"
     ],
-    "textos": "textos.md"
+    "textos": "textos.md",
+    "marca": "voltio"
   },
   {
     "id": "2026-10-whatsapp-con-ia",
@@ -56,6 +58,7 @@
       "voltio-ia-04.png",
       "voltio-ia-05.png"
     ],
-    "textos": "textos.md"
+    "textos": "textos.md",
+    "marca": "voltio"
   }
 ]
