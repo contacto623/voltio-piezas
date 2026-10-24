@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-10-prensa-mercurio-nota",
+    "titulo": "Lo que publicó El Mercurio",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Prensa: nota de El Mercurio (23-ago-2026)",
+    "resumen": "El reportaje de El Mercurio sobre los preuniversitarios personalizados nombra a Tesla: salas de máximo 12 alumnos y profesores con 1.000 puntos. Recorte con la cita textual, timbre «Nota de prensa» y la fuente. Estilo Editorial.",
+    "reel": "preu-prensa-mercurio-nota-reel.mp4",
+    "carrusel": [
+      "preu-prensa-mercurio-nota-01.png",
+      "preu-prensa-mercurio-nota-02.png",
+      "preu-prensa-mercurio-nota-03.png",
+      "preu-prensa-mercurio-nota-04.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
+    "id": "2026-10-prensa-mercurio-marca",
+    "titulo": "Lo que contamos en la Edición Especial",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Prensa: espacio de marca en El Mercurio (27-dic-2025)",
+    "resumen": "Nuestra publicación en la Edición Especial Preuniversitarios de El Mercurio, contada como lo que es: timbre «Espacio de marca». De 50 estudiantes en 2017 a más de 3.500 en 2025 y 28 puntajes máximos en la PAES de Invierno 2025. Estilo Cuaderno.",
+    "reel": "preu-prensa-mercurio-marca-reel.mp4",
+    "carrusel": [
+      "preu-prensa-mercurio-marca-01.png",
+      "preu-prensa-mercurio-marca-02.png",
+      "preu-prensa-mercurio-marca-03.png",
+      "preu-prensa-mercurio-marca-04.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-ajedrez-trigo-cuaderno",
     "titulo": "El trigo y el tablero · estilo Cuaderno",
     "fecha": "2026-10-24",

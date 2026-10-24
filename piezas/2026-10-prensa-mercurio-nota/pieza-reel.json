@@ -1,0 +1,70 @@
+{
+ "id": "preu-prensa-mercurio",
+ "marca": "preu",
+ "formato": "reel",
+ "estilo": "editorial",
+ "titulo": "Lo que publicó El Mercurio",
+ "escenas": [
+  {
+   "id": "e2",
+   "tipo": "prensa",
+   "dur": 9.5,
+   "params": {
+    "titular": "Lo que publicó",
+    "destacado": "El Mercurio.",
+    "clase": "nota",
+    "medio": "El Mercurio",
+    "detalle": "Cuerpo C · domingo 23 de agosto de 2026",
+    "volanta": "Acceso a la educación superior",
+    "titularNota": "La búsqueda del puntaje perfecto potencia el fenómeno de preuniversitarios personalizados",
+    "cita": "«Algo similar ofrecen otros centros de preparación como Tesla, [...] que trabaja con un *máximo de 12 alumnos*, con *profesores que han obtenido los 1.000 puntos*.»",
+    "fuente": "https://www.emol.com/noticias/Nacional/2026/08/23/1209301/preuniversitarios-personalizados-paes-universidades-educacion.html"
+   }
+  },
+  {
+   "id": "e3",
+   "tipo": "contador",
+   "dur": 4,
+   "params": {
+    "titular": "Por sala,",
+    "destacado": "como máximo",
+    "hasta": 12,
+    "etiqueta": "alumnos",
+    "icono": "grupo"
+   }
+  },
+  {
+   "id": "e4",
+   "tipo": "contador",
+   "dur": 4,
+   "params": {
+    "titular": "Profesores que",
+    "destacado": "sacaron",
+    "hasta": 1000,
+    "etiqueta": "puntos en la prueba",
+    "icono": "trofeo"
+   }
+  },
+  {
+   "id": "fin",
+   "tipo": "cierre",
+   "dur": 4.5,
+   "params": {
+    "titular": "Conoce el modelo",
+    "destacado": "de cerca.",
+    "bajada": "Salas de *12 alumnos* como máximo.",
+    "accion": "escribir",
+    "llamado": "Escríbenos",
+    "clave": "PLAN"
+   }
+  }
+ ],
+ "hechos": [
+  {
+   "texto": "El Mercurio, cuerpo C, página C1, domingo 23 de agosto de 2026, reportaje «La búsqueda del puntaje perfecto potencia el fenómeno de preuniversitarios personalizados»: «Algo similar ofrecen otros centros de preparación como Tesla, con sede central en Las Condes y presencia en Providencia, La Reina, Peñalolén, Viña del Mar y Antofagasta, que trabaja con un máximo de 12 alumnos, con profesores que han obtenido los 1.000 puntos.»",
+   "fuente": {
+    "url": "https://www.emol.com/noticias/Nacional/2026/08/23/1209301/preuniversitarios-personalizados-paes-universidades-educacion.html"
+   }
+  }
+ ]
+}

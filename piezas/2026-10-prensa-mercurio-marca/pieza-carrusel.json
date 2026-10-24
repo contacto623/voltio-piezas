@@ -1,0 +1,74 @@
+{
+ "id": "preu-prensa-edicion-especial-carrusel",
+ "marca": "preu",
+ "formato": "carrusel",
+ "estilo": "cuaderno",
+ "titulo": "Lo que contamos en la Edición Especial de El Mercurio",
+ "escenas": [
+  {
+   "id": "e2",
+   "tipo": "prensa",
+   "params": {
+    "titular": "Lo que contamos en la",
+    "destacado": "Edición Especial.",
+    "clase": "marca",
+    "medio": "El Mercurio",
+    "detalle": "Edición Especial · 27 de diciembre de 2025",
+    "volanta": "Expansión",
+    "titularNota": "Preuniversitario Tesla consolida su crecimiento y liderazgo académico en 2025",
+    "fuente": "https://digital.elmercurio.com/2025/12/27/EE-STD-Z/B64JVOBO"
+   }
+  },
+  {
+   "id": "e3",
+   "tipo": "barras",
+   "params": {
+    "titular": "De una sede",
+    "destacado": "a muchas.",
+    "datos": [
+     {
+      "etiqueta": "2017",
+      "valor": 50
+     },
+     {
+      "etiqueta": "2025",
+      "valor": 3500,
+      "destacar": "si"
+     }
+    ],
+    "nota": "Estudiantes del preu."
+   }
+  },
+  {
+   "id": "e4",
+   "tipo": "contador",
+   "params": {
+    "titular": "PAES de Invierno",
+    "destacado": "2025",
+    "hasta": 28,
+    "etiqueta": "puntajes máximos",
+    "icono": "trofeo"
+   }
+  },
+  {
+   "id": "fin",
+   "tipo": "cierre",
+   "params": {
+    "titular": "Conoce el modelo",
+    "destacado": "de cerca.",
+    "bajada": "Salas de *12 alumnos* como máximo.",
+    "accion": "escribir",
+    "llamado": "Escríbenos",
+    "clave": "PLAN"
+   }
+  }
+ ],
+ "hechos": [
+  {
+   "texto": "Espacio de marca de Preuniversitario Tesla en la Edición Especial Preuniversitarios de El Mercurio, 27 de diciembre de 2025, página 8: partió en 2017 en Providencia con 50 estudiantes; en 2025 superó los 3.500 estudiantes; 28 puntajes máximos en la PAES de Invierno 2025; un máximo de 12 estudiantes por sala.",
+   "fuente": {
+    "url": "https://digital.elmercurio.com/2025/12/27/EE-STD-Z/B64JVOBO"
+   }
+  }
+ ]
+}
