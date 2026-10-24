@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-10-ajedrez-trigo-v2",
+    "titulo": "El trigo y el tablero · Cuaderno con tablero animado",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz",
+    "resumen": "La versión Cuaderno con lo que pidió redes: un tablero dibujado donde el trigo se apila casilla por casilla y la cámara se aleja (de 1 grano a 18 trillones en un solo recorrido), cámara viva en todas las escenas y subtítulos más arriba, fuera de los botones de Instagram y TikTok.",
+    "reel": "preu-ajedrez-v2-reel.mp4",
+    "carrusel": [
+      "preu-ajedrez-cuaderno-01.png",
+      "preu-ajedrez-cuaderno-02.png",
+      "preu-ajedrez-cuaderno-03.png",
+      "preu-ajedrez-cuaderno-04.png",
+      "preu-ajedrez-cuaderno-05.png",
+      "preu-ajedrez-cuaderno-06.png",
+      "preu-ajedrez-cuaderno-07.png",
+      "preu-ajedrez-cuaderno-08.png",
+      "preu-ajedrez-cuaderno-09.png",
+      "preu-ajedrez-cuaderno-10.png",
+      "preu-ajedrez-cuaderno-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-prensa-t13",
     "titulo": "Lo que contamos en Tele13 Radio",
     "fecha": "2026-10-24",
