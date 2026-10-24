@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-10-ajedrez-trigo",
+    "titulo": "El trigo y el tablero de ajedrez",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz",
+    "resumen": "La leyenda del grano de trigo que se duplica en cada casilla: de 1 grano a unos 18 trillones, más de 600 años de la cosecha mundial de trigo. Aclara que «quintillones» es una mala traducción y cierra con un desafío estilo PAES de potencias de 2. Primera pieza armada con el Estudio de Piezas.",
+    "reel": "preu-ajedrez-reel.mp4",
+    "carrusel": [
+      "preu-ajedrez-01.png",
+      "preu-ajedrez-02.png",
+      "preu-ajedrez-03.png",
+      "preu-ajedrez-04.png",
+      "preu-ajedrez-05.png",
+      "preu-ajedrez-06.png",
+      "preu-ajedrez-07.png",
+      "preu-ajedrez-08.png",
+      "preu-ajedrez-09.png",
+      "preu-ajedrez-10.png",
+      "preu-ajedrez-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-fermat-homero",
     "titulo": "¿Homero le ganó a Fermat?",
     "fecha": "2026-10-23",
