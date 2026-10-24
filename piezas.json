@@ -37,13 +37,14 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Prensa: espacio de marca en El Mercurio (27-dic-2025)",
-    "resumen": "Nuestra publicación en la Edición Especial Preuniversitarios de El Mercurio, contada como lo que es: timbre «Espacio de marca». De 50 estudiantes en 2017 a más de 3.500 en 2025 y 28 puntajes máximos en la PAES de Invierno 2025. Estilo Cuaderno.",
+    "resumen": "Nuestra publicación en la Edición Especial Preuniversitarios de El Mercurio, contada como lo que es (timbre «Espacio de marca») y con la página real: la cámara se acerca al titular y el destacador marca en la nota los 50 estudiantes de 2017, los más de 3.500 de 2025 y los 28 puntajes máximos de la PAES de Invierno 2025. Voz y música propia. Estilo Cuaderno.",
     "reel": "preu-prensa-mercurio-marca-reel.mp4",
     "carrusel": [
       "preu-prensa-mercurio-marca-01.png",
       "preu-prensa-mercurio-marca-02.png",
       "preu-prensa-mercurio-marca-03.png",
-      "preu-prensa-mercurio-marca-04.png"
+      "preu-prensa-mercurio-marca-04.png",
+      "preu-prensa-mercurio-marca-05.png"
     ],
     "textos": "textos.md",
     "marca": "preu"

@@ -1,6 +1,6 @@
 # Lo que contamos en la Edición Especial de El Mercurio · Preuniversitario Tesla
 
-Espacio de marca (lo contrató el preu): NO es una nota de prensa. Carrusel de 4 láminas (1080x1350) y reel 9:16 de 19,6 s, estilo Cuaderno, con voz (Alejandro) y música de fondo propia (sintetizada para el preu, sin derechos de terceros).
+Espacio de marca (lo contrató el preu): NO es una nota de prensa. Carrusel de 5 láminas (con la página real y sus recortes) (1080x1350) y reel 9:16 de 19,6 s, estilo Cuaderno, con voz (Alejandro) y música de fondo propia (sintetizada para el preu, sin derechos de terceros).
 Nada se publicó. Los archivos están en esta carpeta.
 
 ---

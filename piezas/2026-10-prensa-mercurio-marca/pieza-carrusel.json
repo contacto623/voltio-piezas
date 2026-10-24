@@ -1,5 +1,5 @@
 {
- "id": "preu-prensa-edicion-especial-carrusel",
+ "id": "preu-prensa-edicion-especial-v2-carrusel",
  "marca": "preu",
  "formato": "carrusel",
  "estilo": "cuaderno",
@@ -16,38 +16,50 @@
     "detalle": "Edición Especial · 27 de diciembre de 2025",
     "volanta": "Expansión",
     "titularNota": "Preuniversitario Tesla consolida su crecimiento y liderazgo académico en 2025",
-    "fuente": "https://digital.elmercurio.com/2025/12/27/EE-STD-Z/B64JVOBO"
+    "fuente": "https://digital.elmercurio.com/2025/12/27/EE-STD-Z/B64JVOBO",
+    "imagen": "../web/sitio/prensa/img/mercurio-2025-pagina-800.webp"
    }
   },
   {
    "id": "e3",
-   "tipo": "barras",
+   "tipo": "recorte",
    "params": {
-    "titular": "De una sede",
-    "destacado": "a muchas.",
-    "datos": [
-     {
-      "etiqueta": "2017",
-      "valor": 50
-     },
-     {
-      "etiqueta": "2025",
-      "valor": 3500,
-      "destacar": "si"
-     }
-    ],
-    "nota": "Estudiantes del preu."
+    "titular": "Partimos en 2017",
+    "destacado": "con 50 estudiantes.",
+    "imagen": "../web/sitio/prensa/img/mercurio-2025-texto-1-800.webp",
+    "marcaX": 20,
+    "marcaY": 30.5,
+    "marcaAncho": 58,
+    "marcaAlto": 9.5,
+    "pie": "Edición Especial de El Mercurio, 27 de diciembre de 2025"
+   }
+  },
+  {
+   "id": "e3b",
+   "tipo": "recorte",
+   "params": {
+    "titular": "En 2025,",
+    "destacado": "más de 3.500.",
+    "imagen": "../web/sitio/prensa/img/mercurio-2025-texto-2-800.webp",
+    "marcaX": 22,
+    "marcaY": 9.5,
+    "marcaAncho": 58,
+    "marcaAlto": 13,
+    "pie": "Edición Especial de El Mercurio, 27 de diciembre de 2025"
    }
   },
   {
    "id": "e4",
-   "tipo": "contador",
+   "tipo": "recorte",
    "params": {
-    "titular": "PAES de Invierno",
-    "destacado": "2025",
-    "hasta": 28,
-    "etiqueta": "puntajes máximos",
-    "icono": "trofeo"
+    "titular": "PAES de Invierno 2025:",
+    "destacado": "28 puntajes máximos.",
+    "imagen": "../web/sitio/prensa/img/mercurio-2025-texto-3-800.webp",
+    "marcaX": 22,
+    "marcaY": 30,
+    "marcaAncho": 58,
+    "marcaAlto": 17.5,
+    "pie": "Edición Especial de El Mercurio, 27 de diciembre de 2025"
    }
   },
   {
