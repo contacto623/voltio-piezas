@@ -1,6 +1,6 @@
 # Lo que contamos en Tele13 Radio · Preuniversitario Tesla
 
-Espacio de marca (lo contrató el preu en el programa Empresas & Innovación): NO es una entrevista de prensa. Reel 9:16 de 27,5 s con el corte original de la conductora (0:43,55 a 1:01) y 2 láminas.
+Espacio de marca (lo contrató el preu en el programa Empresas & Innovación): NO es una entrevista de prensa. Reel 9:16 de 27 s: voz de Alejandro al inicio y al cierre, el corte original de la conductora (0:43,55 a 1:01) y música de fondo propia. 2 láminas.
 Nada se publicó. Los archivos están en esta carpeta.
 
 ---

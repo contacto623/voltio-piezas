@@ -1,6 +1,6 @@
 # Lo que publicó El Mercurio · Preuniversitario Tesla
 
-Nota de prensa (no pagada). Carrusel de 4 láminas (1080x1350) y reel 9:16 de 22 s, estilo Editorial, sin voz: subir con un audio en tendencia desde la app.
+Nota de prensa (no pagada). Carrusel de 4 láminas (1080x1350) y reel 9:16 de 15,5 s, estilo Editorial, con voz (Alejandro) y música de fondo propia (sintetizada para el preu, sin derechos de terceros).
 Nada se publicó. Los archivos están en esta carpeta.
 
 ---

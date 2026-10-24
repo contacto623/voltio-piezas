@@ -8,7 +8,7 @@
   {
    "id": "e2",
    "tipo": "prensa",
-   "dur": 9.5,
+   "dur": 5.8,
    "params": {
     "titular": "Lo que publicó",
     "destacado": "El Mercurio.",
@@ -19,36 +19,45 @@
     "titularNota": "La búsqueda del puntaje perfecto potencia el fenómeno de preuniversitarios personalizados",
     "cita": "«Algo similar ofrecen otros centros de preparación como Tesla, [...] que trabaja con un *máximo de 12 alumnos*, con *profesores que han obtenido los 1.000 puntos*.»",
     "fuente": "https://www.emol.com/noticias/Nacional/2026/08/23/1209301/preuniversitarios-personalizados-paes-universidades-educacion.html"
+   },
+   "voz": {
+    "texto": "El Mercurio publicó un reportaje sobre el auge de los preuniversitarios personalizados. Y nos nombró."
    }
   },
   {
    "id": "e3",
    "tipo": "contador",
-   "dur": 4,
+   "dur": 2.5,
    "params": {
     "titular": "Por sala,",
     "destacado": "como máximo",
     "hasta": 12,
     "etiqueta": "alumnos",
     "icono": "grupo"
+   },
+   "voz": {
+    "texto": "Salas con un máximo de doce alumnos."
    }
   },
   {
    "id": "e4",
    "tipo": "contador",
-   "dur": 4,
+   "dur": 2.75,
    "params": {
     "titular": "Profesores que",
     "destacado": "sacaron",
     "hasta": 1000,
     "etiqueta": "puntos en la prueba",
     "icono": "trofeo"
+   },
+   "voz": {
+    "texto": "Y profesores que sacaron los mil puntos en la prueba."
    }
   },
   {
    "id": "fin",
    "tipo": "cierre",
-   "dur": 4.5,
+   "dur": 4.4,
    "params": {
     "titular": "Conoce el modelo",
     "destacado": "de cerca.",
@@ -56,6 +65,9 @@
     "accion": "escribir",
     "llamado": "Escríbenos",
     "clave": "PLAN"
+   },
+   "voz": {
+    "texto": "¿Quieres conocer el modelo de cerca? Escríbenos PLAN."
    }
   }
  ],
@@ -65,6 +77,262 @@
    "fuente": {
     "url": "https://www.emol.com/noticias/Nacional/2026/08/23/1209301/preuniversitarios-personalizados-paes-universidades-educacion.html"
    }
+  }
+ ],
+ "subtitulos": [
+  {
+   "a": 0.0,
+   "b": 1.45,
+   "palabras": [
+    {
+     "w": "El",
+     "a": 0.0,
+     "b": 0.12
+    },
+    {
+     "w": "Mercurio",
+     "a": 0.12,
+     "b": 0.5
+    },
+    {
+     "w": "publicó",
+     "a": 0.5,
+     "b": 0.9
+    },
+    {
+     "w": "un",
+     "a": 0.9,
+     "b": 0.96
+    },
+    {
+     "w": "reportaje",
+     "a": 0.96,
+     "b": 1.45
+    }
+   ]
+  },
+  {
+   "a": 1.45,
+   "b": 3.37,
+   "palabras": [
+    {
+     "w": "sobre",
+     "a": 1.5,
+     "b": 1.76
+    },
+    {
+     "w": "el",
+     "a": 1.76,
+     "b": 1.94
+    },
+    {
+     "w": "auge",
+     "a": 1.94,
+     "b": 2.32
+    },
+    {
+     "w": "de",
+     "a": 2.32,
+     "b": 2.44
+    },
+    {
+     "w": "los",
+     "a": 2.44,
+     "b": 2.56
+    },
+    {
+     "w": "preuniversitarios",
+     "a": 2.56,
+     "b": 3.37
+    }
+   ]
+  },
+  {
+   "a": 3.37,
+   "b": 4.52,
+   "palabras": [
+    {
+     "w": "personalizados,",
+     "a": 3.42,
+     "b": 4.22
+    }
+   ]
+  },
+  {
+   "a": 4.71,
+   "b": 5.72,
+   "palabras": [
+    {
+     "w": "y",
+     "a": 4.76,
+     "b": 4.84
+    },
+    {
+     "w": "nos",
+     "a": 4.84,
+     "b": 4.96
+    },
+    {
+     "w": "nombró,",
+     "a": 4.96,
+     "b": 5.42
+    }
+   ]
+  },
+  {
+   "a": 5.85,
+   "b": 7.93,
+   "palabras": [
+    {
+     "w": "salas",
+     "a": 5.9,
+     "b": 6.28
+    },
+    {
+     "w": "con",
+     "a": 6.28,
+     "b": 6.44
+    },
+    {
+     "w": "un",
+     "a": 6.44,
+     "b": 6.54
+    },
+    {
+     "w": "máximo",
+     "a": 6.54,
+     "b": 6.92
+    },
+    {
+     "w": "de",
+     "a": 6.92,
+     "b": 7.18
+    },
+    {
+     "w": "12",
+     "a": 7.18,
+     "b": 7.46
+    },
+    {
+     "w": "alumnos",
+     "a": 7.46,
+     "b": 7.93
+    }
+   ]
+  },
+  {
+   "a": 7.93,
+   "b": 9.49,
+   "palabras": [
+    {
+     "w": "y",
+     "a": 7.98,
+     "b": 8.4
+    },
+    {
+     "w": "profesores",
+     "a": 8.4,
+     "b": 8.9
+    },
+    {
+     "w": "que",
+     "a": 8.9,
+     "b": 9.04
+    },
+    {
+     "w": "sacaron",
+     "a": 9.04,
+     "b": 9.4
+    },
+    {
+     "w": "los",
+     "a": 9.4,
+     "b": 9.49
+    }
+   ]
+  },
+  {
+   "a": 9.49,
+   "b": 10.98,
+   "palabras": [
+    {
+     "w": "1.000",
+     "a": 9.54,
+     "b": 9.78
+    },
+    {
+     "w": "puntos",
+     "a": 9.78,
+     "b": 10.18
+    },
+    {
+     "w": "en",
+     "a": 10.18,
+     "b": 10.34
+    },
+    {
+     "w": "la",
+     "a": 10.34,
+     "b": 10.44
+    },
+    {
+     "w": "prueba.",
+     "a": 10.44,
+     "b": 10.68
+    }
+   ]
+  },
+  {
+   "a": 11.13,
+   "b": 12.7,
+   "palabras": [
+    {
+     "w": "¿Quieres",
+     "a": 11.18,
+     "b": 11.38
+    },
+    {
+     "w": "conocer",
+     "a": 11.38,
+     "b": 11.66
+    },
+    {
+     "w": "el",
+     "a": 11.66,
+     "b": 11.8
+    },
+    {
+     "w": "modelo",
+     "a": 11.8,
+     "b": 12.04
+    },
+    {
+     "w": "de",
+     "a": 12.04,
+     "b": 12.2
+    },
+    {
+     "w": "cerca?",
+     "a": 12.2,
+     "b": 12.4
+    }
+   ]
+  },
+  {
+   "a": 13.01,
+   "b": 14.3,
+   "palabras": [
+    {
+     "w": "Escríbenos",
+     "a": 13.06,
+     "b": 13.6
+    },
+    {
+     "w": "PLAN.",
+     "a": 13.6,
+     "b": 14.0
+    }
+   ]
   }
  ]
 }

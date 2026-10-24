@@ -8,7 +8,7 @@
   {
    "id": "e1",
    "tipo": "prensa",
-   "dur": 5.5,
+   "dur": 5.0,
    "params": {
     "titular": "Lo que contamos en",
     "destacado": "Tele13 Radio.",
@@ -17,6 +17,9 @@
     "detalle": "Empresas & Innovación · 26 de febrero de 2026",
     "titularNota": "Más de 100 puntajes máximos: el modelo que marca diferencia en la PAES",
     "fuente": "https://www.youtube.com/watch?v=CqG5eMipGlI"
+   },
+   "voz": {
+    "texto": "En nuestro espacio en Tele13 Radio contamos el hito de dos mil veinticinco. Escucha."
    }
   },
   {
@@ -30,6 +33,9 @@
     "accion": "escribir",
     "llamado": "Escríbenos",
     "clave": "PLAN"
+   },
+   "voz": {
+    "texto": "¿Quieres conocer el modelo de cerca? Escríbenos PLAN."
    }
   }
  ],
@@ -39,6 +45,133 @@
    "fuente": {
     "url": "https://www.youtube.com/watch?v=CqG5eMipGlI"
    }
+  }
+ ],
+ "subtitulos": [
+  {
+   "a": 0.0,
+   "b": 1.59,
+   "palabras": [
+    {
+     "w": "En",
+     "a": 0.0,
+     "b": 0.16
+    },
+    {
+     "w": "nuestro",
+     "a": 0.16,
+     "b": 0.3
+    },
+    {
+     "w": "espacio",
+     "a": 0.3,
+     "b": 0.68
+    },
+    {
+     "w": "en",
+     "a": 0.68,
+     "b": 0.86
+    },
+    {
+     "w": "Tele13 Radio",
+     "a": 0.86,
+     "b": 1.59
+    }
+   ]
+  },
+  {
+   "a": 1.59,
+   "b": 3.66,
+   "palabras": [
+    {
+     "w": "contamos",
+     "a": 1.64,
+     "b": 2.18
+    },
+    {
+     "w": "el",
+     "a": 2.18,
+     "b": 2.36
+    },
+    {
+     "w": "hito",
+     "a": 2.36,
+     "b": 2.6
+    },
+    {
+     "w": "de",
+     "a": 2.6,
+     "b": 2.7
+    },
+    {
+     "w": "2025.",
+     "a": 2.7,
+     "b": 3.36
+    }
+   ]
+  },
+  {
+   "a": 4.07,
+   "b": 4.98,
+   "palabras": [
+    {
+     "w": "Escucha.",
+     "a": 4.12,
+     "b": 4.68
+    }
+   ]
+  },
+  {
+   "a": 5.25,
+   "b": 6.9,
+   "palabras": [
+    {
+     "w": "¿Quieres",
+     "a": 5.3,
+     "b": 5.56
+    },
+    {
+     "w": "conocer",
+     "a": 5.56,
+     "b": 5.86
+    },
+    {
+     "w": "el",
+     "a": 5.86,
+     "b": 6.0
+    },
+    {
+     "w": "modelo",
+     "a": 6.0,
+     "b": 6.22
+    },
+    {
+     "w": "de",
+     "a": 6.22,
+     "b": 6.4
+    },
+    {
+     "w": "cerca?",
+     "a": 6.4,
+     "b": 6.6
+    }
+   ]
+  },
+  {
+   "a": 7.15,
+   "b": 8.4,
+   "palabras": [
+    {
+     "w": "Escríbenos",
+     "a": 7.2,
+     "b": 7.76
+    },
+    {
+     "w": "PLAN.",
+     "a": 7.76,
+     "b": 8.1
+    }
+   ]
   }
  ]
 }
