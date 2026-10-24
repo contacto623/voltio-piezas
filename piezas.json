@@ -1,29 +1,5 @@
 [
   {
-    "id": "2026-10-ajedrez-trigo-v2",
-    "titulo": "El trigo y el tablero · Cuaderno con tablero animado",
-    "fecha": "2026-10-24",
-    "cliente": "Preuniversitario Tesla",
-    "tipo": "Contenido educativo PAES (M1) con voz",
-    "resumen": "La versión Cuaderno con lo que pidió redes: un tablero dibujado donde el trigo se apila casilla por casilla y la cámara se aleja (de 1 grano a 18 trillones en un solo recorrido), cámara viva en todas las escenas y subtítulos más arriba, fuera de los botones de Instagram y TikTok.",
-    "reel": "preu-ajedrez-v2-reel.mp4",
-    "carrusel": [
-      "preu-ajedrez-cuaderno-01.png",
-      "preu-ajedrez-cuaderno-02.png",
-      "preu-ajedrez-cuaderno-03.png",
-      "preu-ajedrez-cuaderno-04.png",
-      "preu-ajedrez-cuaderno-05.png",
-      "preu-ajedrez-cuaderno-06.png",
-      "preu-ajedrez-cuaderno-07.png",
-      "preu-ajedrez-cuaderno-08.png",
-      "preu-ajedrez-cuaderno-09.png",
-      "preu-ajedrez-cuaderno-10.png",
-      "preu-ajedrez-cuaderno-11.png"
-    ],
-    "textos": "textos.md",
-    "marca": "preu"
-  },
-  {
     "id": "2026-10-prensa-t13",
     "titulo": "Lo que contamos en Tele13 Radio",
     "fecha": "2026-10-24",
@@ -78,7 +54,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Misma pieza en otro estilo de arte (para comparar)",
-    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Cuaderno: papel cuadriculado, tinta y destacador, con hojas que pasan de lado.",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Cuaderno: papel cuadriculado, tinta y destacador, con hojas que pasan de lado. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
     "reel": "preu-ajedrez-cuaderno-reel.mp4",
     "carrusel": [
       "preu-ajedrez-cuaderno-01.png",
@@ -102,7 +78,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Misma pieza en otro estilo de arte (para comparar)",
-    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Editorial: bloques de color plano que cambian en cada escena, letra enorme y cortes secos.",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Editorial: bloques de color plano que cambian en cada escena, letra enorme y cortes secos. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
     "reel": "preu-ajedrez-editorial-reel.mp4",
     "carrusel": [
       "preu-ajedrez-editorial-01.png",
@@ -122,24 +98,24 @@
   },
   {
     "id": "2026-10-ajedrez-trigo",
-    "titulo": "El trigo y el tablero de ajedrez",
+    "titulo": "El trigo y el tablero · estilo Clásico",
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Contenido educativo PAES (M1) con voz",
-    "resumen": "La leyenda del grano de trigo que se duplica en cada casilla: de 1 grano a unos 18 trillones, más de 600 años de la cosecha mundial de trigo. Aclara que «quintillones» es una mala traducción y cierra con un desafío estilo PAES de potencias de 2. Primera pieza armada con el Estudio de Piezas.",
+    "resumen": "La leyenda del grano de trigo que se duplica en cada casilla: de 1 grano a unos 18 trillones, más de 600 años de la cosecha mundial de trigo. Aclara que «quintillones» es una mala traducción y cierra con un desafío estilo PAES de potencias de 2. Primera pieza armada con el Estudio de Piezas. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
     "reel": "preu-ajedrez-reel.mp4",
     "carrusel": [
-      "preu-ajedrez-01.png",
-      "preu-ajedrez-02.png",
-      "preu-ajedrez-03.png",
-      "preu-ajedrez-04.png",
-      "preu-ajedrez-05.png",
-      "preu-ajedrez-06.png",
-      "preu-ajedrez-07.png",
-      "preu-ajedrez-08.png",
-      "preu-ajedrez-09.png",
-      "preu-ajedrez-10.png",
-      "preu-ajedrez-11.png"
+      "preu-ajedrez-clasico-01.png",
+      "preu-ajedrez-clasico-02.png",
+      "preu-ajedrez-clasico-03.png",
+      "preu-ajedrez-clasico-04.png",
+      "preu-ajedrez-clasico-05.png",
+      "preu-ajedrez-clasico-06.png",
+      "preu-ajedrez-clasico-07.png",
+      "preu-ajedrez-clasico-08.png",
+      "preu-ajedrez-clasico-09.png",
+      "preu-ajedrez-clasico-10.png",
+      "preu-ajedrez-clasico-11.png"
     ],
     "textos": "textos.md",
     "marca": "preu"
