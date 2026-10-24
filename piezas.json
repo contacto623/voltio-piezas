@@ -1,5 +1,53 @@
 [
   {
+    "id": "2026-10-ajedrez-trigo-cuaderno",
+    "titulo": "El trigo y el tablero · estilo Cuaderno",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Misma pieza en otro estilo de arte (para comparar)",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Cuaderno: papel cuadriculado, tinta y destacador, con hojas que pasan de lado.",
+    "reel": "preu-ajedrez-cuaderno-reel.mp4",
+    "carrusel": [
+      "preu-ajedrez-cuaderno-01.png",
+      "preu-ajedrez-cuaderno-02.png",
+      "preu-ajedrez-cuaderno-03.png",
+      "preu-ajedrez-cuaderno-04.png",
+      "preu-ajedrez-cuaderno-05.png",
+      "preu-ajedrez-cuaderno-06.png",
+      "preu-ajedrez-cuaderno-07.png",
+      "preu-ajedrez-cuaderno-08.png",
+      "preu-ajedrez-cuaderno-09.png",
+      "preu-ajedrez-cuaderno-10.png",
+      "preu-ajedrez-cuaderno-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
+    "id": "2026-10-ajedrez-trigo-editorial",
+    "titulo": "El trigo y el tablero · estilo Editorial",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Misma pieza en otro estilo de arte (para comparar)",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Editorial: bloques de color plano que cambian en cada escena, letra enorme y cortes secos.",
+    "reel": "preu-ajedrez-editorial-reel.mp4",
+    "carrusel": [
+      "preu-ajedrez-editorial-01.png",
+      "preu-ajedrez-editorial-02.png",
+      "preu-ajedrez-editorial-03.png",
+      "preu-ajedrez-editorial-04.png",
+      "preu-ajedrez-editorial-05.png",
+      "preu-ajedrez-editorial-06.png",
+      "preu-ajedrez-editorial-07.png",
+      "preu-ajedrez-editorial-08.png",
+      "preu-ajedrez-editorial-09.png",
+      "preu-ajedrez-editorial-10.png",
+      "preu-ajedrez-editorial-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-ajedrez-trigo",
     "titulo": "El trigo y el tablero de ajedrez",
     "fecha": "2026-10-24",
