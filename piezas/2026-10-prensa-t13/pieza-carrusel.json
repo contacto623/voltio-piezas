@@ -1,0 +1,42 @@
+{
+ "id": "preu-prensa-t13-carrusel",
+ "marca": "preu",
+ "formato": "carrusel",
+ "estilo": "clasico",
+ "titulo": "Lo que contamos en Tele13 Radio",
+ "escenas": [
+  {
+   "id": "e1",
+   "tipo": "prensa",
+   "params": {
+    "titular": "Lo que contamos en",
+    "destacado": "Tele13 Radio.",
+    "clase": "marca",
+    "medio": "Tele13 Radio",
+    "detalle": "Empresas & Innovación · 26 de febrero de 2026",
+    "titularNota": "Más de 100 puntajes máximos: el modelo que marca diferencia en la PAES",
+    "fuente": "https://www.youtube.com/watch?v=CqG5eMipGlI"
+   }
+  },
+  {
+   "id": "fin",
+   "tipo": "cierre",
+   "params": {
+    "titular": "Conoce el modelo",
+    "destacado": "de cerca.",
+    "bajada": "Salas de *12 alumnos* como máximo.",
+    "accion": "escribir",
+    "llamado": "Escríbenos",
+    "clave": "PLAN"
+   }
+  }
+ ],
+ "hechos": [
+  {
+   "texto": "Espacio de marca (contratado por Preu Tesla) en Tele13 Radio, programa Empresas & Innovación, 26 de febrero de 2026, «Más de 100 puntajes máximos: el modelo que marca diferencia en la PAES». La conductora: «El Preuniversitario Tesla marca un hito en 2025, 28 puntajes máximos en la PAES de invierno y 73 en la PAES de verano, superando los 100 puntajes máximos en el año.»",
+   "fuente": {
+    "url": "https://www.youtube.com/watch?v=CqG5eMipGlI"
+   }
+  }
+ ]
+}

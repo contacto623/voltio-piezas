@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-prensa-t13",
+    "titulo": "Lo que contamos en Tele13 Radio",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Prensa: espacio de marca en Tele13 Radio (26-feb-2026)",
+    "resumen": "El corte de nuestro espacio en Empresas & Innovación de Tele13 Radio: la conductora cuenta los 28 puntajes máximos de invierno y 73 de verano, más de 100 en 2025. Timbre «Espacio de marca», voz original y subtítulos. Estilo Clásico.",
+    "reel": "preu-prensa-t13-reel.mp4",
+    "carrusel": [
+      "preu-prensa-t13-01.png",
+      "preu-prensa-t13-02.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-prensa-mercurio-nota",
     "titulo": "Lo que publicó El Mercurio",
     "fecha": "2026-10-24",
