@@ -50,6 +50,30 @@
     "marca": "preu"
   },
   {
+    "id": "2026-10-ajedrez-trigo-cuaderno-3d",
+    "titulo": "El trigo y el tablero · Cuaderno con movimiento 3D",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Versión nueva con movimiento 3D (para comparar con la de Cuaderno)",
+    "resumen": "La misma pieza del ajedrez en estilo Cuaderno, con la misma voz y música, grabada con el movimiento 3D del Estudio: la cámara de cada escena inclina y se acerca, la hoja del manuscrito y las tarjetas entran en perspectiva, las cifras tienen volumen y el logo y la web bajaron a la zona segura de Instagram. El desafío y la respuesta quedan quietos para leerlos.",
+    "reel": "preu-ajedrez-cuaderno-3d-reel.mp4",
+    "carrusel": [
+      "preu-ajedrez-cuaderno-01.png",
+      "preu-ajedrez-cuaderno-02.png",
+      "preu-ajedrez-cuaderno-03.png",
+      "preu-ajedrez-cuaderno-04.png",
+      "preu-ajedrez-cuaderno-05.png",
+      "preu-ajedrez-cuaderno-06.png",
+      "preu-ajedrez-cuaderno-07.png",
+      "preu-ajedrez-cuaderno-08.png",
+      "preu-ajedrez-cuaderno-09.png",
+      "preu-ajedrez-cuaderno-10.png",
+      "preu-ajedrez-cuaderno-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-ajedrez-trigo-cuaderno",
     "titulo": "El trigo y el tablero · estilo Cuaderno",
     "fecha": "2026-10-24",
