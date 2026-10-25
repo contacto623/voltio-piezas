@@ -2,6 +2,11 @@
  "id": "preu-fermat-v2",
  "marca": "preu",
  "formato": "reel",
+ "paes": {
+  "prueba": "M1",
+  "eje": "Geometría",
+  "tema": "Teorema de Pitágoras"
+ },
  "escenas": [
   {
    "id": "e1",
@@ -231,12 +236,12 @@
     "pasos": [
      {
       "izquierda": "1782 es par",
-      "derecha": "par",
+      "derecha": "`1782^12` par",
       "tono": "a"
      },
      {
       "izquierda": "1841 es impar",
-      "derecha": "impar",
+      "derecha": "`1841^12` impar",
       "tono": "b"
      },
      {
@@ -246,7 +251,7 @@
      },
      {
       "izquierda": "1922 es par",
-      "derecha": "par",
+      "derecha": "`1922^12` par",
       "tono": "a"
      }
     ],
