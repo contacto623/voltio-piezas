@@ -8,7 +8,7 @@
   {
    "id": "e1",
    "tipo": "prensa",
-   "dur": 5.0,
+   "dur": 5,
    "params": {
     "titular": "Lo que contamos en",
     "destacado": "Tele13 Radio.",
@@ -20,7 +20,10 @@
    },
    "voz": {
     "texto": "En nuestro espacio en Tele13 Radio contamos el hito de dos mil veinticinco. Escucha."
-   }
+   },
+   "palabrasClave": [
+    "Tele13 Radio"
+   ]
   },
   {
    "id": "fin",
@@ -36,7 +39,10 @@
    },
    "voz": {
     "texto": "¿Quieres conocer el modelo de cerca? Escríbenos PLAN."
-   }
+   },
+   "palabrasClave": [
+    "PLAN"
+   ]
   }
  ],
  "hechos": [
@@ -49,12 +55,12 @@
  ],
  "subtitulos": [
   {
-   "a": 0.0,
+   "a": 0,
    "b": 1.59,
    "palabras": [
     {
      "w": "En",
-     "a": 0.0,
+     "a": 0,
      "b": 0.16
     },
     {
@@ -138,11 +144,11 @@
     {
      "w": "el",
      "a": 5.86,
-     "b": 6.0
+     "b": 6
     },
     {
      "w": "modelo",
-     "a": 6.0,
+     "a": 6,
      "b": 6.22
     },
     {
