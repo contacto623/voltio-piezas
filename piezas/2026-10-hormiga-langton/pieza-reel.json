@@ -1,1 +1,1145 @@
-{"id":"preu-hormiga-langton","marca":"preu","formato":"reel","estilo":"clasico","tresD":"auto","titulo":"La hormiga que construye una autopista","escenas":[{"id":"e1","tipo":"hormiga","params":{"titular":"Esta hormiga","destacado":"arma una autopista.","desde":9300,"hasta":11700,"ritmo":"parejo","vista":"todo"},"voz":{"texto":"Esta hormiga no piensa. Pero sola construye una autopista."},"palabrasClave":["no piensa","autopista"],"dur":4},{"id":"e2","tipo":"hormiga","params":{"titular":"Solo sigue","destacado":"dos reglas.","desde":0,"hasta":5,"ritmo":"parejo","reglas":"si","vista":"todo"},"voz":{"texto":"Solo sigue dos reglas. En una casilla apagada gira a la derecha y la enciende. En una encendida gira a la izquierda y la apaga."},"palabrasClave":["dos reglas","derecha","izquierda"],"dur":7.61},{"id":"e3","tipo":"hormiga","params":{"titular":"Miles de pasos","destacado":"de puro caos.","desde":5,"hasta":9000,"ritmo":"acelera","vista":"cerca","rotulo":"caos"},"voz":{"texto":"Durante miles de pasos deja un borrón sin ningún orden."},"palabrasClave":["sin ningún orden"],"dur":4},{"id":"e4","tipo":"hormiga","params":{"titular":"En el paso 9.977","destacado":"sale el orden.","desde":9700,"hasta":11300,"ritmo":"parejo","vista":"todo","rotulo":"autopista"},"voz":{"texto":"Y en el paso 9.977 empieza la autopista. Cada 104 pasos avanza 2 casillas en diagonal."},"palabrasClave":["autopista","en diagonal"],"dur":7.48},{"id":"e5","tipo":"pasos","params":{"titular":"Para la PAES","destacado":"es geometría.","pasos":[{"titulo":"Girar 90°","detalle":"es una *rotación* de su dirección"},{"titulo":"Avanzar","detalle":"es una *traslación* de una casilla"}]},"voz":{"texto":"Para la PAES esto es geometría. Girar es rotar y avanzar es trasladar."},"palabrasClave":["geometría","rotar","trasladar"],"dur":4.97},{"id":"e5b","tipo":"hormiga","params":{"titular":"Cada 104 pasos,","destacado":"el mismo vector.","desde":11300,"hasta":12340,"ritmo":"parejo","vista":"todo","rotulo":"vector (-2, -2)"},"voz":{"texto":"Y la autopista se traslada por el mismo vector cada 104 pasos."},"palabrasClave":["mismo vector"],"dur":4.6},{"id":"e6","tipo":"desafio","params":{"titular":"Ahora tú.","etiqueta":"Desafío estilo PAES · M1","enunciado":"La hormiga parte en `(0, 0)` mirando al norte y con todo apagado. ¿En qué punto queda después de 5 pasos?","alternativas":["(0, 0)","(1, 0)","(-1, 0)","(0, 1)"],"segundos":3,"pie":"Responde en los comentarios"},"voz":{"texto":"Ahora tú. Parte en el origen mirando al norte y con todo apagado. ¿Dónde queda después de 5 pasos?"},"palabrasClave":["Ahora tú","5 pasos"],"dur":11.53},{"id":"e7","tipo":"respuesta","params":{"titular":"Respuesta: C.","alternativas":[{"texto":"(0, 0)","porque":"tras 4 pasos"},{"texto":"(1, 0)","porque":"sin la regla 2"},{"texto":"(-1, 0)","porque":"gira a la izquierda"},{"texto":"(0, 1)","porque":"gira al revés"}],"correcta":"C","explicacion":"El paso 5 pisa una casilla encendida."},"voz":{"texto":"Es la C. Con 4 pasos da una vuelta y vuelve al origen. En el quinto pisa una casilla encendida y gira a la izquierda."},"palabrasClave":["la C","izquierda"],"dur":7.84},{"id":"e8","tipo":"cierre","params":{"titular":"Guárdalo para","destacado":"tu PAES.","bajada":"Te lo explicamos en *Preu Tesla*.","accion":"guardar","llamado":"Comenta","clave":"PAES"},"voz":{"texto":"Dos reglas y del caos sale orden. Guárdalo para tu PAES. Te lo explicamos en Preu Tesla."},"palabrasClave":["orden","Preu Tesla"],"dur":5.44}],"hechosNuevos":[{"texto":"La hormiga de Langton sigue dos reglas: en una casilla apagada gira 90 grados a la derecha, la enciende y avanza; en una encendida gira 90 grados a la izquierda, la apaga y avanza.","fuente":{"url":"https://es.wikipedia.org/wiki/Hormiga_de_Langton"}},{"texto":"Partiendo de una cuadrícula apagada, desde el paso 9977 (9.977) la hormiga construye una autopista: repite un ciclo de 104 pasos y avanza 2 casillas en diagonal en cada ciclo, con el vector (-2, -2) si parte mirando al norte (simulación exacta en src/core/estudioPiezas/dibujos.test.js).","fuente":{"url":"https://es.wikipedia.org/wiki/Hormiga_de_Langton"}},{"texto":"La propuso Christopher Langton en 1986 (Physica D, volumen 22).","fuente":{"url":"https://doi.org/10.1016/0167-2789(86)90237-X"}}],"verificacion":{"correcta":"C","comprobacion":[{"letra":"A","expresion":"1 + 0 - 1 + 0 - 1 = 0","cumple":false},{"letra":"B","expresion":"1 + 0 - 1 + 0 - 1 = 1","cumple":false},{"letra":"C","expresion":"1 + 0 - 1 + 0 - 1 = -1","cumple":true},{"letra":"D","expresion":"1 + 0 - 1 + 0 - 1 = 0 + 1","cumple":false}]},"calculos":[{"expresion":"1 + 0 - 1 + 0 - 1","resultado":"-1"},{"expresion":"1040 / 104 * 2","resultado":"20"}],"textos":{"post":"Esta hormiga no piensa y aun así construye una autopista. Sigue dos reglas: en una casilla apagada gira a la derecha y la enciende; en una encendida gira a la izquierda y la apaga. Miles de pasos de caos y, en el paso 9.977, aparece el orden: cada 104 pasos avanza 2 casillas en diagonal. Para la PAES M1 es geometría pura: rotaciones, traslaciones y vectores. ¿Te atreves con el desafío? Responde en los comentarios.","historia":"Dos reglas. 9.977 pasos. Una autopista. ¿Por qué?","hashtags":["#PAES","#PAES2027","#matematica","#M1","#geometria","#preutesla","#hormigadelangton"]},"subtitulos":[{"a":0.157,"b":1.353,"palabras":[{"w":"Esta","a":0.157,"b":0.389},{"w":"hormiga","a":0.412,"b":0.691},{"w":"no","a":0.749,"b":0.819},{"w":"piensa.","a":0.854,"b":1.353}]},{"a":1.713,"b":3.594,"palabras":[{"w":"Pero","a":1.713,"b":1.898},{"w":"sola","a":1.933,"b":2.119},{"w":"construye","a":2.166,"b":2.514},{"w":"una","a":2.537,"b":2.63},{"w":"autopista.","a":2.653,"b":3.594}]},{"a":4.153,"b":5.326,"palabras":[{"w":"Solo","a":4.153,"b":4.42},{"w":"sigue","a":4.455,"b":4.629},{"w":"dos","a":4.675,"b":4.792},{"w":"reglas.","a":4.861,"b":5.326}]},{"a":5.558,"b":8.019,"palabras":[{"w":"En","a":5.558,"b":5.651},{"w":"una","a":5.709,"b":5.813},{"w":"casilla","a":5.86,"b":6.127},{"w":"apagada","a":6.15,"b":6.533},{"w":"gira","a":6.579,"b":6.788},{"w":"a","a":6.812,"b":6.835},{"w":"la","a":6.87,"b":6.939},{"w":"derecha","a":6.986,"b":7.288},{"w":"y","a":7.311,"b":7.334},{"w":"la","a":7.369,"b":7.415},{"w":"enciende.","a":7.439,"b":8.019}]},{"a":8.437,"b":11.258,"palabras":[{"w":"En","a":8.437,"b":8.553},{"w":"una","a":8.611,"b":8.716},{"w":"encendida","a":8.739,"b":9.215},{"w":"gira","a":9.261,"b":9.459},{"w":"a","a":9.482,"b":9.505},{"w":"la","a":9.54,"b":9.586},{"w":"izquierda","a":9.61,"b":10.062},{"w":"y","a":10.155,"b":10.213},{"w":"la","a":10.295,"b":10.341},{"w":"apaga.","a":10.364,"b":11.258}]},{"a":11.755,"b":14.588,"palabras":[{"w":"Durante","a":11.755,"b":12.138},{"w":"miles","a":12.185,"b":12.394},{"w":"de","a":12.417,"b":12.486},{"w":"pasos","a":12.533,"b":12.8},{"w":"deja","a":12.823,"b":13.009},{"w":"un","a":13.032,"b":13.079},{"w":"borrón","a":13.125,"b":13.369},{"w":"sin","a":13.415,"b":13.543},{"w":"ningún","a":13.566,"b":13.822},{"w":"orden.","a":13.868,"b":14.588}]},{"a":15.752,"b":19.096,"palabras":[{"w":"Y","a":15.752,"b":15.856},{"w":"en","a":15.903,"b":15.949},{"w":"el","a":15.984,"b":16.042},{"w":"paso","a":16.112,"b":16.321},{"w":"9.977","a":16.367,"b":17.981},{"w":"empieza","a":18.097,"b":18.469},{"w":"la","a":18.504,"b":18.55},{"w":"autopista.","a":18.573,"b":19.096}]},{"a":19.514,"b":22.718,"palabras":[{"w":"Cada","a":19.514,"b":19.746},{"w":"104","a":19.781,"b":20.315},{"w":"pasos","a":20.35,"b":20.593},{"w":"avanza","a":20.617,"b":20.953},{"w":"2","a":20.988,"b":21.116},{"w":"casillas","a":21.139,"b":21.499},{"w":"en","a":21.557,"b":21.615},{"w":"diagonal.","a":21.661,"b":22.718}]},{"a":23.249,"b":24.898,"palabras":[{"w":"Para","a":23.249,"b":23.446},{"w":"la","a":23.481,"b":23.551},{"w":"PAES","a":23.609,"b":23.888},{"w":"esto","a":24.004,"b":24.213},{"w":"es","a":24.236,"b":24.282},{"w":"geometría.","a":24.306,"b":24.898}]},{"a":25.316,"b":27.707,"palabras":[{"w":"Girar","a":25.316,"b":25.617},{"w":"es","a":25.675,"b":25.722},{"w":"rotar","a":25.768,"b":26.093},{"w":"y","a":26.175,"b":26.221},{"w":"avanzar","a":26.268,"b":26.581},{"w":"es","a":26.628,"b":26.674},{"w":"trasladar.","a":26.697,"b":27.707}]},{"a":28.212,"b":32.299,"palabras":[{"w":"Y","a":28.212,"b":28.316},{"w":"la","a":28.398,"b":28.444},{"w":"autopista","a":28.467,"b":28.909},{"w":"se","a":28.955,"b":29.036},{"w":"traslada","a":29.071,"b":29.443},{"w":"por","a":29.477,"b":29.582},{"w":"el","a":29.617,"b":29.663},{"w":"mismo","a":29.71,"b":29.93},{"w":"vector","a":29.965,"b":30.29},{"w":"cada","a":30.36,"b":30.592},{"w":"104","a":30.638,"b":31.173},{"w":"pasos.","a":31.207,"b":32.299}]},{"a":32.81,"b":33.437,"palabras":[{"w":"Ahora","a":32.81,"b":33.112},{"w":"tú.","a":33.158,"b":33.437}]},{"a":34.343,"b":36.723,"palabras":[{"w":"Parte","a":34.343,"b":34.633},{"w":"en","a":34.656,"b":34.702},{"w":"el","a":34.749,"b":34.807},{"w":"origen","a":34.853,"b":35.109},{"w":"mirando","a":35.144,"b":35.434},{"w":"al","a":35.457,"b":35.504},{"w":"norte","a":35.562,"b":35.805},{"w":"y","a":35.829,"b":35.852},{"w":"con","a":35.887,"b":35.98},{"w":"todo","a":36.038,"b":36.2},{"w":"apagado.","a":36.223,"b":36.723}]},{"a":37.5,"b":40.519,"palabras":[{"w":"¿Dónde","a":37.5,"b":37.884},{"w":"queda","a":37.93,"b":38.116},{"w":"después","a":38.139,"b":38.406},{"w":"de","a":38.429,"b":38.487},{"w":"5","a":38.522,"b":38.766},{"w":"pasos?","a":38.812,"b":40.519}]},{"a":44.33,"b":44.945,"palabras":[{"w":"Es","a":44.33,"b":44.481},{"w":"la","a":44.516,"b":44.609},{"w":"C.","a":44.667,"b":44.945}]},{"a":45.305,"b":47.743,"palabras":[{"w":"Con","a":45.305,"b":45.468},{"w":"4","a":45.526,"b":45.781},{"w":"pasos","a":45.816,"b":46.071},{"w":"da","a":46.095,"b":46.164},{"w":"una","a":46.199,"b":46.315},{"w":"vuelta","a":46.362,"b":46.745},{"w":"y","a":46.826,"b":46.884},{"w":"vuelve","a":46.942,"b":47.163},{"w":"al","a":47.186,"b":47.232},{"w":"origen.","a":47.267,"b":47.743}]},{"a":48.161,"b":51.668,"palabras":[{"w":"En","a":48.161,"b":48.289},{"w":"el","a":48.324,"b":48.382},{"w":"quinto","a":48.44,"b":48.707},{"w":"pisa","a":48.753,"b":48.928},{"w":"una","a":48.951,"b":49.055},{"w":"casilla","a":49.102,"b":49.38},{"w":"encendida","a":49.473,"b":50.089},{"w":"y","a":50.205,"b":50.286},{"w":"gira","a":50.332,"b":50.518},{"w":"a","a":50.541,"b":50.565},{"w":"la","a":50.599,"b":50.646},{"w":"izquierda.","a":50.669,"b":51.668}]},{"a":52.193,"b":53.795,"palabras":[{"w":"Dos","a":52.193,"b":52.402},{"w":"reglas","a":52.46,"b":52.715},{"w":"y","a":52.762,"b":52.785},{"w":"del","a":52.82,"b":52.924},{"w":"caos","a":52.971,"b":53.145},{"w":"sale","a":53.168,"b":53.354},{"w":"orden.","a":53.389,"b":53.795}]},{"a":54.155,"b":55.223,"palabras":[{"w":"Guárdalo","a":54.155,"b":54.469},{"w":"para","a":54.503,"b":54.654},{"w":"tu","a":54.689,"b":54.77},{"w":"PAES.","a":54.817,"b":55.223}]},{"a":55.421,"b":57.116,"palabras":[{"w":"Te","a":55.421,"b":55.525},{"w":"lo","a":55.56,"b":55.606},{"w":"explicamos","a":55.63,"b":56.106},{"w":"en","a":56.164,"b":56.222},{"w":"Preu","a":56.28,"b":56.454},{"w":"Tesla.","a":56.512,"b":57.116}]}]}
+{
+ "id": "preu-hormiga-langton",
+ "marca": "preu",
+ "formato": "reel",
+ "estilo": "clasico",
+ "tresD": "auto",
+ "titulo": "La hormiga que construye una autopista",
+ "escenas": [
+  {
+   "id": "e1",
+   "tipo": "hormiga",
+   "params": {
+    "titular": "Esta hormiga",
+    "destacado": "arma una autopista.",
+    "desde": 9300,
+    "hasta": 11700,
+    "ritmo": "parejo",
+    "vista": "todo"
+   },
+   "voz": {
+    "texto": "Esta hormiga no piensa. Pero sola construye una autopista."
+   },
+   "palabrasClave": [
+    "no piensa",
+    "autopista"
+   ],
+   "dur": 4
+  },
+  {
+   "id": "e2",
+   "tipo": "hormiga",
+   "params": {
+    "titular": "Solo sigue",
+    "destacado": "dos reglas.",
+    "desde": 0,
+    "hasta": 5,
+    "ritmo": "parejo",
+    "reglas": "si",
+    "vista": "todo"
+   },
+   "voz": {
+    "texto": "Solo sigue dos reglas. En una casilla apagada gira a la derecha y la enciende. En una encendida gira a la izquierda y la apaga."
+   },
+   "palabrasClave": [
+    "dos reglas",
+    "derecha",
+    "izquierda"
+   ],
+   "dur": 7.61
+  },
+  {
+   "id": "e3",
+   "tipo": "hormiga",
+   "params": {
+    "titular": "Miles de pasos",
+    "destacado": "de puro caos.",
+    "desde": 5,
+    "hasta": 9000,
+    "ritmo": "acelera",
+    "vista": "cerca",
+    "rotulo": "caos"
+   },
+   "voz": {
+    "texto": "Durante miles de pasos deja un borrón sin ningún orden."
+   },
+   "palabrasClave": [
+    "sin ningún orden"
+   ],
+   "dur": 4
+  },
+  {
+   "id": "e4",
+   "tipo": "hormiga",
+   "params": {
+    "titular": "En el paso 9.977",
+    "destacado": "sale el orden.",
+    "desde": 9700,
+    "hasta": 11300,
+    "ritmo": "parejo",
+    "vista": "todo",
+    "rotulo": "autopista"
+   },
+   "voz": {
+    "texto": "Y en el paso 9.977 empieza la autopista. Cada 104 pasos avanza 2 casillas en diagonal."
+   },
+   "palabrasClave": [
+    "autopista",
+    "en diagonal"
+   ],
+   "dur": 7.48
+  },
+  {
+   "id": "e5",
+   "tipo": "pasos",
+   "params": {
+    "titular": "Para la PAES",
+    "destacado": "es geometría.",
+    "pasos": [
+     {
+      "titulo": "Girar 90°",
+      "detalle": "es una *rotación* de su dirección"
+     },
+     {
+      "titulo": "Avanzar",
+      "detalle": "es una *traslación* de una casilla"
+     }
+    ]
+   },
+   "voz": {
+    "texto": "Para la PAES esto es geometría. Girar es rotar y avanzar es trasladar."
+   },
+   "palabrasClave": [
+    "geometría",
+    "rotar",
+    "trasladar"
+   ],
+   "dur": 4.97
+  },
+  {
+   "id": "e5b",
+   "tipo": "hormiga",
+   "params": {
+    "titular": "Cada 104 pasos,",
+    "destacado": "el mismo vector.",
+    "desde": 11300,
+    "hasta": 12340,
+    "ritmo": "parejo",
+    "vista": "todo",
+    "rotulo": "vector (-2, -2)"
+   },
+   "voz": {
+    "texto": "Y la autopista se traslada por el mismo vector cada 104 pasos."
+   },
+   "palabrasClave": [
+    "mismo vector"
+   ],
+   "dur": 4.6
+  },
+  {
+   "id": "e6",
+   "tipo": "desafio",
+   "params": {
+    "titular": "Ahora tú.",
+    "etiqueta": "Desafío estilo PAES · M1",
+    "enunciado": "La hormiga parte en `(0, 0)` mirando al norte y con todo apagado. ¿En qué punto queda después de 5 pasos?",
+    "alternativas": [
+     "(0, 0)",
+     "(1, 0)",
+     "(-1, 0)",
+     "(0, 1)"
+    ],
+    "segundos": 3,
+    "pie": "Responde en los comentarios"
+   },
+   "voz": {
+    "texto": "Ahora tú. Parte en el origen mirando al norte y con todo apagado. ¿Dónde queda después de 5 pasos?"
+   },
+   "palabrasClave": [
+    "Ahora tú",
+    "5 pasos"
+   ],
+   "dur": 11.53
+  },
+  {
+   "id": "e7",
+   "tipo": "respuesta",
+   "params": {
+    "titular": "Respuesta: C.",
+    "alternativas": [
+     {
+      "texto": "(0, 0)",
+      "porque": "tras 4 pasos"
+     },
+     {
+      "texto": "(1, 0)",
+      "porque": "sin la regla 2"
+     },
+     {
+      "texto": "(-1, 0)",
+      "porque": "gira a la izquierda"
+     },
+     {
+      "texto": "(0, 1)",
+      "porque": "gira al revés"
+     }
+    ],
+    "correcta": "C",
+    "explicacion": "El paso 5 pisa una casilla encendida."
+   },
+   "voz": {
+    "texto": "Es la C. Con 4 pasos da una vuelta y vuelve al origen. En el quinto pisa una casilla encendida y gira a la izquierda."
+   },
+   "palabrasClave": [
+    "la C",
+    "izquierda"
+   ],
+   "dur": 7.84
+  },
+  {
+   "id": "e8",
+   "tipo": "cierre",
+   "params": {
+    "titular": "Guárdalo para",
+    "destacado": "tu PAES.",
+    "bajada": "Te lo explicamos en *Preu Tesla*.",
+    "accion": "guardar",
+    "llamado": "Comenta",
+    "clave": "PAES"
+   },
+   "voz": {
+    "texto": "Dos reglas y del caos sale orden. Guárdalo para tu PAES. Te lo explicamos en Preu Tesla."
+   },
+   "palabrasClave": [
+    "orden",
+    "Preu Tesla"
+   ],
+   "dur": 5.44
+  }
+ ],
+ "hechosNuevos": [
+  {
+   "texto": "La hormiga de Langton sigue dos reglas: en una casilla apagada gira 90 grados a la derecha, la enciende y avanza; en una encendida gira 90 grados a la izquierda, la apaga y avanza.",
+   "fuente": {
+    "url": "https://es.wikipedia.org/wiki/Hormiga_de_Langton"
+   }
+  },
+  {
+   "texto": "Partiendo de una cuadrícula apagada, desde el paso 9977 (9.977) la hormiga construye una autopista: repite un ciclo de 104 pasos y avanza 2 casillas en diagonal en cada ciclo, con el vector (-2, -2) si parte mirando al norte (simulación exacta en src/core/estudioPiezas/dibujos.test.js).",
+   "fuente": {
+    "url": "https://es.wikipedia.org/wiki/Hormiga_de_Langton"
+   }
+  },
+  {
+   "texto": "La propuso Christopher Langton en 1986 (Physica D, volumen 22).",
+   "fuente": {
+    "url": "https://doi.org/10.1016/0167-2789(86)90237-X"
+   }
+  }
+ ],
+ "verificacion": {
+  "correcta": "C",
+  "comprobacion": [
+   {
+    "letra": "A",
+    "expresion": "1 + 0 - 1 + 0 - 1 = 0",
+    "cumple": false
+   },
+   {
+    "letra": "B",
+    "expresion": "1 + 0 - 1 + 0 - 1 = 1",
+    "cumple": false
+   },
+   {
+    "letra": "C",
+    "expresion": "1 + 0 - 1 + 0 - 1 = -1",
+    "cumple": true
+   },
+   {
+    "letra": "D",
+    "expresion": "1 + 0 - 1 + 0 - 1 = 0 + 1",
+    "cumple": false
+   }
+  ]
+ },
+ "calculos": [
+  {
+   "expresion": "1 + 0 - 1 + 0 - 1",
+   "resultado": "-1"
+  },
+  {
+   "expresion": "1040 / 104 * 2",
+   "resultado": "20"
+  }
+ ],
+ "textos": {
+  "post": "Esta hormiga no piensa y aun así construye una autopista. Sigue dos reglas: en una casilla apagada gira a la derecha y la enciende; en una encendida gira a la izquierda y la apaga. Miles de pasos de caos y, en el paso 9.977, aparece el orden: cada 104 pasos avanza 2 casillas en diagonal. Para la PAES M1 es geometría pura: rotaciones, traslaciones y vectores. ¿Te atreves con el desafío? Responde en los comentarios.",
+  "historia": "Dos reglas. 9.977 pasos. Una autopista. ¿Por qué?",
+  "hashtags": [
+   "#PAES",
+   "#PAES2027",
+   "#matematica",
+   "#M1",
+   "#geometria",
+   "#preutesla",
+   "#hormigadelangton"
+  ]
+ },
+ "subtitulos": [
+  {
+   "a": 0.157,
+   "b": 1.353,
+   "palabras": [
+    {
+     "w": "Esta",
+     "a": 0.157,
+     "b": 0.389
+    },
+    {
+     "w": "hormiga",
+     "a": 0.412,
+     "b": 0.691
+    },
+    {
+     "w": "no",
+     "a": 0.749,
+     "b": 0.819
+    },
+    {
+     "w": "piensa.",
+     "a": 0.854,
+     "b": 1.353
+    }
+   ]
+  },
+  {
+   "a": 1.713,
+   "b": 3.594,
+   "palabras": [
+    {
+     "w": "Pero",
+     "a": 1.713,
+     "b": 1.898
+    },
+    {
+     "w": "sola",
+     "a": 1.933,
+     "b": 2.119
+    },
+    {
+     "w": "construye",
+     "a": 2.166,
+     "b": 2.514
+    },
+    {
+     "w": "una",
+     "a": 2.537,
+     "b": 2.63
+    },
+    {
+     "w": "autopista.",
+     "a": 2.653,
+     "b": 3.594
+    }
+   ]
+  },
+  {
+   "a": 4.153,
+   "b": 5.326,
+   "palabras": [
+    {
+     "w": "Solo",
+     "a": 4.153,
+     "b": 4.42
+    },
+    {
+     "w": "sigue",
+     "a": 4.455,
+     "b": 4.629
+    },
+    {
+     "w": "dos",
+     "a": 4.675,
+     "b": 4.792
+    },
+    {
+     "w": "reglas.",
+     "a": 4.861,
+     "b": 5.326
+    }
+   ]
+  },
+  {
+   "a": 5.558,
+   "b": 8.019,
+   "palabras": [
+    {
+     "w": "En",
+     "a": 5.558,
+     "b": 5.651
+    },
+    {
+     "w": "una",
+     "a": 5.709,
+     "b": 5.813
+    },
+    {
+     "w": "casilla",
+     "a": 5.86,
+     "b": 6.127
+    },
+    {
+     "w": "apagada",
+     "a": 6.15,
+     "b": 6.533
+    },
+    {
+     "w": "gira",
+     "a": 6.579,
+     "b": 6.788
+    },
+    {
+     "w": "a",
+     "a": 6.812,
+     "b": 6.835
+    },
+    {
+     "w": "la",
+     "a": 6.87,
+     "b": 6.939
+    },
+    {
+     "w": "derecha",
+     "a": 6.986,
+     "b": 7.288
+    },
+    {
+     "w": "y",
+     "a": 7.311,
+     "b": 7.334
+    },
+    {
+     "w": "la",
+     "a": 7.369,
+     "b": 7.415
+    },
+    {
+     "w": "enciende.",
+     "a": 7.439,
+     "b": 8.019
+    }
+   ]
+  },
+  {
+   "a": 8.437,
+   "b": 11.258,
+   "palabras": [
+    {
+     "w": "En",
+     "a": 8.437,
+     "b": 8.553
+    },
+    {
+     "w": "una",
+     "a": 8.611,
+     "b": 8.716
+    },
+    {
+     "w": "encendida",
+     "a": 8.739,
+     "b": 9.215
+    },
+    {
+     "w": "gira",
+     "a": 9.261,
+     "b": 9.459
+    },
+    {
+     "w": "a",
+     "a": 9.482,
+     "b": 9.505
+    },
+    {
+     "w": "la",
+     "a": 9.54,
+     "b": 9.586
+    },
+    {
+     "w": "izquierda",
+     "a": 9.61,
+     "b": 10.062
+    },
+    {
+     "w": "y",
+     "a": 10.155,
+     "b": 10.213
+    },
+    {
+     "w": "la",
+     "a": 10.295,
+     "b": 10.341
+    },
+    {
+     "w": "apaga.",
+     "a": 10.364,
+     "b": 11.258
+    }
+   ]
+  },
+  {
+   "a": 11.755,
+   "b": 14.588,
+   "palabras": [
+    {
+     "w": "Durante",
+     "a": 11.755,
+     "b": 12.138
+    },
+    {
+     "w": "miles",
+     "a": 12.185,
+     "b": 12.394
+    },
+    {
+     "w": "de",
+     "a": 12.417,
+     "b": 12.486
+    },
+    {
+     "w": "pasos",
+     "a": 12.533,
+     "b": 12.8
+    },
+    {
+     "w": "deja",
+     "a": 12.823,
+     "b": 13.009
+    },
+    {
+     "w": "un",
+     "a": 13.032,
+     "b": 13.079
+    },
+    {
+     "w": "borrón",
+     "a": 13.125,
+     "b": 13.369
+    },
+    {
+     "w": "sin",
+     "a": 13.415,
+     "b": 13.543
+    },
+    {
+     "w": "ningún",
+     "a": 13.566,
+     "b": 13.822
+    },
+    {
+     "w": "orden.",
+     "a": 13.868,
+     "b": 14.588
+    }
+   ]
+  },
+  {
+   "a": 15.752,
+   "b": 19.096,
+   "palabras": [
+    {
+     "w": "Y",
+     "a": 15.752,
+     "b": 15.856
+    },
+    {
+     "w": "en",
+     "a": 15.903,
+     "b": 15.949
+    },
+    {
+     "w": "el",
+     "a": 15.984,
+     "b": 16.042
+    },
+    {
+     "w": "paso",
+     "a": 16.112,
+     "b": 16.321
+    },
+    {
+     "w": "9.977",
+     "a": 16.367,
+     "b": 17.981
+    },
+    {
+     "w": "empieza",
+     "a": 18.097,
+     "b": 18.469
+    },
+    {
+     "w": "la",
+     "a": 18.504,
+     "b": 18.55
+    },
+    {
+     "w": "autopista.",
+     "a": 18.573,
+     "b": 19.096
+    }
+   ]
+  },
+  {
+   "a": 19.514,
+   "b": 22.718,
+   "palabras": [
+    {
+     "w": "Cada",
+     "a": 19.514,
+     "b": 19.746
+    },
+    {
+     "w": "104",
+     "a": 19.781,
+     "b": 20.315
+    },
+    {
+     "w": "pasos",
+     "a": 20.35,
+     "b": 20.593
+    },
+    {
+     "w": "avanza",
+     "a": 20.617,
+     "b": 20.953
+    },
+    {
+     "w": "2",
+     "a": 20.988,
+     "b": 21.116
+    },
+    {
+     "w": "casillas",
+     "a": 21.139,
+     "b": 21.499
+    },
+    {
+     "w": "en",
+     "a": 21.557,
+     "b": 21.615
+    },
+    {
+     "w": "diagonal.",
+     "a": 21.661,
+     "b": 22.718
+    }
+   ]
+  },
+  {
+   "a": 23.249,
+   "b": 24.898,
+   "palabras": [
+    {
+     "w": "Para",
+     "a": 23.249,
+     "b": 23.446
+    },
+    {
+     "w": "la",
+     "a": 23.481,
+     "b": 23.551
+    },
+    {
+     "w": "PAES",
+     "a": 23.609,
+     "b": 23.888
+    },
+    {
+     "w": "esto",
+     "a": 24.004,
+     "b": 24.213
+    },
+    {
+     "w": "es",
+     "a": 24.236,
+     "b": 24.282
+    },
+    {
+     "w": "geometría.",
+     "a": 24.306,
+     "b": 24.898
+    }
+   ]
+  },
+  {
+   "a": 25.316,
+   "b": 27.707,
+   "palabras": [
+    {
+     "w": "Girar",
+     "a": 25.316,
+     "b": 25.617
+    },
+    {
+     "w": "es",
+     "a": 25.675,
+     "b": 25.722
+    },
+    {
+     "w": "rotar",
+     "a": 25.768,
+     "b": 26.093
+    },
+    {
+     "w": "y",
+     "a": 26.175,
+     "b": 26.221
+    },
+    {
+     "w": "avanzar",
+     "a": 26.268,
+     "b": 26.581
+    },
+    {
+     "w": "es",
+     "a": 26.628,
+     "b": 26.674
+    },
+    {
+     "w": "trasladar.",
+     "a": 26.697,
+     "b": 27.707
+    }
+   ]
+  },
+  {
+   "a": 28.212,
+   "b": 32.299,
+   "palabras": [
+    {
+     "w": "Y",
+     "a": 28.212,
+     "b": 28.316
+    },
+    {
+     "w": "la",
+     "a": 28.398,
+     "b": 28.444
+    },
+    {
+     "w": "autopista",
+     "a": 28.467,
+     "b": 28.909
+    },
+    {
+     "w": "se",
+     "a": 28.955,
+     "b": 29.036
+    },
+    {
+     "w": "traslada",
+     "a": 29.071,
+     "b": 29.443
+    },
+    {
+     "w": "por",
+     "a": 29.477,
+     "b": 29.582
+    },
+    {
+     "w": "el",
+     "a": 29.617,
+     "b": 29.663
+    },
+    {
+     "w": "mismo",
+     "a": 29.71,
+     "b": 29.93
+    },
+    {
+     "w": "vector",
+     "a": 29.965,
+     "b": 30.29
+    },
+    {
+     "w": "cada",
+     "a": 30.36,
+     "b": 30.592
+    },
+    {
+     "w": "104",
+     "a": 30.638,
+     "b": 31.173
+    },
+    {
+     "w": "pasos.",
+     "a": 31.207,
+     "b": 32.299
+    }
+   ]
+  },
+  {
+   "a": 32.81,
+   "b": 33.437,
+   "palabras": [
+    {
+     "w": "Ahora",
+     "a": 32.81,
+     "b": 33.112
+    },
+    {
+     "w": "tú.",
+     "a": 33.158,
+     "b": 33.437
+    }
+   ]
+  },
+  {
+   "a": 34.343,
+   "b": 36.723,
+   "palabras": [
+    {
+     "w": "Parte",
+     "a": 34.343,
+     "b": 34.633
+    },
+    {
+     "w": "en",
+     "a": 34.656,
+     "b": 34.702
+    },
+    {
+     "w": "el",
+     "a": 34.749,
+     "b": 34.807
+    },
+    {
+     "w": "origen",
+     "a": 34.853,
+     "b": 35.109
+    },
+    {
+     "w": "mirando",
+     "a": 35.144,
+     "b": 35.434
+    },
+    {
+     "w": "al",
+     "a": 35.457,
+     "b": 35.504
+    },
+    {
+     "w": "norte",
+     "a": 35.562,
+     "b": 35.805
+    },
+    {
+     "w": "y",
+     "a": 35.829,
+     "b": 35.852
+    },
+    {
+     "w": "con",
+     "a": 35.887,
+     "b": 35.98
+    },
+    {
+     "w": "todo",
+     "a": 36.038,
+     "b": 36.2
+    },
+    {
+     "w": "apagado.",
+     "a": 36.223,
+     "b": 36.723
+    }
+   ]
+  },
+  {
+   "a": 37.5,
+   "b": 40.519,
+   "palabras": [
+    {
+     "w": "¿Dónde",
+     "a": 37.5,
+     "b": 37.884
+    },
+    {
+     "w": "queda",
+     "a": 37.93,
+     "b": 38.116
+    },
+    {
+     "w": "después",
+     "a": 38.139,
+     "b": 38.406
+    },
+    {
+     "w": "de",
+     "a": 38.429,
+     "b": 38.487
+    },
+    {
+     "w": "5",
+     "a": 38.522,
+     "b": 38.766
+    },
+    {
+     "w": "pasos?",
+     "a": 38.812,
+     "b": 40.519
+    }
+   ]
+  },
+  {
+   "a": 44.33,
+   "b": 44.945,
+   "palabras": [
+    {
+     "w": "Es",
+     "a": 44.33,
+     "b": 44.481
+    },
+    {
+     "w": "la",
+     "a": 44.516,
+     "b": 44.609
+    },
+    {
+     "w": "C.",
+     "a": 44.667,
+     "b": 44.945
+    }
+   ]
+  },
+  {
+   "a": 45.305,
+   "b": 47.743,
+   "palabras": [
+    {
+     "w": "Con",
+     "a": 45.305,
+     "b": 45.468
+    },
+    {
+     "w": "4",
+     "a": 45.526,
+     "b": 45.781
+    },
+    {
+     "w": "pasos",
+     "a": 45.816,
+     "b": 46.071
+    },
+    {
+     "w": "da",
+     "a": 46.095,
+     "b": 46.164
+    },
+    {
+     "w": "una",
+     "a": 46.199,
+     "b": 46.315
+    },
+    {
+     "w": "vuelta",
+     "a": 46.362,
+     "b": 46.745
+    },
+    {
+     "w": "y",
+     "a": 46.826,
+     "b": 46.884
+    },
+    {
+     "w": "vuelve",
+     "a": 46.942,
+     "b": 47.163
+    },
+    {
+     "w": "al",
+     "a": 47.186,
+     "b": 47.232
+    },
+    {
+     "w": "origen.",
+     "a": 47.267,
+     "b": 47.743
+    }
+   ]
+  },
+  {
+   "a": 48.161,
+   "b": 51.668,
+   "palabras": [
+    {
+     "w": "En",
+     "a": 48.161,
+     "b": 48.289
+    },
+    {
+     "w": "el",
+     "a": 48.324,
+     "b": 48.382
+    },
+    {
+     "w": "quinto",
+     "a": 48.44,
+     "b": 48.707
+    },
+    {
+     "w": "pisa",
+     "a": 48.753,
+     "b": 48.928
+    },
+    {
+     "w": "una",
+     "a": 48.951,
+     "b": 49.055
+    },
+    {
+     "w": "casilla",
+     "a": 49.102,
+     "b": 49.38
+    },
+    {
+     "w": "encendida",
+     "a": 49.473,
+     "b": 50.089
+    },
+    {
+     "w": "y",
+     "a": 50.205,
+     "b": 50.286
+    },
+    {
+     "w": "gira",
+     "a": 50.332,
+     "b": 50.518
+    },
+    {
+     "w": "a",
+     "a": 50.541,
+     "b": 50.565
+    },
+    {
+     "w": "la",
+     "a": 50.599,
+     "b": 50.646
+    },
+    {
+     "w": "izquierda.",
+     "a": 50.669,
+     "b": 51.668
+    }
+   ]
+  },
+  {
+   "a": 52.193,
+   "b": 53.795,
+   "palabras": [
+    {
+     "w": "Dos",
+     "a": 52.193,
+     "b": 52.402
+    },
+    {
+     "w": "reglas",
+     "a": 52.46,
+     "b": 52.715
+    },
+    {
+     "w": "y",
+     "a": 52.762,
+     "b": 52.785
+    },
+    {
+     "w": "del",
+     "a": 52.82,
+     "b": 52.924
+    },
+    {
+     "w": "caos",
+     "a": 52.971,
+     "b": 53.145
+    },
+    {
+     "w": "sale",
+     "a": 53.168,
+     "b": 53.354
+    },
+    {
+     "w": "orden.",
+     "a": 53.389,
+     "b": 53.795
+    }
+   ]
+  },
+  {
+   "a": 54.155,
+   "b": 55.223,
+   "palabras": [
+    {
+     "w": "Guárdalo",
+     "a": 54.155,
+     "b": 54.469
+    },
+    {
+     "w": "para",
+     "a": 54.503,
+     "b": 54.654
+    },
+    {
+     "w": "tu",
+     "a": 54.689,
+     "b": 54.77
+    },
+    {
+     "w": "PAES.",
+     "a": 54.817,
+     "b": 55.223
+    }
+   ]
+  },
+  {
+   "a": 55.421,
+   "b": 57.116,
+   "palabras": [
+    {
+     "w": "Te",
+     "a": 55.421,
+     "b": 55.525
+    },
+    {
+     "w": "lo",
+     "a": 55.56,
+     "b": 55.606
+    },
+    {
+     "w": "explicamos",
+     "a": 55.63,
+     "b": 56.106
+    },
+    {
+     "w": "en",
+     "a": 56.164,
+     "b": 56.222
+    },
+    {
+     "w": "Preu",
+     "a": 56.28,
+     "b": 56.454
+    },
+    {
+     "w": "Tesla.",
+     "a": 56.512,
+     "b": 57.116
+    }
+   ]
+  }
+ ],
+ "paes": {
+  "prueba": "M1",
+  "eje": "Geometría",
+  "contenido": "Puntos y vectores en el plano cartesiano"
+ }
+}

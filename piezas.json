@@ -17,7 +17,7 @@
     "fecha": "2026-10-25",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Contenido educativo PAES (M1) con voz",
-    "resumen": "La hormiga de Langton sigue dos reglas y, después de 9.977 pasos de caos, construye una autopista que avanza 2 casillas en diagonal cada 104 pasos. Para la PAES M1 es geometría: rotaciones, traslaciones y vectores, con un desafío estilo PAES verificado. Dibujo nuevo del Estudio de Piezas, simulado exacto (cada cuadro sale del paso real de la hormiga), con subtítulos arriba y música propia.",
+    "resumen": "La hormiga de Langton sigue dos reglas y, después de 9.977 pasos de caos, construye una autopista que avanza 2 casillas en diagonal cada 104 pasos. Para la PAES M1 es geometría: rotaciones, traslaciones y vectores, con un desafío estilo PAES verificado. Dibujo nuevo del Estudio de Piezas, simulado exacto (cada cuadro sale del paso real de la hormiga), con subtítulos arriba y música propia. Etiqueta fija todo el reel: «PAES M1 · Geometría · Puntos y vectores en el plano cartesiano», el contenido oficial del temario.",
     "reel": "preu-hormiga-langton-reel.mp4",
     "carrusel": [],
     "textos": "textos.md",
@@ -29,7 +29,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Contenido educativo PAES (M1) con voz",
-    "resumen": "¿0,9 periódico es casi 1? No: es exactamente 1. Una barra del 0 al 1 que se llena de a nueve décimas, la prueba con álgebra, un desafío estilo PAES y la regla del período sobre nueves. Con el dibujo «El espacio que se achica» y subtítulos arriba.",
+    "resumen": "¿0,9 periódico es casi 1? No: es exactamente 1. Una barra del 0 al 1 que se llena de a nueve décimas, la prueba con álgebra, un desafío estilo PAES y la regla del período sobre nueves. Con el dibujo «El espacio que se achica» y subtítulos arriba. Etiqueta fija todo el reel: «PAES M1 · Números · Operaciones y comparación en los racionales», el contenido oficial del temario.",
     "reel": "preu-09-periodico-reel.mp4",
     "carrusel": [],
     "textos": "textos.md",
@@ -91,7 +91,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Versión nueva con movimiento 3D (para comparar con la de Cuaderno)",
-    "resumen": "La misma pieza del ajedrez en estilo Cuaderno, con la misma voz y música, grabada con el movimiento 3D del Estudio: la cámara de cada escena inclina y se acerca, la hoja del manuscrito y las tarjetas entran en perspectiva, las cifras tienen volumen y el logo y la web bajaron a la zona segura de Instagram. El desafío y la respuesta quedan quietos para leerlos.",
+    "resumen": "La misma pieza del ajedrez en estilo Cuaderno, con la misma voz y música, grabada con el movimiento 3D del Estudio: la cámara de cada escena inclina y se acerca, la hoja del manuscrito y las tarjetas entran en perspectiva, las cifras tienen volumen y el logo y la web bajaron a la zona segura de Instagram. El desafío y la respuesta quedan quietos para leerlos. Etiqueta fija todo el reel: «PAES M1 · Números · Problemas con potencias y raíces enésimas en diversos contextos», el contenido oficial del temario.",
     "reel": "preu-ajedrez-cuaderno-3d-reel.mp4",
     "carrusel": [
       "preu-ajedrez-cuaderno-01.png",
@@ -115,7 +115,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Misma pieza en otro estilo de arte (para comparar)",
-    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Cuaderno: papel cuadriculado, tinta y destacador, con hojas que pasan de lado. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Cuaderno: papel cuadriculado, tinta y destacador, con hojas que pasan de lado. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia. Etiqueta fija todo el reel: «PAES M1 · Números · Problemas con potencias y raíces enésimas en diversos contextos», el contenido oficial del temario.",
     "reel": "preu-ajedrez-cuaderno-reel.mp4",
     "carrusel": [
       "preu-ajedrez-cuaderno-01.png",
@@ -139,7 +139,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Misma pieza en otro estilo de arte (para comparar)",
-    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Editorial: bloques de color plano que cambian en cada escena, letra enorme y cortes secos. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
+    "resumen": "La misma pieza del ajedrez, con la misma voz, en el estilo Editorial: bloques de color plano que cambian en cada escena, letra enorme y cortes secos. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia. Ahora con movimiento 3D. Etiqueta fija todo el reel: «PAES M1 · Números · Problemas con potencias y raíces enésimas en diversos contextos», el contenido oficial del temario.",
     "reel": "preu-ajedrez-editorial-reel.mp4",
     "carrusel": [
       "preu-ajedrez-editorial-01.png",
@@ -163,7 +163,7 @@
     "fecha": "2026-10-24",
     "cliente": "Preuniversitario Tesla",
     "tipo": "Contenido educativo PAES (M1) con voz",
-    "resumen": "La leyenda del grano de trigo que se duplica en cada casilla: de 1 grano a unos 18 trillones, más de 600 años de la cosecha mundial de trigo. Aclara que «quintillones» es una mala traducción y cierra con un desafío estilo PAES de potencias de 2. Primera pieza armada con el Estudio de Piezas. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia.",
+    "resumen": "La leyenda del grano de trigo que se duplica en cada casilla: de 1 grano a unos 18 trillones, más de 600 años de la cosecha mundial de trigo. Aclara que «quintillones» es una mala traducción y cierra con un desafío estilo PAES de potencias de 2. Primera pieza armada con el Estudio de Piezas. Con tablero animado (la cámara se aleja mientras el trigo se apila), cámara viva, subtítulos en la zona segura y música de fondo propia. Ahora con movimiento 3D. Etiqueta fija todo el reel: «PAES M1 · Números · Problemas con potencias y raíces enésimas en diversos contextos», el contenido oficial del temario.",
     "reel": "preu-ajedrez-reel.mp4",
     "carrusel": [
       "preu-ajedrez-clasico-01.png",
