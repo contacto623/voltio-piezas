@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-10-hormiga-langton",
+    "titulo": "La hormiga que construye una autopista",
+    "fecha": "2026-10-25",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz",
+    "resumen": "La hormiga de Langton sigue dos reglas y, después de 9.977 pasos de caos, construye una autopista que avanza 2 casillas en diagonal cada 104 pasos. Para la PAES M1 es geometría: rotaciones, traslaciones y vectores, con un desafío estilo PAES verificado. Dibujo nuevo del Estudio de Piezas, simulado exacto (cada cuadro sale del paso real de la hormiga), con subtítulos arriba y música propia.",
+    "reel": "preu-hormiga-langton-reel.mp4",
+    "carrusel": [],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
+    "id": "2026-10-09-periodico",
+    "titulo": "0,9 periódico es exactamente 1",
+    "fecha": "2026-10-24",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz",
+    "resumen": "¿0,9 periódico es casi 1? No: es exactamente 1. Una barra del 0 al 1 que se llena de a nueve décimas, la prueba con álgebra, un desafío estilo PAES y la regla del período sobre nueves. Con el dibujo «El espacio que se achica» y subtítulos arriba.",
+    "reel": "preu-09-periodico-reel.mp4",
+    "carrusel": [],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-prensa-t13",
     "titulo": "Lo que contamos en Tele13 Radio",
     "fecha": "2026-10-24",
