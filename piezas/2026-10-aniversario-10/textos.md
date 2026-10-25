@@ -1,6 +1,6 @@
 # Aniversario 10 años · Preuniversitario Tesla
 
-Reel promocional armado con el Estudio de Piezas: 9:16 (1080x1920, 34 s, voz de Alejandro con subtítulos arriba), estilo Editorial.
+Reel promocional armado con el Estudio de Piezas: 9:16 (1080x1920, 46 s, voz de Alejandro con subtítulos arriba), estilo Editorial.
 Nada se publicó. Los archivos están en esta carpeta.
 
 ---
@@ -9,7 +9,9 @@ Nada se publicó. Los archivos están en esta carpeta.
 
 Preu Tesla cumple 10 años y lo celebramos con el descuento más grande que hemos hecho: 55% en el Anual 2027, presencial u online, solo hasta el 31 de octubre.
 
-Salas de 12 alumnos como máximo y profesores que sacaron los 1.000 puntos. En 2025 nuestros alumnos sumaron más de 100 puntajes máximos.
+Máximo 12 alumnos por sala y profesores que sacaron los 1.000 puntos. En 2025 nuestros alumnos sumaron más de 100 puntajes máximos.
+
+Y todo incluido: informe personalizado de cada ensayo, clases particulares de regalo, clases grabadas y la plataforma disponible 24/7.
 
 Escríbenos hoy y asegura tu cupo.
 
