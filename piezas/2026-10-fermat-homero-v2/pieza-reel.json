@@ -1,0 +1,1443 @@
+{
+ "id": "preu-fermat-v2",
+ "marca": "preu",
+ "formato": "reel",
+ "escenas": [
+  {
+   "id": "e1",
+   "tipo": "ecuacion",
+   "dur": 3.8,
+   "voz": {
+    "texto": "Esta ecuación salió en Los Simpson, y la calculadora dice que es cierta."
+   },
+   "params": {
+    "sello": "Los Simpson · Halloween, 1995",
+    "titular": "¿Esta ecuación",
+    "destacado": "es cierta?",
+    "ecuacion": "1782^12 + 1841^12 = 1922^12",
+    "calculadora": [
+     {
+      "expresion": "1782^12 + 1841^12",
+      "resultado": "2,541210259E39"
+     },
+     {
+      "expresion": "1922^12",
+      "resultado": "2,541210259E39"
+     }
+    ],
+    "veredicto": "iguales",
+    "veredictoTexto": "Iguales",
+    "mundo": "si"
+   },
+   "palabrasClave": [
+    "Los Simpson",
+    "cierta"
+   ]
+  },
+  {
+   "id": "e2",
+   "tipo": "gancho",
+   "dur": 2,
+   "voz": {
+    "texto": "¿Homero le ganó a Fermat?"
+   },
+   "params": {
+    "titular": "¿Homero le ganó",
+    "destacado": "a Fermat?",
+    "mundo": "si"
+   },
+   "palabrasClave": [
+    "Fermat"
+   ]
+  },
+  {
+   "id": "e3",
+   "tipo": "pitagoras",
+   "dur": 5.5,
+   "voz": {
+    "texto": "Con cuadrados sí funciona: tres, cuatro y cinco. Y hay infinitos tríos así."
+   },
+   "params": {
+    "titular": "Con `n = 2`,",
+    "destacado": "sí funciona.",
+    "a": 3,
+    "b": 4,
+    "trios": [
+     "5, 12, 13",
+     "8, 15, 17",
+     "infinitos"
+    ]
+   },
+   "palabrasClave": [
+    "tres, cuatro",
+    "infinitos"
+   ]
+  },
+  {
+   "id": "e4",
+   "tipo": "cubos",
+   "dur": 3.9,
+   "voz": {
+    "texto": "Con cubos, nunca calza: siempre sobra o falta un cubito."
+   },
+   "params": {
+    "titular": "Con `n = 3`,",
+    "destacado": "nunca calza.",
+    "filas": [
+     {
+      "a": 9,
+      "b": 10,
+      "c": 12
+     },
+     {
+      "a": 6,
+      "b": 8,
+      "c": 9
+     }
+    ]
+   },
+   "palabrasClave": [
+    "nunca calza"
+   ]
+  },
+  {
+   "id": "e5",
+   "tipo": "manuscrito",
+   "dur": 9,
+   "voz": {
+    "texto": "Hacia mil seiscientos treinta y siete, Fermat anotó en un margen: con potencias mayores que dos, nunca calza. Tenía una prueba maravillosa, pero no le cabía."
+   },
+   "params": {
+    "titular": "Hacia 1637,",
+    "destacado": "en un margen.",
+    "estilo": "pergamino",
+    "encabezado": "Arithmetica, libro II",
+    "lineas": [
+     {
+      "texto": "Cubum autem in duos cubos, aut"
+     },
+     {
+      "texto": "quadratoquadratum in duos quadra-"
+     },
+     {
+      "texto": "toquadratos, et generaliter nullam"
+     },
+     {
+      "texto": "in infinitum ultra quadratum potes-"
+     },
+     {
+      "texto": "tatem in duos eiusdem nominis fas"
+     },
+     {
+      "texto": "est dividere. Cuius rei demonstra-"
+     },
+     {
+      "texto": "tionem mirabilem sane detexi.",
+      "subraya": "si"
+     },
+     {
+      "texto": "Hanc marginis exiguitas non caperet.",
+      "subraya": "si"
+     }
+    ],
+    "cita": "«He descubierto una demostración verdaderamente maravillosa, pero este margen es demasiado estrecho para contenerla.»",
+    "autor": "Pierre de Fermat, en su ejemplar de la Aritmética"
+   },
+   "palabrasClave": [
+    "en un margen",
+    "no le cabía"
+   ]
+  },
+  {
+   "id": "e6",
+   "tipo": "linea",
+   "dur": 4.25,
+   "voz": {
+    "texto": "Fermat probó el cuatro; Euler, el tres. Pero nadie pudo con todos."
+   },
+   "params": {
+    "titular": "Siglos de",
+    "destacado": "intentos.",
+    "hitos": [
+     {
+      "cuando": "1637",
+      "texto": "*Fermat* anota la conjetura en el margen."
+     },
+     {
+      "cuando": "Siglo XVII",
+      "texto": "*Fermat* demuestra `n = 4` con su descenso infinito."
+     },
+     {
+      "cuando": "1770",
+      "texto": "*Euler* publica el caso `n = 3`."
+     }
+    ],
+    "bajada": "Cada uno sumaba casos. *Nadie podía con todos.*"
+   },
+   "palabrasClave": [
+    "Euler"
+   ]
+  },
+  {
+   "id": "e7",
+   "tipo": "viaje",
+   "dur": 12.85,
+   "voz": {
+    "texto": "Andrew Wiles lo conoció a los diez años. Lo anunció en mil novecientos noventa y tres, pero tenía un error. Con Richard Taylor lo arregló, y en mil novecientos noventa y cinco quedó publicado: trescientos cincuenta y ocho años después."
+   },
+   "params": {
+    "titular": "El niño de",
+    "destacado": "la biblioteca.",
+    "hitos": [
+     {
+      "cuando": "1963",
+      "texto": "A los *10 años* encuentra el problema en un libro."
+     },
+     {
+      "cuando": "1993",
+      "texto": "Lo anuncia en *Cambridge*."
+     },
+     {
+      "cuando": "1993",
+      "texto": "En la revisión aparece *un error*."
+     },
+     {
+      "cuando": "1994",
+      "texto": "Lo corrige con *Richard Taylor*."
+     },
+     {
+      "cuando": "1995",
+      "texto": "Se publica en *Annals of Mathematics*."
+     }
+    ],
+    "bajada": "*358 años* después de la nota en el margen."
+   },
+   "palabrasClave": [
+    "diez años",
+    "un error",
+    "cincuenta y ocho"
+   ]
+  },
+  {
+   "id": "e8",
+   "tipo": "razonamiento",
+   "dur": 12.1,
+   "voz": {
+    "texto": "¿Y Homero? Mil setecientos ochenta y dos es par; mil ochocientos cuarenta y uno, impar. Par más impar da impar, pero mil novecientos veintidós es par. Falsa."
+   },
+   "params": {
+    "titular": "¿Y Homero?",
+    "ecuacion": "1782^12 + 1841^12 = 1922^12",
+    "pasos": [
+     {
+      "izquierda": "1782 es par",
+      "derecha": "par",
+      "tono": "a"
+     },
+     {
+      "izquierda": "1841 es impar",
+      "derecha": "impar",
+      "tono": "b"
+     },
+     {
+      "izquierda": "par + impar",
+      "derecha": "impar",
+      "tono": "b"
+     },
+     {
+      "izquierda": "1922 es par",
+      "derecha": "par",
+      "tono": "a"
+     }
+    ],
+    "conclusion": "impar != par",
+    "veredicto": "Falsa",
+    "veredictoTono": "mal"
+   },
+   "palabrasClave": [
+    "par",
+    "impar",
+    "Falsa"
+   ]
+  },
+  {
+   "id": "e9",
+   "tipo": "desafio",
+   "dur": 7.9,
+   "voz": {
+    "texto": "Ahora tú: ¿cuál de estos tríos forma un triángulo rectángulo? Tres segundos."
+   },
+   "params": {
+    "titular": "Ahora tú.",
+    "etiqueta": "Desafío estilo PAES · M1",
+    "enunciado": "¿Cuál de los siguientes tríos de números puede corresponder a las medidas de los lados de un *triángulo rectángulo*?",
+    "alternativas": [
+     "2, 3 y 4",
+     "5, 12 y 14",
+     "8, 15 y 17",
+     "9, 12 y 16"
+    ],
+    "segundos": 3,
+    "pie": "Responde en los comentarios"
+   },
+   "palabrasClave": [
+    "Ahora tú"
+   ]
+  },
+  {
+   "id": "e10",
+   "tipo": "respuesta",
+   "dur": 4.75,
+   "voz": {
+    "texto": "La C: ocho al cuadrado más quince al cuadrado da diecisiete al cuadrado."
+   },
+   "params": {
+    "titular": "Respuesta: C.",
+    "correcta": "C",
+    "alternativas": [
+     {
+      "texto": "2, 3 y 4",
+      "porque": "`4 + 9 = 13`, no `16`"
+     },
+     {
+      "texto": "5, 12 y 14",
+      "porque": "`25 + 144 = 169`, no `196`"
+     },
+     {
+      "texto": "8, 15 y 17",
+      "porque": "`64 + 225 = 289 = 17^2`"
+     },
+     {
+      "texto": "9, 12 y 16",
+      "porque": "`81 + 144 = 225`, no `256`"
+     }
+    ],
+    "explicacion": "`8^2 + 15^2 = 17^2`: el lado mayor es la hipotenusa."
+   },
+   "palabrasClave": [
+    "La C"
+   ]
+  },
+  {
+   "id": "e11",
+   "tipo": "cierre",
+   "dur": 5.7,
+   "voz": {
+    "texto": "Guárdalo y compártelo con quien da la PAES. Te lo explicamos en Preu Tesla."
+   },
+   "params": {
+    "titular": "Guárdalo y",
+    "destacado": "compártelo",
+    "bajada": "con quien da la *PAES.*",
+    "accion": "guardar"
+   },
+   "palabrasClave": [
+    "Preu Tesla"
+   ]
+  }
+ ],
+ "subtitulos": [
+  {
+   "a": 0,
+   "b": 1.64,
+   "palabras": [
+    {
+     "w": "Esta",
+     "a": 0,
+     "b": 0.24
+    },
+    {
+     "w": "ecuación",
+     "a": 0.24,
+     "b": 0.6
+    },
+    {
+     "w": "salió",
+     "a": 0.6,
+     "b": 0.92
+    },
+    {
+     "w": "en",
+     "a": 0.92,
+     "b": 0.98
+    },
+    {
+     "w": "Los",
+     "a": 0.98,
+     "b": 1.1
+    },
+    {
+     "w": "Simpson,",
+     "a": 1.1,
+     "b": 1.64
+    }
+   ]
+  },
+  {
+   "a": 1.88,
+   "b": 3.6,
+   "palabras": [
+    {
+     "w": "y",
+     "a": 1.88,
+     "b": 2.04
+    },
+    {
+     "w": "la",
+     "a": 2.04,
+     "b": 2.12
+    },
+    {
+     "w": "calculadora",
+     "a": 2.12,
+     "b": 2.64
+    },
+    {
+     "w": "dice",
+     "a": 2.64,
+     "b": 2.88
+    },
+    {
+     "w": "que",
+     "a": 2.88,
+     "b": 3.06
+    },
+    {
+     "w": "es",
+     "a": 3.06,
+     "b": 3.24
+    },
+    {
+     "w": "cierta.",
+     "a": 3.24,
+     "b": 3.6
+    }
+   ]
+  },
+  {
+   "a": 4.02,
+   "b": 5.5,
+   "palabras": [
+    {
+     "w": "¿Homero",
+     "a": 4.02,
+     "b": 4.44
+    },
+    {
+     "w": "le",
+     "a": 4.44,
+     "b": 4.62
+    },
+    {
+     "w": "ganó",
+     "a": 4.62,
+     "b": 4.88
+    },
+    {
+     "w": "a",
+     "a": 4.88,
+     "b": 5
+    },
+    {
+     "w": "Fermat?",
+     "a": 5,
+     "b": 5.5
+    }
+   ]
+  },
+  {
+   "a": 6.04,
+   "b": 7.36,
+   "palabras": [
+    {
+     "w": "Con",
+     "a": 6.04,
+     "b": 6.28
+    },
+    {
+     "w": "cuadrados",
+     "a": 6.28,
+     "b": 6.7
+    },
+    {
+     "w": "sí",
+     "a": 6.7,
+     "b": 6.98
+    },
+    {
+     "w": "funciona.",
+     "a": 6.98,
+     "b": 7.36
+    }
+   ]
+  },
+  {
+   "a": 7.82,
+   "b": 9.34,
+   "palabras": [
+    {
+     "w": "3,",
+     "a": 7.82,
+     "b": 8
+    },
+    {
+     "w": "4",
+     "a": 8.3,
+     "b": 8.62
+    },
+    {
+     "w": "y",
+     "a": 8.62,
+     "b": 9
+    },
+    {
+     "w": "5.",
+     "a": 9,
+     "b": 9.34
+    }
+   ]
+  },
+  {
+   "a": 9.72,
+   "b": 10.96,
+   "palabras": [
+    {
+     "w": "Y",
+     "a": 9.72,
+     "b": 9.84
+    },
+    {
+     "w": "hay",
+     "a": 9.84,
+     "b": 9.92
+    },
+    {
+     "w": "infinitos",
+     "a": 9.92,
+     "b": 10.42
+    },
+    {
+     "w": "tríos",
+     "a": 10.42,
+     "b": 10.74
+    },
+    {
+     "w": "así.",
+     "a": 10.74,
+     "b": 10.96
+    }
+   ]
+  },
+  {
+   "a": 11.46,
+   "b": 13,
+   "palabras": [
+    {
+     "w": "Con",
+     "a": 11.46,
+     "b": 11.7
+    },
+    {
+     "w": "cubos,",
+     "a": 11.7,
+     "b": 12.1
+    },
+    {
+     "w": "nunca",
+     "a": 12.3,
+     "b": 12.56
+    },
+    {
+     "w": "calza.",
+     "a": 12.56,
+     "b": 13
+    }
+   ]
+  },
+  {
+   "a": 13.34,
+   "b": 14.92,
+   "palabras": [
+    {
+     "w": "Siempre",
+     "a": 13.34,
+     "b": 13.64
+    },
+    {
+     "w": "sobra",
+     "a": 13.64,
+     "b": 14.08
+    },
+    {
+     "w": "o",
+     "a": 14.08,
+     "b": 14.2
+    },
+    {
+     "w": "falta",
+     "a": 14.2,
+     "b": 14.38
+    },
+    {
+     "w": "un",
+     "a": 14.38,
+     "b": 14.54
+    },
+    {
+     "w": "cubito.",
+     "a": 14.54,
+     "b": 14.92
+    }
+   ]
+  },
+  {
+   "a": 15.44,
+   "b": 16.82,
+   "palabras": [
+    {
+     "w": "Hacia",
+     "a": 15.44,
+     "b": 15.62
+    },
+    {
+     "w": "1637,",
+     "a": 15.62,
+     "b": 16.82
+    }
+   ]
+  },
+  {
+   "a": 17.28,
+   "b": 18.44,
+   "palabras": [
+    {
+     "w": "Fermat",
+     "a": 17.28,
+     "b": 17.6
+    },
+    {
+     "w": "anotó",
+     "a": 17.6,
+     "b": 17.86
+    },
+    {
+     "w": "en",
+     "a": 17.86,
+     "b": 17.98
+    },
+    {
+     "w": "un",
+     "a": 17.98,
+     "b": 18.08
+    },
+    {
+     "w": "margen.",
+     "a": 18.08,
+     "b": 18.44
+    }
+   ]
+  },
+  {
+   "a": 18.88,
+   "b": 20.16,
+   "palabras": [
+    {
+     "w": "Con",
+     "a": 18.88,
+     "b": 19.02
+    },
+    {
+     "w": "potencias",
+     "a": 19.02,
+     "b": 19.36
+    },
+    {
+     "w": "mayores",
+     "a": 19.36,
+     "b": 19.72
+    },
+    {
+     "w": "que",
+     "a": 19.72,
+     "b": 19.92
+    },
+    {
+     "w": "2,",
+     "a": 19.92,
+     "b": 20.16
+    }
+   ]
+  },
+  {
+   "a": 20.46,
+   "b": 21.2,
+   "palabras": [
+    {
+     "w": "nunca",
+     "a": 20.46,
+     "b": 20.68
+    },
+    {
+     "w": "calza.",
+     "a": 20.68,
+     "b": 21.2
+    }
+   ]
+  },
+  {
+   "a": 21.64,
+   "b": 22.98,
+   "palabras": [
+    {
+     "w": "Tenía",
+     "a": 21.64,
+     "b": 21.84
+    },
+    {
+     "w": "una",
+     "a": 21.84,
+     "b": 21.98
+    },
+    {
+     "w": "prueba",
+     "a": 21.98,
+     "b": 22.18
+    },
+    {
+     "w": "maravillosa,",
+     "a": 22.18,
+     "b": 22.98
+    }
+   ]
+  },
+  {
+   "a": 23.24,
+   "b": 23.96,
+   "palabras": [
+    {
+     "w": "pero",
+     "a": 23.24,
+     "b": 23.4
+    },
+    {
+     "w": "no",
+     "a": 23.4,
+     "b": 23.54
+    },
+    {
+     "w": "le",
+     "a": 23.54,
+     "b": 23.66
+    },
+    {
+     "w": "cabía.",
+     "a": 23.66,
+     "b": 23.96
+    }
+   ]
+  },
+  {
+   "a": 24.44,
+   "b": 25.54,
+   "palabras": [
+    {
+     "w": "Fermat",
+     "a": 24.44,
+     "b": 24.92
+    },
+    {
+     "w": "probó",
+     "a": 24.92,
+     "b": 25.2
+    },
+    {
+     "w": "el",
+     "a": 25.2,
+     "b": 25.3
+    },
+    {
+     "w": "4.",
+     "a": 25.3,
+     "b": 25.54
+    }
+   ]
+  },
+  {
+   "a": 26.04,
+   "b": 26.88,
+   "palabras": [
+    {
+     "w": "Euler,",
+     "a": 26.04,
+     "b": 26.38
+    },
+    {
+     "w": "el",
+     "a": 26.38,
+     "b": 26.64
+    },
+    {
+     "w": "3.",
+     "a": 26.64,
+     "b": 26.88
+    }
+   ]
+  },
+  {
+   "a": 27.32,
+   "b": 28.58,
+   "palabras": [
+    {
+     "w": "Pero",
+     "a": 27.32,
+     "b": 27.48
+    },
+    {
+     "w": "nadie",
+     "a": 27.48,
+     "b": 27.82
+    },
+    {
+     "w": "pudo",
+     "a": 27.82,
+     "b": 28.06
+    },
+    {
+     "w": "con",
+     "a": 28.06,
+     "b": 28.3
+    },
+    {
+     "w": "todos.",
+     "a": 28.3,
+     "b": 28.58
+    }
+   ]
+  },
+  {
+   "a": 28.58,
+   "b": 30.5,
+   "palabras": [
+    {
+     "w": "Andrew",
+     "a": 28.58,
+     "b": 29.44
+    },
+    {
+     "w": "Wiles",
+     "a": 29.44,
+     "b": 29.78
+    },
+    {
+     "w": "lo",
+     "a": 29.78,
+     "b": 30
+    },
+    {
+     "w": "conoció",
+     "a": 30,
+     "b": 30.32
+    },
+    {
+     "w": "a",
+     "a": 30.32,
+     "b": 30.4
+    },
+    {
+     "w": "los",
+     "a": 30.4,
+     "b": 30.5
+    }
+   ]
+  },
+  {
+   "a": 30.5,
+   "b": 31.06,
+   "palabras": [
+    {
+     "w": "10",
+     "a": 30.5,
+     "b": 30.7
+    },
+    {
+     "w": "años.",
+     "a": 30.7,
+     "b": 31.06
+    }
+   ]
+  },
+  {
+   "a": 31.46,
+   "b": 32.74,
+   "palabras": [
+    {
+     "w": "Lo",
+     "a": 31.46,
+     "b": 31.56
+    },
+    {
+     "w": "anunció",
+     "a": 31.56,
+     "b": 31.9
+    },
+    {
+     "w": "en",
+     "a": 31.9,
+     "b": 31.98
+    },
+    {
+     "w": "1993,",
+     "a": 31.98,
+     "b": 32.74
+    }
+   ]
+  },
+  {
+   "a": 33.48,
+   "b": 34.18,
+   "palabras": [
+    {
+     "w": "pero",
+     "a": 33.48,
+     "b": 33.64
+    },
+    {
+     "w": "tenía",
+     "a": 33.64,
+     "b": 33.88
+    },
+    {
+     "w": "un",
+     "a": 33.88,
+     "b": 34.02
+    },
+    {
+     "w": "error.",
+     "a": 34.02,
+     "b": 34.18
+    }
+   ]
+  },
+  {
+   "a": 34.7,
+   "b": 36.02,
+   "palabras": [
+    {
+     "w": "Con",
+     "a": 34.7,
+     "b": 34.82
+    },
+    {
+     "w": "Richard",
+     "a": 34.82,
+     "b": 35.06
+    },
+    {
+     "w": "Taylor",
+     "a": 35.06,
+     "b": 35.42
+    },
+    {
+     "w": "lo",
+     "a": 35.42,
+     "b": 35.66
+    },
+    {
+     "w": "arregló,",
+     "a": 35.66,
+     "b": 36.02
+    }
+   ]
+  },
+  {
+   "a": 36.38,
+   "b": 38.68,
+   "palabras": [
+    {
+     "w": "y",
+     "a": 36.38,
+     "b": 36.42
+    },
+    {
+     "w": "en",
+     "a": 36.42,
+     "b": 36.52
+    },
+    {
+     "w": "1995",
+     "a": 36.52,
+     "b": 37.26
+    },
+    {
+     "w": "quedó",
+     "a": 37.26,
+     "b": 38.12
+    },
+    {
+     "w": "publicado.",
+     "a": 38.12,
+     "b": 38.68
+    }
+   ]
+  },
+  {
+   "a": 39.76,
+   "b": 40.96,
+   "palabras": [
+    {
+     "w": "358",
+     "a": 39.76,
+     "b": 40.36
+    },
+    {
+     "w": "años",
+     "a": 40.36,
+     "b": 40.62
+    },
+    {
+     "w": "después.",
+     "a": 40.62,
+     "b": 40.96
+    }
+   ]
+  },
+  {
+   "a": 41.58,
+   "b": 41.96,
+   "palabras": [
+    {
+     "w": "¿Y",
+     "a": 41.58,
+     "b": 41.72
+    },
+    {
+     "w": "Homero?",
+     "a": 41.72,
+     "b": 41.96
+    }
+   ]
+  },
+  {
+   "a": 43.1,
+   "b": 44.24,
+   "palabras": [
+    {
+     "w": "1782",
+     "a": 43.1,
+     "b": 43.7
+    },
+    {
+     "w": "es",
+     "a": 43.92,
+     "b": 44.08
+    },
+    {
+     "w": "par.",
+     "a": 44.08,
+     "b": 44.24
+    }
+   ]
+  },
+  {
+   "a": 44.86,
+   "b": 45.46,
+   "palabras": [
+    {
+     "w": "1841,",
+     "a": 44.86,
+     "b": 45.46
+    }
+   ]
+  },
+  {
+   "a": 46.1,
+   "b": 47.66,
+   "palabras": [
+    {
+     "w": "impar.",
+     "a": 46.1,
+     "b": 46.42
+    },
+    {
+     "w": "Par",
+     "a": 46.82,
+     "b": 47.12
+    },
+    {
+     "w": "más",
+     "a": 47.12,
+     "b": 47.26
+    },
+    {
+     "w": "impar,",
+     "a": 47.26,
+     "b": 47.66
+    }
+   ]
+  },
+  {
+   "a": 47.8,
+   "b": 48.26,
+   "palabras": [
+    {
+     "w": "da",
+     "a": 47.8,
+     "b": 47.92
+    },
+    {
+     "w": "impar.",
+     "a": 47.92,
+     "b": 48.26
+    }
+   ]
+  },
+  {
+   "a": 48.58,
+   "b": 50.46,
+   "palabras": [
+    {
+     "w": "Pero",
+     "a": 48.58,
+     "b": 48.74
+    },
+    {
+     "w": "1922",
+     "a": 48.74,
+     "b": 49.64
+    },
+    {
+     "w": "es",
+     "a": 50.08,
+     "b": 50.24
+    },
+    {
+     "w": "par.",
+     "a": 50.24,
+     "b": 50.46
+    }
+   ]
+  },
+  {
+   "a": 50.96,
+   "b": 51.22,
+   "palabras": [
+    {
+     "w": "Falsa.",
+     "a": 50.96,
+     "b": 51.22
+    }
+   ]
+  },
+  {
+   "a": 51.68,
+   "b": 53.12,
+   "palabras": [
+    {
+     "w": "Y",
+     "a": 51.68,
+     "b": 51.82
+    },
+    {
+     "w": "mira",
+     "a": 51.82,
+     "b": 52.06
+    },
+    {
+     "w": "cómo",
+     "a": 52.06,
+     "b": 52.26
+    },
+    {
+     "w": "termina",
+     "a": 52.26,
+     "b": 52.64
+    },
+    {
+     "w": "cada",
+     "a": 52.64,
+     "b": 52.82
+    },
+    {
+     "w": "lado.",
+     "a": 52.82,
+     "b": 53.12
+    }
+   ]
+  },
+  {
+   "a": 53.72,
+   "b": 54.14,
+   "palabras": [
+    {
+     "w": "Ahora",
+     "a": 53.72,
+     "b": 53.94
+    },
+    {
+     "w": "tú.",
+     "a": 53.94,
+     "b": 54.14
+    }
+   ]
+  },
+  {
+   "a": 54.62,
+   "b": 55.88,
+   "palabras": [
+    {
+     "w": "¿Cuál",
+     "a": 54.62,
+     "b": 54.76
+    },
+    {
+     "w": "de",
+     "a": 54.76,
+     "b": 54.88
+    },
+    {
+     "w": "estos",
+     "a": 54.88,
+     "b": 55.06
+    },
+    {
+     "w": "tríos",
+     "a": 55.06,
+     "b": 55.44
+    },
+    {
+     "w": "forma",
+     "a": 55.44,
+     "b": 55.7
+    },
+    {
+     "w": "un",
+     "a": 55.7,
+     "b": 55.88
+    }
+   ]
+  },
+  {
+   "a": 55.88,
+   "b": 56.86,
+   "palabras": [
+    {
+     "w": "triángulo",
+     "a": 55.88,
+     "b": 56.24
+    },
+    {
+     "w": "rectángulo?",
+     "a": 56.24,
+     "b": 56.86
+    }
+   ]
+  },
+  {
+   "a": 57.23,
+   "b": 57.92,
+   "palabras": [
+    {
+     "w": "3",
+     "a": 57.23,
+     "b": 57.54
+    },
+    {
+     "w": "segundos.",
+     "a": 57.54,
+     "b": 57.92
+    }
+   ]
+  },
+  {
+   "a": 61.89,
+   "b": 64.28,
+   "palabras": [
+    {
+     "w": "La",
+     "a": 61.89,
+     "b": 62.2
+    },
+    {
+     "w": "C,",
+     "a": 62.2,
+     "b": 62.4
+    },
+    {
+     "w": "8",
+     "a": 62.76,
+     "b": 63.02
+    },
+    {
+     "w": "al",
+     "a": 63.02,
+     "b": 63.16
+    },
+    {
+     "w": "cuadrado",
+     "a": 63.16,
+     "b": 63.62
+    },
+    {
+     "w": "más",
+     "a": 63.62,
+     "b": 63.8
+    },
+    {
+     "w": "15",
+     "a": 63.8,
+     "b": 64.06
+    },
+    {
+     "w": "al",
+     "a": 64.06,
+     "b": 64.28
+    }
+   ]
+  },
+  {
+   "a": 64.28,
+   "b": 66.28,
+   "palabras": [
+    {
+     "w": "cuadrado,",
+     "a": 64.28,
+     "b": 64.78
+    },
+    {
+     "w": "da",
+     "a": 64.94,
+     "b": 65.04
+    },
+    {
+     "w": "17",
+     "a": 65.04,
+     "b": 65.46
+    },
+    {
+     "w": "al",
+     "a": 65.46,
+     "b": 65.84
+    },
+    {
+     "w": "cuadrado.",
+     "a": 65.84,
+     "b": 66.28
+    }
+   ]
+  },
+  {
+   "a": 66.66,
+   "b": 68.16,
+   "palabras": [
+    {
+     "w": "Guárdalo",
+     "a": 66.66,
+     "b": 67.14
+    },
+    {
+     "w": "y",
+     "a": 67.14,
+     "b": 67.4
+    },
+    {
+     "w": "compártelo",
+     "a": 67.4,
+     "b": 67.98
+    },
+    {
+     "w": "con",
+     "a": 67.98,
+     "b": 68.16
+    }
+   ]
+  },
+  {
+   "a": 68.16,
+   "b": 68.92,
+   "palabras": [
+    {
+     "w": "quien",
+     "a": 68.16,
+     "b": 68.28
+    },
+    {
+     "w": "da",
+     "a": 68.28,
+     "b": 68.44
+    },
+    {
+     "w": "la",
+     "a": 68.44,
+     "b": 68.52
+    },
+    {
+     "w": "PAES.",
+     "a": 68.52,
+     "b": 68.92
+    }
+   ]
+  },
+  {
+   "a": 69.25,
+   "b": 70.43,
+   "palabras": [
+    {
+     "w": "Te",
+     "a": 69.25,
+     "b": 69.41
+    },
+    {
+     "w": "lo",
+     "a": 69.41,
+     "b": 69.47
+    },
+    {
+     "w": "explicamos",
+     "a": 69.47,
+     "b": 69.91
+    },
+    {
+     "w": "en",
+     "a": 69.91,
+     "b": 70.07
+    },
+    {
+     "w": "Preu",
+     "a": 70.07,
+     "b": 70.25
+    },
+    {
+     "w": "Tesla.",
+     "a": 70.25,
+     "b": 70.43
+    }
+   ]
+  }
+ ],
+ "tresD": "auto",
+ "verificacion": {
+  "correcta": "C",
+  "comprobacion": [
+   {
+    "letra": "A",
+    "expresion": "2^2 + 3^2 = 4^2",
+    "cumple": false
+   },
+   {
+    "letra": "B",
+    "expresion": "5^2 + 12^2 = 14^2",
+    "cumple": false
+   },
+   {
+    "letra": "C",
+    "expresion": "8^2 + 15^2 = 17^2",
+    "cumple": true
+   },
+   {
+    "letra": "D",
+    "expresion": "9^2 + 12^2 = 16^2",
+    "cumple": false
+   }
+  ]
+ }
+}

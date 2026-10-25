@@ -182,6 +182,30 @@
     "marca": "preu"
   },
   {
+    "id": "2026-10-fermat-homero-v2",
+    "titulo": "¿Homero le ganó a Fermat? · versión nueva",
+    "fecha": "2026-10-25",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Contenido educativo PAES (M1) con voz, rearmado con el Estudio",
+    "resumen": "La misma historia de Fermat con la misma voz, rearmada con todo lo nuevo del Estudio: subtítulos arriba de una a tres palabras con las claves en píldora, cámara 3D que inclina y orbita, música propia que baja cuando habla la voz, la línea de tiempo que viaja de 1963 a 1995 y un cierre que nombra a Preu Tesla.",
+    "reel": "preu-fermat-v2-reel.mp4",
+    "carrusel": [
+      "preu-fermat-v2-01.png",
+      "preu-fermat-v2-02.png",
+      "preu-fermat-v2-03.png",
+      "preu-fermat-v2-04.png",
+      "preu-fermat-v2-05.png",
+      "preu-fermat-v2-06.png",
+      "preu-fermat-v2-07.png",
+      "preu-fermat-v2-08.png",
+      "preu-fermat-v2-09.png",
+      "preu-fermat-v2-10.png",
+      "preu-fermat-v2-11.png"
+    ],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-fermat-homero",
     "titulo": "¿Homero le ganó a Fermat?",
     "fecha": "2026-10-23",
