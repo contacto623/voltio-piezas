@@ -1,5 +1,17 @@
 [
   {
+    "id": "2026-10-ultimos-dias-55",
+    "titulo": "Últimos días del 55%: el descuento más grande de nuestros 10 años",
+    "fecha": "2026-10-25",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Oferta con fecha límite",
+    "resumen": "Reel comercial para los últimos días del Aniversario, sin precios en pesos: el 55% corriendo desde el primer cuadro, «pagas 45 de cada 100», hasta 12 cuotas sin interés, la página real de El Mercurio con «máximo de 12 alumnos» destacado y la fecha de término (después, cada vez menos descuento). Voz en modo promo con tres voces, estilo Clásico, subtítulos arriba y música propia.",
+    "reel": "preu-ultimos-dias-55-reel.mp4",
+    "carrusel": [],
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-aniversario-10",
     "titulo": "Aniversario 10 años: 55% en el Anual",
     "fecha": "2026-10-25",
