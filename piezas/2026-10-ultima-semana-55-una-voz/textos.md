@@ -1,6 +1,6 @@
 # Última semana del 55 %, una sola voz · Preuniversitario Tesla
 
-Reel comercial armado con el Estudio de Piezas: 9:16 (1080x1920, 33 s), estilo Editorial, receta «Oferta con fecha límite» y voz en modo promo con una sola voz de principio a fin (Diego, la de El Mercurio). Subtítulos ABAJO (en el pie, de 1416 a 1510 px, sin la marca chica; las escenas suben 80 px para dejarles el espacio), música propia y arranque en caliente (el primer cuadro ya trae la fecha de término, el título y la cifra).
+Reel comercial armado con el Estudio de Piezas: 9:16 (1080x1920, 33 s), estilo Editorial, receta «Oferta con fecha límite» y voz en modo promo con una sola voz de principio a fin (Diego, la de El Mercurio). Subtítulos ABAJO (en el pie, de 1416 a 1510 px, con el logo completo de Preu Tesla arriba desde el primer cuadro hasta el cierre), música propia y arranque en caliente (el primer cuadro ya trae la fecha de término, el título y la cifra).
 Versión 4 (26 de octubre), igual a la 3 pero con una sola voz: parte con «Última semana», sin «45 de cada 100» y con lo que incluye el plan (12 alumnos por sala, profes de 1.000 puntos, 103 Puntajes Máximos, clases particulares de regalo y la app Tesla+).
 Sin precios en pesos ni el descuento de después del 31.
 Nada se publicó. Los archivos están en esta carpeta.
