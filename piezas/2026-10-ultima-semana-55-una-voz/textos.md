@@ -26,7 +26,7 @@ Termina el sábado 31 de octubre.
 
 ## Lo que dice la voz
 
-¡Última semana con 55% en Preu Tesla, el descuento más grande en 10 años! ¿Y en cuotas? ¡Hasta 12 sin interés! ¡Máximo 12 alumnos por sala y profes de 1.000 puntos! Y no lo decimos solo nosotros: ¡lo contó El Mercurio! ¡Y además, clases particulares de regalo y tecnología educativa con la app Tesla+! Ojo: termina este sábado 31. ¡Después, cada vez menos! ¡Escríbenos hoy y asegura tu cupo! Te lo explicamos en Preu Tesla.
+¡Última semana con 55% en Preu Tesla, el descuento más grande en 10 años! ¿Y en cuotas? ¡Hasta 12 sin interés! ¡Máximo 12 alumnos por sala y profes de 1.000 puntos! Y no lo decimos solo nosotros: ¡lo contó El Mercurio! ¡Y además, clases particulares de regalo y tecnología educativa con la app Tesla+! Termina este sábado 31. ¡Aprovecha este descuentazo! ¡Escríbenos hoy y asegura tu cupo! Te lo explicamos en Preu Tesla.
 
 ## Fuentes
 
@@ -35,4 +35,4 @@ Termina el sábado 31 de octubre.
 - El Mercurio en Emol, 23 de agosto de 2026: https://www.emol.com/noticias/Nacional/2026/08/23/1209301/preuniversitarios-personalizados-paes-universidades-educacion.html (recorte de la página real sin la foto de la nota, que muestra un ensayo de otro preuniversitario, ni el párrafo que nombra a otro preu).
 - Clases particulares de regalo y app Tesla+: https://www.preuniversitariotesla.cl/web/sitio/tesla-plus/ y la página de programas del sitio.
 - 103 Puntajes Máximos en la Admisión 2026: portada de https://www.preuniversitariotesla.cl/
-- Después del 31: solo se dice que el descuento irá bajando (decisión del dueño, 25 de octubre de 2026).
+- Después del 31: el reel ya no lo menciona; cierra con «¡Aprovecha este descuentazo!» (propuesta del socio de redes, 26 de octubre de 2026). No se dice el descuento de después.
