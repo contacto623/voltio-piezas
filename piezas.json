@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-10-colegios-spot-tv",
+    "titulo": "Preu Tesla para colegios: del ensayo al plan del lunes",
+    "fecha": "2026-10-27",
+    "cliente": "Preuniversitario Tesla",
+    "tipo": "Spot 16:9 para colegios (web y TV)",
+    "resumen": "Spot de 85 s en formato TV para directores y UTP: corregir con el celular, el curso pregunta por pregunta, el eje más débil, un informe del curso listo para imprimir, un informe a cada familia, Aula Tesla con aprobación del profesor, datos aislados por colegio, clases en el colegio, 103 Puntajes Máximos y El Mercurio. Cierra con «Parta con un ensayo de muestra». Incluye un corte de 30 s y una demo de 2:20 con recorrido por la plataforma. Cifras de ejemplo marcadas, sin precios.",
+    "reel": "preu-colegios-spot.mp4",
+    "textos": "textos.md",
+    "marca": "preu"
+  },
+  {
     "id": "2026-10-ultima-semana-55-una-voz",
     "titulo": "Última semana del 55%, una sola voz, subtítulos abajo y efectos",
     "fecha": "2026-10-26",
